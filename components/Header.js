@@ -1,5 +1,7 @@
 export default function Header(){
     return (
-        <header></header>
+        <header>
+            <a href="">About Me</a>
+        </header>
     )
 }
