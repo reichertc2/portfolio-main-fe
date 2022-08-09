@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import styles from '../styles/Home.module.css'
 import MainPage from '../components/MainPage'
 import Landing from '../components/Landing'
 
@@ -13,7 +12,7 @@ export default function Home() {
   }
   
   return (
-    <div className={styles.container}>
+    <div >
      
 
       {entered ?  <MainPage/> : <Landing handleEntry={handleEntry}/> }

@@ -1,6 +1,6 @@
 export default function NavBar(){
     return(
-        <nav>
+        <nav id="leftNavBar">
             <a href="">Link 1</a>
       
         </nav>
