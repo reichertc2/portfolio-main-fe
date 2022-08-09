@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 * {
   box-sizing: border-box;
 }
@@ -26,7 +30,7 @@ nav {
 }
 
 header {
-  background-color: yellow;
+  background-color: purple;
 }
 
 footer {
