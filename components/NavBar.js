@@ -3,7 +3,7 @@ import Resume from "./Bio/Resume"
 
 export default function NavBar() {
     return (
-        <nav id="leftNavBar">
+        <nav id="leftNavBar" className="inline-block">
             <ul>
                 <li>
                     <Link href="/">

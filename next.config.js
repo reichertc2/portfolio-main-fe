@@ -6,10 +6,7 @@ const nextConfig = {
       'via.placeholder.com'
     ],
   },
-  content: [
-    "./pages/**/*.{js,ts,jsx,tsx}",
-    "./components/**/*.{js,ts,jsx,tsx}",
-  ],
+
 }
 
 module.exports = nextConfig
