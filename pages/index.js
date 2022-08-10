@@ -12,7 +12,7 @@ export default function Home() {
   }
 
   return (
-    <div className='bg-cyan-900 m-auto min-h-screen'>
+    <div className='bg-sky-900 m-auto min-h-screen'>
 
 
       {entered ? <MainPage /> : <Landing handleEntry={handleEntry} />}

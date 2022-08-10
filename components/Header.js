@@ -6,9 +6,9 @@ import placeHolderImage from '../public/placeholder-image.png'
 
 export default function Header() {
     return (
-        <header>
+        <header className="pt-2 pl-3">
             <Image
-                    className='ml-1.5 rounded-full'
+                    className='rounded-full'
                     src={placeHolderImage}
                     alt='Placeholder'
                     width={75}
