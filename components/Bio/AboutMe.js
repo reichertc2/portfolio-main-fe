@@ -25,24 +25,24 @@ export default function AboutMe() {
                 </p>
 
                 <ul className="text-sky-200 inline-block pr-3 align-top text-sm">
-                    <li className="text-semibold">Languages: </li>
-                    <li className="pl-3">~ Python</li>
-                    <li className="pl-3">~ JavaScript</li>
+                    <li className="text-semibold ">Languages: </li>
+                    <li className="pl-3 list-disc list-inside">Python</li>
+                    <li className="pl-3 list-disc list-inside">JavaScript</li>
                 </ul>
 
                 <ul className="text-sky-200 inline-block px-5 align-top text-sm">
                     <li className="text-semibold">Tools: </li>
-                    <li className="pl-3">~ Django</li>
-                    <li className="pl-3">~ Flask</li>
-                    <li className="pl-3">~ React</li>
+                    <li className="pl-3 list-disc list-inside">Django</li>
+                    <li className="pl-3 list-disc list-inside">Flask</li>
+                    <li className="pl-3 list-disc list-inside">React</li>
 
 
                 </ul>
                 <ul className="text-sky-200 inline-block align-top text-sm">
                     <li className="text-semibold opacity-0">Blank</li>
 
-                    <li className="pl-3">~ Next.js</li>
-                    <li className="pl-3">~ Node.js</li>
+                    <li className="pl-3 list-disc list-inside">Next.js</li>
+                    <li className="pl-3 list-disc list-inside">Node.js</li>
 
                 </ul>
             </div>
