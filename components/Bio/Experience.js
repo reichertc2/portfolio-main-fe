@@ -1,7 +1,14 @@
-export default function Experience () {
+export default function Experience() {
     return (
-        <section className="py-6">
-            <h3>Experience</h3>
+        <section id="ExperienceSection" className="py-24 w-4/5 pl-8">
+            <h3 className="text-xl text-sky-300 py-1 font-semibold  ">
+                Experience
+            </h3>
+            <div className="inline-block w-3/5">
+
+            </div>
+
+
         </section>
     )
 }

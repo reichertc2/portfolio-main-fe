@@ -6,22 +6,22 @@ export default function NavBar() {
         <nav id="leftNavBar" className="inline-block w-4/5">
             <ul className="flex justify-end">
                 <li className="px-2 text-sky-200 hover:underline">
-                    <Link href="/">
+                    <Link href="#AboutMeSection">
                         <a>About</a>
                     </Link>
                 </li>
                 <li className="px-2  text-sky-200 hover:underline">
-                    <Link href="/">
+                    <Link href="#ExperienceSection">
                         <a>Experience</a>
                     </Link>
                 </li>
                 <li className="px-2  text-sky-200 hover:underline">
-                    <Link href="/">
+                    <Link href="#WorkSection">
                         <a>Work</a>
                     </Link>
                 </li>
                 <li className="px-2  text-sky-200 hover:underline decoration-wavy">
-                    <Link href="/">
+                    <Link href="#ContactSection" >
                         <a>Contact</a>
                     </Link>
                 </li>
