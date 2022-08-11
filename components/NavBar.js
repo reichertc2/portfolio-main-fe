@@ -3,29 +3,29 @@ import Resume from "./Bio/Resume"
 
 export default function NavBar() {
     return (
-        <nav id="leftNavBar" className="inline-block w-4/5">
+        <nav id="leftNavBar" className="inline-block w-11/12 align-top">
             <ul className="flex justify-end">
-                <li className="px-2 text-sky-200 hover:underline">
+                <li className="px-2 text-sky-200 pt-4">
                     <Link href="#AboutMeSection">
-                        <a>About</a>
+                        <a className="hover-underline-animation">About</a>
                     </Link>
                 </li>
-                <li className="px-2  text-sky-200 hover:underline">
+                <li className="px-2  text-sky-200 pt-4">
                     <Link href="#ExperienceSection">
-                        <a>Experience</a>
+                        <a className="hover-underline-animation">Experience</a>
                     </Link>
                 </li>
-                <li className="px-2  text-sky-200 hover:underline">
+                <li className="px-2  text-sky-200 pt-4">
                     <Link href="#WorkSection">
-                        <a>Work</a>
+                        <a className="hover-underline-animation">Work</a>
                     </Link>
                 </li>
-                <li className="px-2  text-sky-200 hover:underline decoration-wavy">
+                <li className="px-2  text-sky-200 pt-4">
                     <Link href="#ContactSection" >
-                        <a>Contact</a>
+                        <a className="hover-underline-animation">Contact</a>
                     </Link>
                 </li>
-                <li className="px-2 text-sky-200">
+                <li className="px-2 text-sky-200 pt-2">
                     <Resume />
                 </li>
             </ul>

@@ -24,13 +24,13 @@ export default function AboutMe() {
                     Here are a few tools and languages I am familiar:
                 </p>
 
-                <ul className="text-sky-200 inline-block  pr-3 align-top">
+                <ul className="text-sky-200 inline-block pr-3 align-top text-sm">
                     <li className="text-semibold">Languages: </li>
                     <li className="pl-3">~ Python</li>
                     <li className="pl-3">~ JavaScript</li>
                 </ul>
 
-                <ul className="text-sky-200 inline-block px-5 align-top">
+                <ul className="text-sky-200 inline-block px-5 align-top text-sm">
                     <li className="text-semibold">Tools: </li>
                     <li className="pl-3">~ Django</li>
                     <li className="pl-3">~ Flask</li>
@@ -38,7 +38,7 @@ export default function AboutMe() {
 
 
                 </ul>
-                <ul className="text-sky-200 inline-block align-top">
+                <ul className="text-sky-200 inline-block align-top text-sm">
                     <li className="text-semibold opacity-0">Blank</li>
 
                     <li className="pl-3">~ Next.js</li>

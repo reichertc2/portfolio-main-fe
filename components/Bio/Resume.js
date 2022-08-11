@@ -1,7 +1,10 @@
-export default function Resume () {
+export default function Resume() {
     return (
-        
-            <button className="inline-block">Resume</button>
-        
+
+        <button 
+        className="p-2 inline-block border-2 border-solid border-sky-200 rounded-md ">
+            Resume
+        </button>
+
     )
 }
