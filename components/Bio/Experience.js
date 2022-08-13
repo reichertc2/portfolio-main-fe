@@ -69,18 +69,19 @@ const jobExperience = {
 
 
 export default function Experience() {
-    
 
-    const [displayedCompany , setDisplayedCompany] = React.useState(jobExperience["jobs"][0])
+
+    const [displayedCompany, setDisplayedCompany] = React.useState(jobExperience["jobs"][0])
 
     const openExperience = (id = "exp-1") => {
 
         console.log('openExperience', id)
-        company = jobExperience["jobs"].filter(comp => comp["id"] === id)
-        console.log('openExperience', company[0])
+        let company = jobExperience["jobs"].filter(comp => comp["id"] === id)
+        // company = {}
+        console.log('openExperience', company)
 
-        // setDisplayedCompany(company)
-        return 
+        setDisplayedCompany(company[0])
+        return
 
     }
 
@@ -115,7 +116,7 @@ export default function Experience() {
 
 
                 <div className="text-sky-200 inline-block w-4/5 align-top" >
-                    
+
                     <h3 className="text-lg inline-block">{displayedCompany.Position} </h3>
                     <Link className="inline-block" href="https://www.divurgent.com">
                         <a > --> <span className="hover-underline-animation">{displayedCompany.CompanyName}</span></a>
@@ -124,9 +125,15 @@ export default function Experience() {
                     <p className="text-xs text-stone-900 font-semibold">{displayedCompany.Tenure}</p>
 
                     <ul className="p-4 text-sm w-4/5">
-                        <li className="pt-2 list-disc">Project assigned was the development, testing, and deployment of the new customer portal native to SalesForce.</li>
-                        <li className="py-1.5 list-disc">Attended and completed the Health Data Services and Azure API for FHIR Intermediate Level Classroom and Hack training.</li>
-                        <li className="py-1.5 list-disc">Increased testing coverage for proprietary applications in Django and Flask.</li>
+                        {
+                            displayedCompany.BulletPoints.map(( item, idx) =>
+                                <li key={idx}
+                                    className="pt-2 list-disc">
+                                    {item}
+                                </li>
+                            )
+                        }
+
                     </ul>
 
 
