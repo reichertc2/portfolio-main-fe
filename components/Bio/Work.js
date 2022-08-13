@@ -10,9 +10,9 @@ const projectWorks = {
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam blandit velit sit amet leo pharetra euismod. Nunc eleifend quam nec urna lacinia, sit amet auctor ex finibus. Duis ac lobortis neque, id feugiat ante.",
             "toolList": [
                 "tool a",
-                "tool a",
-                "tool a",
-                "tool a",
+                "tool b",
+                "tool c",
+                "tool d",
 
             ],
             "urlList": [
@@ -92,7 +92,7 @@ export default function Work() {
 
                 )
             }
-            
+
         </section>
     )
 }
