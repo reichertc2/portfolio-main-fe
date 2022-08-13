@@ -2,37 +2,10 @@ import Image from "next/image"
 import Link from "next/link"
 import placeHolderImage from '../../public/placeholder-image.png'
 
-const projectWorks = {
-    "projects": [
-        {
-            "id": "feat-1",
-            "title": "Project Title",
-            "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam blandit velit sit amet leo pharetra euismod. Nunc eleifend quam nec urna lacinia, sit amet auctor ex finibus. Duis ac lobortis neque, id feugiat ante.",
-            "toolList": [
-                "tool a",
-                "tool b",
-                "tool c",
-                "tool d",
-
-            ],
-            "urlList": [
-                {
-                    "name": "GitHub",
-                    "url": "https://github.com/reichertc2",
-                }
-                ,
-
-            ],
-            "images": [
-                "placeHolderImage"
-            ]
-
-        }
-    ]
-}
 
 
-export default function Work() {
+
+export default function Work({ projectWorks }) {
     return (
         <section id="WorkSection" className="py-24 w-4/5 pl-8">
             <h3
@@ -40,7 +13,7 @@ export default function Work() {
                 Work
             </h3>
             {
-                projectWorks["projects"].map(project =>
+                projectWorks.map(project =>
                     <div
                         key={project["id"]}
                         className="py-8"
