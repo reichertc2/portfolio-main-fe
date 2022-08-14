@@ -3,9 +3,7 @@ import Image from 'next/image'
 import placeHolderImage from '../public/placeholder-image.png'
 
 
-
-
-export default function Landing({ handleEntry }) {
+export default function Landing() {
 
     return (
         <div className='bg-sky-900 m-auto transition delay-1000'>
@@ -16,21 +14,16 @@ export default function Landing({ handleEntry }) {
             <main id="landingMain" className='m-auto bg-sky-900 w-4/5 '>
                 <div className='m-auto w-4/5 min-h-screen grid grid-cols-7 gap-6 grid-rows-5'>
                     {/* <h1 id="landingH1">Welcome</h1> */}
+                    <div className='col-start-4 col-end-5 row-start-3 row-end-4'>
 
-                    <button
-                        id="landingButton"
-                        className='rounded-full col-start-4 col-end-5 row-start-3 row-end-4'
-                        onClick={handleEntry}
-                        >
                         <Image
                             className='rounded-full'
-
                             src={placeHolderImage}
                             alt='Placeholder'
                             width={100}
                             height={100}
                         />
-                    </button>
+                    </div>
                 </div>
             </main>
         </div>
