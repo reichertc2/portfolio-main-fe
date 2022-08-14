@@ -1,19 +1,39 @@
 import Link from "next/link"
 import Resume from "./Bio/Resume"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-
+import { useTheme } from "next-themes"
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faMoon } from "@fortawesome/free-solid-svg-icons"
+import { faSun } from "@fortawesome/free-solid-svg-icons"
 
-library.add(faMoon)
+library.add(faMoon, faSun)
 
 export default function NavBar() {
+    const { systemTheme, theme, setTheme } = useTheme();
+
     const renderThemeChanger = () => {
-        return (
-            <button className="">
-                <FontAwesomeIcon icon={faMoon} />
-            </button>
-        )
+
+        const currentTheme = theme === 'system' ? systemTheme : theme;
+
+        if (currentTheme === 'dark') {
+            return (
+                <button className=""
+                    onClick={() => setTheme('light')}
+                >
+                    <FontAwesomeIcon icon={faSun} />
+                </button>
+            )
+        } else {
+            return (
+                <button className=""
+                    onClick={() => setTheme('dark')}
+                >
+                    <FontAwesomeIcon icon={faMoon} />
+                </button>
+            )
+        }
+
+
     }
 
     const navigations = [

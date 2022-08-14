@@ -10,7 +10,7 @@ config.autoAddCss = false
 
 function MyApp({ Component, pageProps }) {
   return (
-    <ThemeProvider>
+    <ThemeProvider attribute='class'>
       <Layout>
         <Component {...pageProps} />
       </Layout>
