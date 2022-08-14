@@ -41,7 +41,7 @@ export default function Experience({ jobExperience }) {
                 <div className="text-sky-200 inline-block w-4/5 align-top" >
                     <h3 className="text-lg inline-block">{displayedCompany.Position} </h3>
                     <Link className="inline-block" href="https://www.divurgent.com">
-                        <a > --> <span className="hover-underline-animation">{displayedCompany.CompanyName}</span></a>
+                        <a > --&gt; <span className="hover-underline-animation">{displayedCompany.CompanyName}</span></a>
                     </Link>
                     <p className="text-xs text-stone-900 font-semibold">{displayedCompany.Tenure}</p>
                     <ul className="p-4 text-sm w-4/5">
