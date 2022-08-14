@@ -19,7 +19,7 @@ export default function ContactMe({ contactInfo }) {
                 <h2 className="text-7xl font-semibold italic text-sky-200 pt-1 pb-3 opacity-70">
                     Reach Out
                 </h2>
-                <p className="text-stone-900 p-6 rounded-md m-auto w-2/5 ">
+                <p className="text-stone-900 dark:text-sky-200 p-6 rounded-md m-auto w-2/5 ">
                     {contactInfo["contactBrief"]}
                 </p>
                 <button

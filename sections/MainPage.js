@@ -5,10 +5,10 @@ import Footer from './Footer'
 export default function MainPage({ profileMain }) {
 
     return (
-        <div className='bg-sky-900 m-auto min-h-screen'>
+        <div className='m-auto min-h-screen'>
             <Header />
             <Main profileMain={profileMain} />
-            <Footer profileMain={profileMain}/>
+            <Footer profileMain={profileMain} />
         </div>
     )
 }

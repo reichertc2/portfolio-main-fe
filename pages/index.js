@@ -12,11 +12,11 @@ export default function Home() {
     setEntered(true)
   }
 
-  useEffect(() =>{
+  useEffect(() => {
     fetchUser()
-    setTimeout(handleEntry,3000)
+    setTimeout(handleEntry, 3000)
   }
-    )
+  )
 
   const fetchUser = async () => {
     const response = await fetch('/api/user')
@@ -26,7 +26,7 @@ export default function Home() {
 
   return (
 
-    <div className='bg-sky-900 m-auto min-h-screen'>
+    <div className='m-auto min-h-screen'>
 
 
       {entered ? <MainPage profileMain={profileMain} /> : <Landing />}
