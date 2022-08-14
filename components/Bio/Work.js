@@ -1,6 +1,13 @@
 import Image from "next/image"
 import Link from "next/link"
 import placeHolderImage from '../../public/placeholder-image.png'
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+// import { faFaceRelieved } from '@fortawesome/pro-solid-svg-icons'
+import {   faGithub } from "@fortawesome/free-brands-svg-icons"
+
+
+library.add(faGithub)
 
 
 export default function Work({ projectWorks }) {
@@ -26,12 +33,12 @@ export default function Work({ projectWorks }) {
                                 height={300}
                             />
                         </div>
-                        <div className="inline-block w-3/5">
+                        <div className="inline-block w-3/5 align-top">
                             <h4 className="text-sky-400 italic text-right">Featured Project</h4>
                             <h3 className="text-xl text-sky-300 py-1 font-semibold text-right ">{project.title}</h3>
-                            <p className="bg-stone-900 text-sky-300 p-1 rounded-md m-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam blandit velit sit amet leo pharetra euismod. Nunc eleifend quam nec urna lacinia, sit amet auctor ex finibus. Duis ac lobortis neque, id feugiat ante. Quisque gravida risus et magna vulputate sollicitudin. </p>
+                            <p className="bg-stone-900 text-sky-300 p-1 rounded-md m-3">{project.description}</p>
                             <ul className="text-right p-3">
-                                
+
                                 {
                                     project.toolList.map(tool =>
                                         <li key={tool}
@@ -53,7 +60,12 @@ export default function Work({ projectWorks }) {
                                             className="inline-block px-2 text-sky-200"
                                         >
                                             <Link href={url.url}>
-                                                <a>{url.name}</a>
+                                                <a >
+                                                    <FontAwesomeIcon
+                                                        className="text-2xl"
+                                                        icon={faGithub} />
+                                                </a>
+
                                             </Link>
 
                                         </li>
@@ -69,3 +81,4 @@ export default function Work({ projectWorks }) {
         </section>
     )
 }
+

@@ -8,8 +8,6 @@ import ContactMe from './Bio/Contact'
 
 export default function Main({ profileMain }) {
 
-
-
     return (
         <>
             <Head>
