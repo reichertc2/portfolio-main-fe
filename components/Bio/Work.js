@@ -3,8 +3,6 @@ import Link from "next/link"
 import placeHolderImage from '../../public/placeholder-image.png'
 
 
-
-
 export default function Work({ projectWorks }) {
     return (
         <section id="WorkSection" className="py-24 w-4/5 pl-8">
@@ -12,6 +10,7 @@ export default function Work({ projectWorks }) {
                 className="text-xl text-sky-300 py-1 font-semibold  ">
                 Work
             </h3>
+
             {
                 projectWorks.map(project =>
                     <div
@@ -32,6 +31,7 @@ export default function Work({ projectWorks }) {
                             <h3 className="text-xl text-sky-300 py-1 font-semibold text-right ">{project.title}</h3>
                             <p className="bg-stone-900 text-sky-300 p-1 rounded-md m-3">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam blandit velit sit amet leo pharetra euismod. Nunc eleifend quam nec urna lacinia, sit amet auctor ex finibus. Duis ac lobortis neque, id feugiat ante. Quisque gravida risus et magna vulputate sollicitudin. </p>
                             <ul className="text-right p-3">
+                                
                                 {
                                     project.toolList.map(tool =>
                                         <li key={tool}
@@ -45,6 +45,7 @@ export default function Work({ projectWorks }) {
 
                             </ul>
                             <ul>
+
                                 {
                                     project.urlList.map(url =>
                                         <li
@@ -62,7 +63,6 @@ export default function Work({ projectWorks }) {
                             </ul>
                         </div>
                     </div>
-
                 )
             }
 

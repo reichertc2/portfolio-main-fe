@@ -2,19 +2,15 @@ import Link from "next/link";
 import React from "react";
 
 
-
 export default function Experience({ jobExperience }) {
-
 
     const [displayedCompany, setDisplayedCompany] = React.useState(jobExperience[0])
 
     const openExperience = (id = "exp-1") => {
 
-        console.log('openExperience', id)
+        // console.log('openExperience', id)
         let company = jobExperience.filter(comp => comp["id"] === id)
-        // company = {}
-        console.log('openExperience', company)
-
+        // console.log('openExperience', company)
         setDisplayedCompany(company[0])
         return
 
@@ -27,6 +23,7 @@ export default function Experience({ jobExperience }) {
             </h3>
             <div id="ExperienceTabs" className="inline-block w-full py-8">
                 <div id="tab" className="w-1/5 inline-block">
+
                     {
                         jobExperience.map(comp =>
 
@@ -37,29 +34,18 @@ export default function Experience({ jobExperience }) {
                             >
                                 {comp["CompanyName"]}
                             </button>
-
-
                         )
                     }
+
                 </div>
-
-
-                {/* {
-                        jobExperience["jobs"].filter(id => id.id === "exp-1")
-                    } */}
-
-
-
                 <div className="text-sky-200 inline-block w-4/5 align-top" >
-
                     <h3 className="text-lg inline-block">{displayedCompany.Position} </h3>
                     <Link className="inline-block" href="https://www.divurgent.com">
                         <a > --> <span className="hover-underline-animation">{displayedCompany.CompanyName}</span></a>
                     </Link>
-
                     <p className="text-xs text-stone-900 font-semibold">{displayedCompany.Tenure}</p>
-
                     <ul className="p-4 text-sm w-4/5">
+
                         {
                             displayedCompany.BulletPoints.map((item, idx) =>
                                 <li key={idx}
@@ -70,13 +56,8 @@ export default function Experience({ jobExperience }) {
                         }
 
                     </ul>
-
-
                 </div>
-
             </div>
-
-
         </section>
     )
 }

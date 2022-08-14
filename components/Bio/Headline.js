@@ -1,5 +1,3 @@
-
-
 export default function Headline({headLine}) {
 
     return (
@@ -13,7 +11,6 @@ export default function Headline({headLine}) {
             <h2 className="text-7xl font-semibold italic text-sky-200 pt-1 pb-3 opacity-70">
                 {headLine["headline"]}
             </h2>
-
         </section>
     )
 }

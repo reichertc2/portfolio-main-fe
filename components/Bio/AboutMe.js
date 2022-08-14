@@ -2,8 +2,8 @@ import Image from "next/image"
 import placeHolderImage from '../../public/placeholder-image.png'
 
 
-
-export default function AboutMe({aboutMe}) {
+export default function AboutMe({ aboutMe }) {
+    
     return (
         <section id="AboutMeSection" className="py-24 w-4/5 pl-8">
             <h3 className="text-xl text-sky-300 py-1 font-semibold  ">
@@ -21,10 +21,9 @@ export default function AboutMe({aboutMe}) {
                     )
                 }
 
-
-
                 <ul className="text-sky-200 inline-block pr-3 align-top text-sm">
                     <li className="text-semibold pb-1">Languages: </li>
+
                     {
                         aboutMe["languages"].map((lang, idx) =>
                             <li
@@ -34,9 +33,9 @@ export default function AboutMe({aboutMe}) {
                     }
 
                 </ul>
-
                 <ul className="text-sky-200 inline-block inline-grid grid-cols-5 gap-0 text-sm">
                     <li className="text-semibold col-span-full">Tools: </li>
+
                     {
                         aboutMe["tools"].map((tool, idx) =>
                             <li
@@ -45,22 +44,18 @@ export default function AboutMe({aboutMe}) {
                         )
                     }
 
-
-
                 </ul>
 
             </div>
             <div className="pl-16 inline-block align-top ">
                 <Image
                     className='px-10 rounded-md'
-
                     src={placeHolderImage}
                     alt='Placeholder'
                     width={250}
                     height={250}
                 />
             </div>
-
         </section>
     )
 }

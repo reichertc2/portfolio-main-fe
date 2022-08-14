@@ -1,4 +1,3 @@
-
 export default function Resume() {
 
     const openResume = () => {
@@ -15,7 +14,6 @@ export default function Resume() {
                     className="p-2 inline-block border-2 border-solid border-sky-200 rounded-md "
                     onClick={() => openResume()}
                 >
-
                     Resume
                 </button>
             </a>
