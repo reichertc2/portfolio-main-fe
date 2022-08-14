@@ -2,6 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply mx-auto
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -45,4 +51,3 @@ html {
 .tab button.active {
   background-color: #ccc;
 }
-

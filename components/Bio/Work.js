@@ -1,6 +1,6 @@
 import Image from "next/image"
 import Link from "next/link"
-import placeHolderImage from '../../public/placeholder-image.png'
+// import placeHolderImage from '../../public/placeholder-image.png'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
