@@ -1,7 +1,7 @@
 # Professional Developer Portfolio 
 
 **Author**: Chris Reichert
-**Version**: 0.5.3 Work Component Buildout
+**Version**: 0.9.3 Initial Deploy
 
 ## Architecture
 

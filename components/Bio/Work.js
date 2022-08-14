@@ -3,8 +3,8 @@ import Link from "next/link"
 import placeHolderImage from '../../public/placeholder-image.png'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-// import { faFaceRelieved } from '@fortawesome/pro-solid-svg-icons'
-import {   faGithub } from "@fortawesome/free-brands-svg-icons"
+import { faGithub } from "@fortawesome/free-brands-svg-icons"
+import projectImage from '../../public/stick2.png'
 
 
 library.add(faGithub)
@@ -27,7 +27,7 @@ export default function Work({ projectWorks }) {
                         <div className="inline-block">
                             <Image
                                 className='px-10 rounded-md align-top'
-                                src={placeHolderImage}
+                                src={projectImage}
                                 alt='Placeholder'
                                 width={300}
                                 height={300}
@@ -36,7 +36,7 @@ export default function Work({ projectWorks }) {
                         <div className="inline-block w-3/5 align-top">
                             <h4 className="text-sky-400 italic text-right">Featured Project</h4>
                             <h3 className="text-xl text-sky-300 py-1 font-semibold text-right ">{project.title}</h3>
-                            <p className="bg-stone-900 text-sky-300 p-1 rounded-md m-3">{project.description}</p>
+                            <p className="bg-stone-900 text-sky-300 p-1 rounded-md m-3 text-right">{project.description}</p>
                             <ul className="text-right p-3">
 
                                 {
@@ -51,7 +51,7 @@ export default function Work({ projectWorks }) {
                                 }
 
                             </ul>
-                            <ul>
+                            <ul className="pl-64">
 
                                 {
                                     project.urlList.map(url =>

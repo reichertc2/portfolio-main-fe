@@ -1,6 +1,6 @@
 import Image from "next/image"
 import placeHolderImage from '../../public/placeholder-image.png'
-
+import profileImage from '../../public/profile.jpeg'
 
 export default function AboutMe({ aboutMe }) {
     
@@ -50,10 +50,10 @@ export default function AboutMe({ aboutMe }) {
             <div className="pl-16 inline-block align-top ">
                 <Image
                     className='px-10 rounded-md'
-                    src={placeHolderImage}
+                    src={profileImage}
                     alt='Placeholder'
-                    width={250}
-                    height={250}
+                    width={270}
+                    height={225}
                 />
             </div>
         </section>
