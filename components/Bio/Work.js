@@ -4,13 +4,15 @@ import Link from "next/link"
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
-import projectImage from '../../public/stick2.png'
+import projectImage1 from '../../public/stick2.png'
 
 
 library.add(faGithub)
 
 
 export default function Work({ projectWorks }) {
+
+    const projectImages= [projectImage1]
     return (
         <section id="WorkSection" className="py-24 w-4/5 pl-8">
             <h3
@@ -19,15 +21,16 @@ export default function Work({ projectWorks }) {
             </h3>
 
             {
-                projectWorks.map(project =>
+                projectWorks.map((project, idx) =>
                     <div
                         key={project["id"]}
                         className="py-8"
                     >
-                        <div className="inline-block">
+                        <div className="inline-block w-2/5">
+
                             <Image
                                 className='px-10 rounded-md align-top'
-                                src={projectImage}
+                                src={projectImages[idx]}
                                 alt='Placeholder'
                                 width={300}
                                 height={300}

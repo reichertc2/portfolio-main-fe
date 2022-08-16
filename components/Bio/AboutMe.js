@@ -50,6 +50,19 @@ export default function AboutMe({ aboutMe }) {
                     )
                 }
 
+
+
+            </div>
+            <div className=" w-2/5 px-4 inline-block align-top ">
+                <Image
+                    className=' rounded-md'
+                    src={profileImage}
+                    alt='profileImage'
+                    width={300}
+                    height={300}
+                />
+            </div>
+            <div>
                 <ul className="dark:text-sky-200 inline-block pr-3 align-top text-sm">
                     <li className="text-semibold pb-1">Languages: </li>
 
@@ -65,7 +78,7 @@ export default function AboutMe({ aboutMe }) {
                     }
 
                 </ul>
-                <ul className="dark:text-sky-200 inline-block inline-grid grid-cols-5 gap-0 text-sm">
+                <ul className="dark:text-sky-200 inline-block inline-grid grid-cols-5 gap-2 text-sm pl-5">
                     <li className="text-semibold col-span-full">Tools: </li>
 
                     {
@@ -73,23 +86,13 @@ export default function AboutMe({ aboutMe }) {
                             <li
                                 key={idx}
                                 className="img-li pl-5 list-inside text-sm"
-                                >
-                                    {tool}
-                                    </li>
+                            >
+                                {tool}
+                            </li>
                         )
                     }
 
                 </ul>
-
-            </div>
-            <div className="pl-16 inline-block align-top ">
-                <Image
-                    className='px-10 rounded-md'
-                    src={profileImage}
-                    alt='Placeholder'
-                    width={270}
-                    height={225}
-                />
             </div>
         </section>
     )

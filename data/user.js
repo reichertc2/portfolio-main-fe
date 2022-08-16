@@ -102,7 +102,7 @@ export const user =
                 "Next.js",
                 "Tailwind",
                 "VS Code"
-                
+
 
             ],
             "urlList": [
@@ -119,10 +119,87 @@ export const user =
 
         }
     ],
+    "subprojects": [
+        {
+            "id": "feat-1",
+            "title": "Stick Figure Adventure",
+            "description": "Designed full stack retro text-based adventure game. It includes Django, React.js, and TailwindCSS. Pair and mob programmed with three others and deployed with Docker Container and to Vercel.",
+            "toolList": [
+                "Django",
+                "Next.js",
+                "Tailwind",
+                "VS Code"
+
+
+            ],
+            "urlList": [
+                {
+                    "name": "github",
+                    "url": "https://github.com/reichertc2",
+                }
+                ,
+
+            ],
+            "images": [
+                "placeHolderImage"
+            ]
+
+        },
+        {
+            "id": "feat-1",
+            "title": "Stick Figure Adventure",
+            "description": "Designed full stack retro text-based adventure game. It includes Django, React.js, and TailwindCSS. Pair and mob programmed with three others and deployed with Docker Container and to Vercel.",
+            "toolList": [
+                "Django",
+                "Next.js",
+                "Tailwind",
+                "VS Code"
+
+
+            ],
+            "urlList": [
+                {
+                    "name": "github",
+                    "url": "https://github.com/reichertc2",
+                }
+                ,
+
+            ],
+            "images": [
+                "placeHolderImage"
+            ]
+
+        },
+        {
+            "id": "feat-1",
+            "title": "Stick Figure Adventure",
+            "description": "Designed full stack retro text-based adventure game. It includes Django, React.js, and TailwindCSS. Pair and mob programmed with three others and deployed with Docker Container and to Vercel.",
+            "toolList": [
+                "Django",
+                "Next.js",
+                "Tailwind",
+                "VS Code"
+
+
+            ],
+            "urlList": [
+                {
+                    "name": "github",
+                    "url": "https://github.com/reichertc2",
+                }
+                ,
+
+            ],
+            "images": [
+                "placeHolderImage"
+            ]
+
+        },
+    ],
     "contactInfo": {
         "email": "chris.a.reichert@gmail.com",
         "contactBrief": "Currently looking for meaningful work and my inbox is open. Please say hello or send me comments. Have a great day.",
-        "socials":[
+        "socials": [
             "https://github.com/reichertc2",
             "https://www.linkedin.com/in/christopher-reichert/",
             "https://trailblazer.me/id/reichertc2",
