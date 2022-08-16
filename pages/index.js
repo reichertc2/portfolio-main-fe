@@ -15,7 +15,7 @@ export default function Home() {
   useEffect(() => {
     fetchUser()
     setTimeout(handleEntry, 3000)
-  }
+  },[]
   )
 
   const fetchUser = async () => {

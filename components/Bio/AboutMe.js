@@ -1,11 +1,40 @@
+import { useEffect, useState } from "react"
 import Image from "next/image"
 import placeHolderImage from '../../public/placeholder-image.png'
 import profileImage from '../../public/profile.jpeg'
 
 export default function AboutMe({ aboutMe }) {
-    
+
+    const [showCss, useShowCss] = useState('py-24 w-4/5 pl-8 transition-opacity')
+
+    // let showCss = 'py-24 w-4/5 pl-8 opacity-0'
+
+    const handleScroll = () => {
+
+        // console.log('scroll event: ', window.scrollY)
+        // let hidden = true
+        // if (hidden && window.scrollY === 650) {
+        useShowCss = 'py-24 w-4/5 pl-8'
+        console.log('scroll event: 500', showCss)
+
+        // hidden = false
+        // }
+    }
+
+
+
+
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleScroll)
+        document.getElementById("AboutMeSection").addEventListener("scroll", handleScroll())
+
+
+
+    }, [])
+
     return (
-        <section id="AboutMeSection" className="py-24 w-4/5 pl-8">
+        <section id="AboutMeSection" className={showCss}>
             <h3 className="text-xl text-sky-300 py-1 font-semibold  ">
                 About Me
             </h3>
@@ -28,7 +57,10 @@ export default function AboutMe({ aboutMe }) {
                         aboutMe["languages"].map((lang, idx) =>
                             <li
                                 key={idx}
-                                className="pl-3 list-disc list-inside">{lang}</li>
+                                className="img-li pl-5 list-inside"
+                            >
+                                {lang}
+                            </li>
                         )
                     }
 
@@ -40,7 +72,10 @@ export default function AboutMe({ aboutMe }) {
                         aboutMe["tools"].map((tool, idx) =>
                             <li
                                 key={idx}
-                                className="pl-3 list-disc list-inside text-sm">{tool}</li>
+                                className="img-li pl-5 list-inside text-sm"
+                                >
+                                    {tool}
+                                    </li>
                         )
                     }
 

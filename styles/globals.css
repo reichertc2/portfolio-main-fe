@@ -53,3 +53,25 @@ html {
 .tab button.active {
   background-color: #ccc;
 }
+
+/* li:before {
+  content:"\f35a";
+  font-family: 'FontAwesome';
+  display: inline-block;
+  margin-left: -1.3em;
+  width: 1.3em
+} */
+
+/* li {
+  list-style-image: url('../public/circle-right-solid-dark.svg');
+  
+} */
+
+.img-li {
+  list-style: none;
+  background-image: url('../public/circle-right-solid-dark.svg');
+  background-size: .75rem;
+  background-repeat: no-repeat;
+	background-position: left center;
+
+}

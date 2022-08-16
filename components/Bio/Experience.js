@@ -49,7 +49,7 @@ export default function Experience({ jobExperience }) {
                         {
                             displayedCompany.BulletPoints.map((item, idx) =>
                                 <li key={idx}
-                                    className="pt-2 list-disc">
+                                    className="img-li pl-6 pt-2 ">
                                     {item}
                                 </li>
                             )
