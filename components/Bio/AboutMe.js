@@ -35,7 +35,7 @@ export default function AboutMe({ aboutMe }) {
 
     return (
         <section id="AboutMeSection" className={showCss}>
-            <h3 className="text-xl text-sky-300 py-1 font-semibold  ">
+            <h3 className="text-xl dark:text-sky-300 py-1 font-semibold  ">
                 About Me
             </h3>
             <div className="inline-block w-3/5">
@@ -43,14 +43,14 @@ export default function AboutMe({ aboutMe }) {
                 {
                     aboutMe["elevator"].map((text, idx) =>
                         <p key={idx}
-                            className="text-sky-200 py-2"
+                            className="dark:text-sky-200 py-2"
                         >
                             {text}
                         </p>
                     )
                 }
 
-                <ul className="text-sky-200 inline-block pr-3 align-top text-sm">
+                <ul className="dark:text-sky-200 inline-block pr-3 align-top text-sm">
                     <li className="text-semibold pb-1">Languages: </li>
 
                     {
@@ -65,7 +65,7 @@ export default function AboutMe({ aboutMe }) {
                     }
 
                 </ul>
-                <ul className="text-sky-200 inline-block inline-grid grid-cols-5 gap-0 text-sm">
+                <ul className="dark:text-sky-200 inline-block inline-grid grid-cols-5 gap-0 text-sm">
                     <li className="text-semibold col-span-full">Tools: </li>
 
                     {

@@ -49,7 +49,7 @@ export default function NavBar() {
             <ul className="flex justify-end">
 
                 {navigations.map(nav => (
-                    <li key={nav.label} className="px-2 text-sky-200 pt-4">
+                    <li key={nav.label} className="px-2 dark:text-sky-200 pt-4">
                         <Link href={nav.path}>
                             <a className="hover-underline-animation">{nav.label}</a>
                         </Link>
@@ -58,10 +58,10 @@ export default function NavBar() {
                 )
                 }
 
-                <li className="px-2 text-sky-200 pt-2">
+                <li className="px-2 dark:text-sky-200 pt-2">
                     <Resume />
                 </li>
-                <li className="px-2 text-sky-200 pt-4">
+                <li className="px-2 darK:text-sky-200 pt-4">
                     {renderThemeChanger()}
                 </li>
             </ul>
