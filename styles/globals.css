@@ -2,6 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    /* @apply mx-auto; */
+    @apply bg-slate-400 dark:bg-stone-800 ;
+
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -13,8 +21,9 @@ html {
 .hover-underline-animation {
   display: inline-block;
   position: relative;
-  color: #bae6fd;
+  /* color: #bae6fd; */
 }
+
 
 .hover-underline-animation:after {
   content: '';
@@ -24,7 +33,7 @@ html {
   height: 2px;
   bottom: 0;
   left: 0;
-  background-color: #bae6fd;
+  background-color: #bae6fd ;
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -46,3 +55,31 @@ html {
   background-color: #ccc;
 }
 
+/* li:before {
+  content:"\f35a";
+  font-family: 'FontAwesome';
+  display: inline-block;
+  margin-left: -1.3em;
+  width: 1.3em
+} */
+
+/* li {
+  list-style-image: url('../public/circle-right-solid-dark.svg');
+  
+} */
+
+.img-li {
+  list-style: none;
+  background-image: url('../public/circle-right-solid-dark.svg');
+  background-size: .75rem;
+  background-repeat: no-repeat;
+	background-position: left center;
+
+}
+
+.img-li:dark {
+ 
+  background-image: url('../public/circle-right-solid-dark.svg');
+ 
+
+}

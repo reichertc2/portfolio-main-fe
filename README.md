@@ -1,7 +1,7 @@
 # Professional Developer Portfolio 
 
 **Author**: Chris Reichert
-**Version**: 0.9.3 Initial Deploy
+**Version**: 1.0.1 Version 1 - Minimalistic
 
 ## Architecture
 

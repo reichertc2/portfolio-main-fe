@@ -3,6 +3,7 @@ import Headline from './Bio/Headline'
 import AboutMe from './Bio/AboutMe'
 import Experience from './Bio/Experience'
 import Work from './Bio/Work'
+import SubWork from './Bio/SubWork'
 import ContactMe from './Bio/Contact'
 
 
@@ -23,6 +24,7 @@ export default function Main({ profileMain }) {
                     <AboutMe aboutMe={profileMain["aboutMe"]} />
                     <Experience jobExperience={profileMain["jobs"]} />
                     <Work projectWorks={profileMain["projects"]} />
+                    <SubWork projectWorks={profileMain["subprojects"]}/>
                     <ContactMe contactInfo={profileMain["contactInfo"]} />
                 </article>
             </main>
