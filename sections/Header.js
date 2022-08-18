@@ -1,6 +1,6 @@
 import Image from "next/image"
 import NavBar from "../components/NavBar"
-import placeHolderImage from '../public/placeholder-image.png'
+import placeHolderImage from '../public/logo_basic.png'
 
 
 export default function Header() {

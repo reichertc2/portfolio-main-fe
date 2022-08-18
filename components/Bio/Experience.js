@@ -18,7 +18,7 @@ export default function Experience({ jobExperience }) {
 
     return (
         <section id="ExperienceSection" className="py-24 w-full pl-8">
-            <h3 className="text-xl dark:text-sky-300 py-1 font-semibold  ">
+            <h3 className="text-xl dark:text-sky-300 py-1 font-semibold">
                 Experience
             </h3>
             <div id="ExperienceTabs" className="inline-block w-full py-8">
@@ -40,7 +40,7 @@ export default function Experience({ jobExperience }) {
                 </div>
                 <div className="dark:text-sky-200 inline-block w-4/5 align-top" >
                     <h3 className="text-lg inline-block">{displayedCompany.Position} </h3>
-                    <Link className="inline-block" href="https://www.divurgent.com">
+                    <Link className="inline-block" href={displayedCompany.CompanyURL}>
                         <a > --&gt; <span className="hover-underline-animation">{displayedCompany.CompanyName}</span></a>
                     </Link>
                     <p className="text-xs dark:text-stone-900 font-semibold">{displayedCompany.Tenure}</p>
@@ -49,7 +49,7 @@ export default function Experience({ jobExperience }) {
                         {
                             displayedCompany.BulletPoints.map((item, idx) =>
                                 <li key={idx}
-                                    className="img-li pl-6 pt-2 ">
+                                    className="img-li pl-6 pt-2">
                                     {item}
                                 </li>
                             )

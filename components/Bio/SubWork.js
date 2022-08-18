@@ -4,7 +4,9 @@ import Link from "next/link"
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
-import projectImage1 from '../../public/stick2.png'
+import projectImage1 from '../../public/speed.png'
+import projectImage2 from '../../public/books.png'
+import projectImage3 from '../../public/coders-pursuit-ss.png'
 
 
 library.add(faGithub)
@@ -12,7 +14,7 @@ library.add(faGithub)
 
 export default function SubWork({ projectWorks }) {
 
-    const projectImages = [projectImage1, projectImage1, projectImage1]
+    const projectImages = [projectImage1, projectImage2, projectImage3]
     return (
         <section id="WorkSection" className="py-24 w-4/5 pl-8">
             <h3
@@ -30,7 +32,7 @@ export default function SubWork({ projectWorks }) {
                             <div className="inline-block w-full relative ">
 
                                 <Image
-                                    className='opacity-20 rounded-md hover:opacity-80'
+                                    className='opacity-40 rounded-md '
                                     src={projectImages[idx]}
                                     alt='Placeholder'
                                     width={300}
@@ -41,6 +43,7 @@ export default function SubWork({ projectWorks }) {
 
                                 <div className="absolute -left-0 -bottom-0 opacity-0 hover:opacity-90 pb-4 pl-1">
                                     <h3 className="text-xl dark:text-sky-300 py-1 font-semibold ">{project.title}</h3>
+                                    <p className="text-md dark:text-sky-300 py-1 font-semibold ">{project.description}</p>
 
                                     <ul className="">
 

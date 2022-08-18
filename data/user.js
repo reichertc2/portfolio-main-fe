@@ -10,10 +10,11 @@ export const user =
     "aboutMe":
     {
         "elevator": [
-            "Hello. My name is Chris and i enjoy creating and automating processes through the power of code. My ineterest began while I was in high school where I wrote my first HTML code.",
-            "I stepped away from software to pursue a military career in aviation as an officer and pilot of the AH-64D attack helicopter.",
-            "I then pursued a career in construction as a project manager earning my Project Management Professional (PMP).",
-            "I finally revisited programming and fell in love. I attended a coding training program at CodFellows, which I highly recommend."
+            "Hello. My name is Chris and I enjoy creating and automating processes through the power of code. Getting my feet wet with excel, and graduating to first JavaScript, then my language of choice Python.",
+            "A veteran of the US Army in aviation as an officer and pilot of the AH-64D attack helicopter.",
+            // "I transitioned into a career in construction as a project manager earning my Project Management Professional (PMP).",
+            "I finally revisited programming and fell in love. I attended a coding training program at CodFellows, which I highly recommend.",
+            "In software, there isn't a stack I'm not willing to learn or ecosystem to develop in. ",
         ],
         "languages": [
             "Python",
@@ -37,9 +38,9 @@ export const user =
             "CompanyURL": "https://www.divurgent.com",
             "Tenure": "February - August 2022",
             "BulletPoints": [
-                "Project assigned was the development, testing, and deployment of the new customer portal native to SalesForce.",
+                "Developed SalesForce LWC for the integration of single-signon capability with PowerBI, Azure, and Salesforce for Community Portal.",
                 "Attended and completed the Health Data Services and Azure API for FHIR Intermediate Level Classroom and Hack training.",
-                "Increased testing coverage for proprietary applications in Django and Flask."
+                "Increased testing coverage for proprietary applications in Django and Flask.",
             ]
         },
 
@@ -50,9 +51,9 @@ export const user =
             "CompanyURL": "https://www.codefellows.com",
             "Tenure": "July 2021- February 2022",
             "BulletPoints": [
-                "TBA",
-                "TBA",
-                "TBA"
+                "Developed full stack applications from MERN to Django and Next with Postgres.",
+                "Pair and mob programmed full stack applications for projects. See below for some examples",
+                // "TBA",
             ]
         },
         {
@@ -62,9 +63,9 @@ export const user =
             "CompanyURL": "https://www.usfusion.com",
             "Tenure": "May 2019 - July 2021",
             "BulletPoints": [
-                "Designed excel application to manage changes to scope, cost, and documentation. This application was applied to monitor a successful $2M HDD pipe installation project resulting in equipment, labor, and subcontractor costs 20% below estimated margins. ",
+                "Designed excel application to manage changes to scope, cost, and documentation. This application was applied to monitor a successful $2M HDD pipe installation project resulting in equipment, labor, and subcontractor costs 20% below estimated margins.",
                 "Mentored and trained aspiring project leaders in project management processes, cost estimation, and blueprint reading.",
-                // "TBA"
+                // "TBA",
             ]
         },
         {
@@ -86,7 +87,7 @@ export const user =
             "CompanyURL": "https://www.zacherygroup.com",
             "Tenure": "April 2018 - May 2019",
             "BulletPoints": [
-                "Controlled motor run-ins program, planned and coordinated to effectively manage resources and deliver the project on-time (the only program to do so).",
+                "Developed application to control motor run-ins program. Planned and coordinated to effectively manage resources and deliver the project on-time (the only program to do so).",
                 // "TBA",
                 // "TBA"
             ]
@@ -121,23 +122,25 @@ export const user =
     ],
     "subprojects": [
         {
-            "id": "feat-1",
-            "title": "Stick Figure Adventure",
-            "description": "Designed full stack retro text-based adventure game. It includes Django, React.js, and TailwindCSS. Pair and mob programmed with three others and deployed with Docker Container and to Vercel.",
+            "id": "sub-1",
+            "title": "Speed Typing App",
+            "description": "Typing test app demonstrating the speed of a python serverless function.",
             "toolList": [
-                "Django",
-                "Next.js",
-                "Tailwind",
-                "VS Code"
+                "Serverless Function",
+                "React",
+                "VS Code",
 
 
             ],
             "urlList": [
                 {
-                    "name": "github",
-                    "url": "https://github.com/reichertc2",
-                }
-                ,
+                    "name": "github1",
+                    "url": "https://github.com/940s/speed_typing",
+                },
+                {
+                    "name": "github2",
+                    "url": "https://github.com/940s/speed_typing_fe",
+                },
 
             ],
             "images": [
@@ -146,24 +149,27 @@ export const user =
 
         },
         {
-            "id": "feat-1",
-            "title": "Stick Figure Adventure",
-            "description": "Designed full stack retro text-based adventure game. It includes Django, React.js, and TailwindCSS. Pair and mob programmed with three others and deployed with Docker Container and to Vercel.",
+            "id": "sub-2",
+            "title": "Can of Books",
+            "description": "Reading list appliction. Simple application utilizing CRUD and MongoDB.  ",
             "toolList": [
-                "Django",
-                "Next.js",
-                "Tailwind",
-                "VS Code"
+                "React",
+                "Node.js",
+                "Auth0",
+                "MongoDB",
+                "VS Code",
 
 
             ],
             "urlList": [
                 {
-                    "name": "github",
-                    "url": "https://github.com/reichertc2",
-                }
-                ,
-
+                    "name": "github1",
+                    "url": "https://github.com/reichertc2/can-of-books",
+                },
+                {
+                    "name": "github2",
+                    "url": "https://github.com/reichertc2/can-of-books-api",
+                },
             ],
             "images": [
                 "placeHolderImage"
@@ -171,21 +177,18 @@ export const user =
 
         },
         {
-            "id": "feat-1",
-            "title": "Stick Figure Adventure",
-            "description": "Designed full stack retro text-based adventure game. It includes Django, React.js, and TailwindCSS. Pair and mob programmed with three others and deployed with Docker Container and to Vercel.",
+            "id": "sub-3",
+            "title": "Coders Pursuit",
+            "description": "Simple movie trivia game in Javascript, HTML, and CSS only with local storage.",
             "toolList": [
-                "Django",
-                "Next.js",
-                "Tailwind",
-                "VS Code"
+                "VS Code",
 
 
             ],
             "urlList": [
                 {
                     "name": "github",
-                    "url": "https://github.com/reichertc2",
+                    "url": "https://github.com/Coders-Pursuit/Movie-Trivia",
                 }
                 ,
 

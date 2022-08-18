@@ -59,7 +59,7 @@ export default function NavBar() {
                 }
 
                 <li className="px-2 dark:text-sky-200 pt-2">
-                    <Resume />
+                    {/* <Resume /> */}
                 </li>
                 <li className="px-2 darK:text-sky-200 pt-4">
                     {renderThemeChanger()}

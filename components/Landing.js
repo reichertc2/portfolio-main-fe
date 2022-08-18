@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import placeHolderImage from '../public/placeholder-image.png'
+import placeHolderImage from '../public/logo_basic.png'
 
 
 export default function Landing() {
@@ -17,7 +17,7 @@ export default function Landing() {
                     <div className='col-start-4 col-end-5 row-start-3 row-end-4'>
 
                         <Image
-                            className='rounded-full'
+                            className='animate-pulse rounded-full'
                             src={placeHolderImage}
                             alt='Placeholder'
                             width={100}

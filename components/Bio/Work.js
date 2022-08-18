@@ -29,7 +29,7 @@ export default function Work({ projectWorks }) {
                         <div className="inline-block w-2/5">
 
                             <Image
-                                className='px-10 rounded-md align-top'
+                                className='px-10 rounded-md align-top opacity-40 hover:opacity-90'
                                 src={projectImages[idx]}
                                 alt='Placeholder'
                                 width={300}
