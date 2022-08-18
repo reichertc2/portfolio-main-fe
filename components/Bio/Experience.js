@@ -43,7 +43,7 @@ export default function Experience({ jobExperience }) {
                     <Link className="inline-block" href={displayedCompany.CompanyURL}>
                         <a > --&gt; <span className="hover-underline-animation">{displayedCompany.CompanyName}</span></a>
                     </Link>
-                    <p className="text-xs dark:text-stone-900 font-semibold">{displayedCompany.Tenure}</p>
+                    <p className="text-xs dark:text-sky-300 font-semibold">{displayedCompany.Tenure}</p>
                     <ul className="p-4 text-sm w-4/5">
 
                         {

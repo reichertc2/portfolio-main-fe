@@ -63,7 +63,7 @@ export default function AboutMe({ aboutMe }) {
                 />
             </div>
             <div>
-                <ul className="dark:text-sky-200 inline-block pr-3 align-top text-sm">
+                <ul className="dark:text-sky-200 inline-block pr-3 align-top text-sm w-1/5">
                     <li className="text-semibold pb-1">Languages: </li>
 
                     {
@@ -78,7 +78,7 @@ export default function AboutMe({ aboutMe }) {
                     }
 
                 </ul>
-                <ul className="dark:text-sky-200 inline-block inline-grid grid-cols-5 gap-2 text-sm pl-5">
+                <ul className="dark:text-sky-200 inline-block inline-grid grid-cols-5 gap-2 text-sm pl-5 w-4/5">
                     <li className="text-semibold col-span-full">Tools: </li>
 
                     {

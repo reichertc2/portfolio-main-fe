@@ -3,7 +3,8 @@ export const user =
 {
     "profile": {
         "name": "Chris Reichert",
-        "headline": "Software Engineer | Veteran | PMP"
+        "headline": "Software Engineer | Veteran | PMP",
+        "profileURL": "https://github.com/reichertc2/portfolio-main-fe",
 
 
     },
@@ -13,7 +14,7 @@ export const user =
             "Hello. My name is Chris and I enjoy creating and automating processes through the power of code. Getting my feet wet with excel, and graduating to first JavaScript, then my language of choice Python.",
             "A veteran of the US Army in aviation as an officer and pilot of the AH-64D attack helicopter.",
             // "I transitioned into a career in construction as a project manager earning my Project Management Professional (PMP).",
-            "I finally revisited programming and fell in love. I attended a coding training program at CodFellows, which I highly recommend.",
+            "I finally revisited programming and fell in love. I attended a coding training program at CodeFellows, which I highly recommend.",
             "In software, there isn't a stack I'm not willing to learn or ecosystem to develop in. ",
         ],
         "languages": [
@@ -27,6 +28,9 @@ export const user =
             "React",
             "Next.js",
             "Node.js",
+            "Lightning Web Components",
+            // "Tailwind CSS",
+
 
         ]
     },
