@@ -18,7 +18,7 @@ export default function Experience({ jobExperience }) {
 
     return (
         <section id="ExperienceSection" className="py-24 w-full pl-8">
-            <h3 className="text-xl dark:text-sky-300 py-1 font-semibold">
+            <h3 className={`text-xl dark:text-sky-300 py-1 font-semibold`}>
                 Experience
             </h3>
             <div id="ExperienceTabs" className="inline-block w-full py-8">

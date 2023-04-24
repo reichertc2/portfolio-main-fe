@@ -1,41 +1,24 @@
 import { useEffect, useState } from "react"
 import Image from "next/image"
-import placeHolderImage from '../../public/placeholder-image.png'
 import profileImage from '../../public/profile.jpeg'
+import { baseDarkText,  } from "../../styles/colors"
 
 export default function AboutMe({ aboutMe }) {
 
     const [showCss, useShowCss] = useState('py-24 w-4/5 pl-8 transition-opacity')
 
-    // let showCss = 'py-24 w-4/5 pl-8 opacity-0'
-
     const handleScroll = () => {
-
-        // console.log('scroll event: ', window.scrollY)
-        // let hidden = true
-        // if (hidden && window.scrollY === 650) {
         useShowCss = 'py-24 w-4/5 pl-8'
-        console.log('scroll event: 500', showCss)
-
-        // hidden = false
-        // }
     }
-
-
-
-
 
     useEffect(() => {
         window.addEventListener('scroll', handleScroll)
         document.getElementById("AboutMeSection").addEventListener("scroll", handleScroll())
-
-
-
     }, [])
 
     return (
         <section id="AboutMeSection" className={showCss}>
-            <h3 className="text-xl dark:text-sky-300 py-1 font-semibold  ">
+            <h3 className={`text-xl dark:${baseDarkText()} py-1 font-semibold`}>
                 About Me
             </h3>
             <div className="inline-block w-3/5">
@@ -43,14 +26,12 @@ export default function AboutMe({ aboutMe }) {
                 {
                     aboutMe["elevator"].map((text, idx) =>
                         <p key={idx}
-                            className="dark:text-sky-200 py-2"
+                            className={`dark:${baseDarkText()} py-2`}
                         >
                             {text}
                         </p>
                     )
                 }
-
-
 
             </div>
             <div className=" w-2/5 px-4 inline-block align-top ">
@@ -63,7 +44,7 @@ export default function AboutMe({ aboutMe }) {
                 />
             </div>
             <div>
-                <ul className="dark:text-sky-200 inline-block pr-3 align-top text-sm w-1/5">
+                <ul className={`dark:${baseDarkText()} inline-block pr-3 align-top text-sm w-1/5`}>
                     <li className="text-semibold pb-1">Languages: </li>
 
                     {
@@ -78,7 +59,7 @@ export default function AboutMe({ aboutMe }) {
                     }
 
                 </ul>
-                <ul className="dark:text-sky-200 inline-block inline-grid grid-cols-5 gap-2 text-sm pl-5 w-4/5">
+                <ul className={`dark:${baseDarkText()} inline-block inline-grid grid-cols-5 gap-2 text-sm pl-5 w-4/5`}>
                     <li className="text-semibold col-span-full">Tools: </li>
 
                     {
