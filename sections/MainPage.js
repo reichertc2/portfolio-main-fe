@@ -6,7 +6,7 @@ export default function MainPage({ profileMain }) {
 
     return (
         <div className='m-auto min-h-screen'>
-            <Header />
+            <Header profileMain={profileMain}/>
             <Main profileMain={profileMain} />
             <Footer profileMain={profileMain} />
         </div>

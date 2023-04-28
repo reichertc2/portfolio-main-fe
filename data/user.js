@@ -1,10 +1,11 @@
 import { faGithub, faLinkedin  } from "@fortawesome/free-brands-svg-icons";
+import logoImage from '../public/logo_basic.png'
 import speedPic01 from "../public/speed.png";
 import booksPic01 from "../public/books.png";
 import pursuitPic01 from "../public/coders-pursuit-ss.png";
 import profileImage from '../public/profile.jpeg'
 import stickPic01 from '../public/stick2.png'
-import confinPic01 from '../public/consapp.png'
+import confinPic01 from '../public/consapp.jpg'
 
 
 export const user = {
@@ -12,6 +13,10 @@ export const user = {
     name: "Chris Reichert",
     headline: "Software Engineer | Veteran | PMP",
     profileURL: "https://github.com/reichertc2/portfolio-main-fe",
+    logo:{
+      image:logoImage,
+      alt:"CR Logo"
+    }
   },
   aboutMe: {
     elevator: [
@@ -98,7 +103,12 @@ export const user = {
           icon: faGithub
         },
       ],
-      images: [confinPic01],
+      images: [
+        {
+          image:confinPic01,
+          alt:"Personal Fintech App Pic"
+        }
+        ],
     },
   ],
   subprojects: [
@@ -115,7 +125,13 @@ export const user = {
           icon: faGithub,
         },
       ],
-      images: [stickPic01],
+      images: [
+        {
+          image:stickPic01,
+          alt:"Stick Figure Adventure"
+        }
+        
+      ],
     },
     {
       id: "sub-1",
@@ -135,7 +151,12 @@ export const user = {
           icon: faGithub,
         },
       ],
-      images: [speedPic01],
+      images: [
+        {
+          image:speedPic01,
+          alt:"Speed Typling Pic"
+        }
+        ],
     },
     {
       id: "sub-2",
@@ -155,7 +176,12 @@ export const user = {
           icon: faGithub,
         },
       ],
-      images: [booksPic01],
+      images: [
+        {
+          image:booksPic01,
+          alt:"Can of Books Pic"
+        }
+        ],
     },
     {
       id: "sub-3",
@@ -171,7 +197,11 @@ export const user = {
         },
       ],
       images: [
-        pursuitPic01, 
+        {
+          image:pursuitPic01,
+          alt:"Coders Pursuit Pic"
+        }
+        , 
     ],
     },
   ],

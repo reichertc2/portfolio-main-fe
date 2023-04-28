@@ -14,10 +14,9 @@ export default function WorkBasic({ project }) {
 
             <Image
                 className='px-10 rounded-md align-top opacity-40 hover:opacity-90'
-                src={project.images[0]}
-                alt='Placeholder'
-                width={300}
-                height={300}
+                src={project.images[0].image}
+                alt={project.images[0].alt}
+           
             />
         </div>
         <div className="inline-block w-3/5 align-top">

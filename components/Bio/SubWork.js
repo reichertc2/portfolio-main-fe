@@ -14,8 +14,8 @@ export default function SubWork({ projectWorks }) {
             <div className="inline-block w-full relative ">
               <Image
                 className="opacity-40 rounded-md "
-                src={project.images[0]}
-                alt="Placeholder"
+                src={project.images[0].image}
+                alt={project.images[0].alt}
                 width={300}
                 height={300}
               />

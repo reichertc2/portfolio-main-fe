@@ -1,9 +1,8 @@
 import Image from "next/image"
 import NavBar from "../components/NavBar"
-import placeHolderImage from '../public/logo_basic.png'
 
 
-export default function Header() {
+export default function Header({profileMain}) {
 
 
 
@@ -11,8 +10,8 @@ export default function Header() {
         <header className="pt-2 pl-3">
             <Image
                     className='rounded-full'
-                    src={placeHolderImage}
-                    alt='Placeholder'
+                    src={profileMain.profile.logo.image}
+                    alt={profileMain.profile.logo.alt}
                     width={75}
                     height={75}
                 />
