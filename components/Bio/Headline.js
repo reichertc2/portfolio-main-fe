@@ -8,7 +8,7 @@ export default function Headline({headLine}) {
             <h6 className={`dark:${baseDarkText()} italic`}>
                 Hi, my name is
             </h6>
-            <h2 className={`text-7xl font-semibold ${lightText()} py-1`}>
+            <h2 className={`text-7xl ${lightText()} font-semibold py-1`}>
                 {headLine["name"]}
             </h2>
             <h2 className={`text-5xl font-semibold italic dark:${baseDarkText()} pt-1 pb-3 opacity-70`}>

@@ -1,3 +1,4 @@
+import BasicSectionHeader from "../common/BasicSectionHeader";
 import Link from "next/link";
 import React from "react";
 import { baseDarkText, baseBorder } from "../../styles/colors";
@@ -13,9 +14,9 @@ export default function Experience({ jobExperience }) {
 
     return (
         <section id="ExperienceSection" className="py-24 w-full pl-8">
-            <h3 className={`text-xl dark:${baseDarkText()} py-1 font-semibold`}>
-                Experience
-            </h3>
+            <BasicSectionHeader 
+                headerTitle={"Experience"}
+            />
             <div id="ExperienceTabs" className="inline-block w-full py-8">
                 <div id="tab" className="w-1/5 inline-block">
 

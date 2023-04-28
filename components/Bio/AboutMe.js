@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react"
 import Image from "next/image"
-import profileImage from '../../public/profile.jpeg'
 import { baseDarkText,  } from "../../styles/colors"
 import SummaryBio from "./AboutMe/SummaryBio"
 import ListBlock from "./AboutMe/ListBlock"
@@ -25,12 +24,12 @@ export default function AboutMe({ aboutMe }) {
                 About Me
             </h3>
             <SummaryBio 
-                elevator={aboutMe["elevator"]}
+                elevator={aboutMe.elevator}
             />
             <div className=" w-2/5 px-4 inline-block align-top ">
                 <Image
                     className=' rounded-md'
-                    src={profileImage}
+                    src={aboutMe.profileImage}
                     alt='profileImage'
                     width={300}
                     height={300}
@@ -39,12 +38,12 @@ export default function AboutMe({ aboutMe }) {
             <div>
                 <ListBlock
                     title="Languages"
-                    listProps={aboutMe["languages"]}
+                    listProps={aboutMe.languages}
                     orientation={"vertical"}
                 />
                 <ListBlock 
                     title="Tools"
-                    listProps={aboutMe["tools"]}
+                    listProps={aboutMe.tools}
                     orientation={"horizontal"}
                 />
 

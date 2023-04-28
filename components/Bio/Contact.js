@@ -1,20 +1,16 @@
 import Link from 'next/link'
-import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faGithub } from "@fortawesome/free-brands-svg-icons"
-import { faLinkedin } from "@fortawesome/free-brands-svg-icons"
-import { faSalesforce } from "@fortawesome/free-brands-svg-icons"
 import { baseDarkText, baseText } from '../../styles/colors'
+import BasicSectionHeader from '../common/BasicSectionHeader'
 
-
-library.add(faGithub, faLinkedin, faSalesforce)
 
 export default function ContactMe({ contactInfo }) {
+
     return (
         <section id="ContactSection" className="py-24 w-full pl-8">
-            <h3 className={`text-xl dark:${baseDarkText()} py-1 font-semibold`}>
-                Contact
-            </h3>
+            <BasicSectionHeader 
+                headerTitle={"Contact"}
+            />
             <div className="inline-block w-full text-center">
 
                 <h2 className={`text-7xl font-semibold italic dark:${baseDarkText()} pt-1 pb-3 opacity-70`}>
@@ -32,39 +28,23 @@ export default function ContactMe({ contactInfo }) {
                 <ul
                     className={`text-3xl dark:${baseDarkText()} p-3 content-center`}
                 >
-                    <li
+
+                    {
+                        contactInfo.socials.map((social, idx) =>(
+                            <li
+                            key={social.icon}
                         className="inline-block px-2 w-1/12">
-                        <Link href={contactInfo.socials[0]}>
+                        <Link href={social.url}>
                             <a >
                                 <FontAwesomeIcon
-
-                                    icon={faGithub} />
+                                    icon={social.icon} />
                             </a>
 
                         </Link>
-                    </li>
-                    <li
-                        className="inline-block px-2 w-1/12">
-                        <Link href={contactInfo.socials[1]}>
-                            <a >
-                                <FontAwesomeIcon
+                    </li>)
+                            )
+                    }
 
-                                    icon={faLinkedin} />
-                            </a>
-
-                        </Link>
-                    </li>
-                    <li
-                        className="inline-block px-2 w-1/12">
-                        <Link href={contactInfo.socials[2]}>
-                            <a >
-                                <FontAwesomeIcon
-
-                                    icon={faSalesforce} />
-                            </a>
-
-                        </Link>
-                    </li>
                 </ul>
             </div>
         </section>
