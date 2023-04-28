@@ -13,28 +13,33 @@ export const user =
         "elevator": [
             "Hello. My name is Chris and I enjoy creating and automating processes through the power of code. Getting my feet wet with excel, and graduating to first JavaScript, then my language of choice Python.",
             "A veteran of the US Army in aviation as an officer and pilot of the AH-64D attack helicopter.",
-            // "I transitioned into a career in construction as a project manager earning my Project Management Professional (PMP).",
             "I finally revisited programming and fell in love. I attended a coding training program at CodeFellows, which I highly recommend.",
             "In software, there isn't a stack I'm not willing to learn or ecosystem to develop in. ",
         ],
         "languages": [
+            "Typescript",
             "Python",
-            "Javascript",
-            "Apex"
+            "C#",
+            "Javascript"
         ],
         "tools": [
+            "React / React TS",
             "Django",
             "Flask",
-            "React",
-            "Next.js",
-            "Node.js",
-            "Lightning Web Components",
-            // "Tailwind CSS",
-
-
+            "Next.js"
         ]
     },
     "jobs": [
+        {
+            "id": "exp-0",
+            "CompanyName": "Unite Digitial",
+            "Position": "Software Developer",
+            "CompanyURL": "https://unitedigital.com/",
+            "Tenure": "August 2022 - Present",
+            "BulletPoints": [
+                "Developed features and fixed bugs per assigned tasks."
+            ]
+        },
         {
             "id": "exp-1",
             "CompanyName": "Divurgent",
@@ -83,23 +88,35 @@ export const user =
                 // "TBA",
                 // "TBA"
             ]
-        },
-        {
-            "id": "exp-5",
-            "CompanyName": "Zachry",
-            "Position": "Senior Project Coordinator",
-            "CompanyURL": "https://www.zacherygroup.com",
-            "Tenure": "April 2018 - May 2019",
-            "BulletPoints": [
-                "Developed application to control motor run-ins program. Planned and coordinated to effectively manage resources and deliver the project on-time (the only program to do so).",
-                // "TBA",
-                // "TBA"
-            ]
-        },
+        }
     ],
     "projects": [
         {
             "id": "feat-1",
+            "title": "Personal Fintech App",
+            "description": "A personal application to help individuals determine portfolio allocations.",
+            "toolList": [
+                "Flask",
+                "React TS",
+                "Tailwind",
+            ],
+            "urlList": [
+                {
+                    "name": "github",
+                    "url": "https://github.com/reichertc2",
+                }
+                
+
+            ],
+            "images": [
+                "placeHolderImage"
+            ]
+
+        }
+    ],
+    "subprojects": [
+        {
+            "id": "sub-0",
             "title": "Stick Figure Adventure",
             "description": "Designed full stack retro text-based adventure game. It includes Django, React.js, and TailwindCSS. Pair and mob programmed with three others and deployed with Docker Container and to Vercel.",
             "toolList": [
@@ -114,17 +131,14 @@ export const user =
                 {
                     "name": "github",
                     "url": "https://github.com/reichertc2",
-                }
-                ,
+                },
 
             ],
             "images": [
                 "placeHolderImage"
             ]
 
-        }
-    ],
-    "subprojects": [
+        },
         {
             "id": "sub-1",
             "title": "Speed Typing App",
@@ -209,8 +223,7 @@ export const user =
         "socials": [
             "https://github.com/reichertc2",
             "https://www.linkedin.com/in/christopher-reichert/",
-            "https://trailblazer.me/id/reichertc2",
-            // "https://leetcode.com/reichertc2/",
+            "https://leetcode.com/reichertc2/",
         ]
     }
 }

@@ -1,14 +1,17 @@
+import { baseDarkText, lightText } from "../../styles/colors";
+
+
 export default function Headline({headLine}) {
 
     return (
         <section className="pt-48 pb-28 w-4/5">
-            <h6 className="dark:text-sky-400 italic">
+            <h6 className={`dark:${baseDarkText()} italic`}>
                 Hi, my name is
             </h6>
-            <h2 className="text-7xl font-semibold text-sky-100 py-1">
+            <h2 className={`text-7xl font-semibold ${lightText()} py-1`}>
                 {headLine["name"]}
             </h2>
-            <h2 className="text-5xl font-semibold italic dark:text-sky-200 pt-1 pb-3 opacity-70">
+            <h2 className={`text-5xl font-semibold italic dark:${baseDarkText()} pt-1 pb-3 opacity-70`}>
                 {headLine["headline"]}
             </h2>
         </section>

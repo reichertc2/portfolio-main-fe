@@ -6,9 +6,11 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faMoon } from "@fortawesome/free-solid-svg-icons"
 import { faSun } from "@fortawesome/free-solid-svg-icons"
 
+
 library.add(faMoon, faSun)
 
 export default function NavBar() {
+
     const { systemTheme, theme, setTheme } = useTheme();
 
     const renderThemeChanger = () => {
@@ -32,8 +34,6 @@ export default function NavBar() {
                 </button>
             )
         }
-
-
     }
 
     const navigations = [
@@ -41,7 +41,6 @@ export default function NavBar() {
         { label: 'Experience', path: '#ExperienceSection' },
         { label: 'Work', path: '#WorkSection' },
         { label: 'Contact', path: '#ContactSection' },
-
     ]
 
     return (
@@ -59,7 +58,6 @@ export default function NavBar() {
                 }
 
                 <li className="px-2 dark:text-sky-200 pt-2">
-                    {/* <Resume /> */}
                 </li>
                 <li className="px-2 darK:text-sky-200 pt-4">
                     {renderThemeChanger()}
