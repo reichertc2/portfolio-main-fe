@@ -1,4 +1,4 @@
-import { baseDarkText,  } from "../../../styles/colors"
+import { bulkText } from "../../../styles/colors"
 
 
 export default function SummaryBio({ elevator }) {
@@ -10,7 +10,7 @@ export default function SummaryBio({ elevator }) {
                     elevator.map((text, idx) =>
                         <p 
                         key={`${text}-${idx}`}
-                            className={`dark:${baseDarkText()} py-2`}
+                            className={`dark:text-gray-500 py-2`}
                         >
                             {text}
                         </p>

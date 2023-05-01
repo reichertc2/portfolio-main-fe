@@ -4,26 +4,28 @@ import { baseDarkText,  } from "../../styles/colors"
 import { genericSectionLayout, genericSectionTransition } from "../../styles/styles"
 import SummaryBio from "./AboutMe/SummaryBio"
 import ListBlock from "./AboutMe/ListBlock"
+import BasicSectionHeader from "../common/BasicSectionHeader"
 
 
 export default function AboutMe({ aboutMe }) {
 
-    const [showCss, useShowCss] = useState(genericSectionTransition())
+    // const [showCss, useShowCss] = useState(genericSectionTransition())
 
-    const handleScroll = () => {
-        useShowCss =`${genericSectionTransition()}`
-    }
+    // const handleScroll = () => {
+    //     useShowCss =`${genericSectionLayout()}`
+    // }
 
-    useEffect(() => {
-        window.addEventListener('scroll', handleScroll)
-        document.getElementById("AboutMeSection").addEventListener("scroll", handleScroll())
-    }, [])
+    // useEffect(() => {
+    //     window.addEventListener('scroll', handleScroll)
+    //     document.getElementById("AboutMeSection").addEventListener("scroll", handleScroll())
+    // }, [])
 
     return (
-        <section id="AboutMeSection" className={genericSectionTransition()}>
-            <h3 className={`text-xl dark:${baseDarkText()} py-1 font-semibold`}>
-                About Me
-            </h3>
+        <section id="AboutMeSection" className={genericSectionLayout()}>
+            <BasicSectionHeader 
+                headerTitle={"About Me"}
+            />
+         
             <SummaryBio 
                 elevator={aboutMe.elevator}
             />

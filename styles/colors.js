@@ -6,6 +6,10 @@ export const lightText = () =>{
     return `text-sky-100`
 }
 
+export const bulkText = () =>{
+    return `text-gray-500`
+}
+
 export const baseBorder = () =>{
     return `border-sky-700`
 }
@@ -15,7 +19,7 @@ export const baseDarkText = () =>{
 }
 
 export const accentDarkText = () =>{
-    return `text-sky-600`
+    return `text-sky-400`
 }
 
 export const baseDarkBorder = () =>{

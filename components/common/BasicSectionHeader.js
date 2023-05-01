@@ -1,4 +1,4 @@
-import { baseDarkText } from "../../styles/colors"
+import { baseDarkText, accentDarkText } from "../../styles/colors"
 
 export default function BasicSectionHeader({ headerTitle }) {
 

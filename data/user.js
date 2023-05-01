@@ -20,13 +20,13 @@ export const user = {
   },
   aboutMe: {
     elevator: [
-      "Hello. My name is Chris and I enjoy creating and automating processes through the power of code. Getting my feet wet with excel, and graduating to first JavaScript, then my language of choice Python.",
-      "A veteran of the US Army in aviation as an officer and pilot of the AH-64D attack helicopter.",
-      "I finally revisited programming and fell in love. I attended a coding training program at CodeFellows, which I highly recommend.",
-      "In software, there isn't a stack I'm not willing to learn or ecosystem to develop in. ",
+      "Hello. I'm Chris and I enjoy creating and automating processes through the power of code. Getting my feet wet with excel, and graduating to first JavaScript, then my language of choice Python.",
+      "A veteran of the US Army aviation as an officer and pilot of the AH-64D Apache attack helicopter.",
+      "I revisited programming, after hitting a barrier in the potential of excel. Frustrated by its data limitations, I ventured out and I attended a coding training program at CodeFellows, and fell in love with the power of coding.",
+      "In software, there isn't a stack I'm not willing to learn or ecosystem to develop in. I have since learned TypeScript and C# through my positions, and explored the Azure development ecosystem.",
     ],
-    languages: ["Typescript", "Python", "C#", "Javascript"],
-    tools: ["React / React TS", "Django", "Flask", "Next.js"],
+    languages: ["Python", "C#", "Javascript"],
+    tools: ["React / React TS", "Flask", "Next.js"],
     profileImage: profileImage
 
   },
@@ -37,7 +37,12 @@ export const user = {
       Position: "Software Developer",
       CompanyURL: "https://unitedigital.com/",
       Tenure: "August 2022 - Present",
-      BulletPoints: ["Developed features and fixed bugs per assigned tasks."],
+      BulletPoints: [
+        "Developed features and fixed bugs per assigned tasks."
+        // "TBA",
+        // "TBA",
+
+      ],
     },
     {
       id: "exp-1",
