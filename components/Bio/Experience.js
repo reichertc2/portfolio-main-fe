@@ -2,6 +2,7 @@ import BasicSectionHeader from "../common/BasicSectionHeader";
 import Link from "next/link";
 import React from "react";
 import { baseDarkText, baseBorder } from "../../styles/colors";
+import { genericSectionLayout } from "../../styles/styles";
 
 export default function Experience({ jobExperience }) {
 
@@ -13,7 +14,7 @@ export default function Experience({ jobExperience }) {
     }
 
     return (
-        <section id="ExperienceSection" className="py-24 w-full pl-8">
+        <section id="ExperienceSection" className={`${genericSectionLayout()}`}>
             <BasicSectionHeader 
                 headerTitle={"Experience"}
             />

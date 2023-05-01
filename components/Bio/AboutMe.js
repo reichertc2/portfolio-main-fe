@@ -1,16 +1,17 @@
 import { useEffect, useState } from "react"
 import Image from "next/image"
 import { baseDarkText,  } from "../../styles/colors"
+import { genericSectionLayout, genericSectionTransition } from "../../styles/styles"
 import SummaryBio from "./AboutMe/SummaryBio"
 import ListBlock from "./AboutMe/ListBlock"
 
 
 export default function AboutMe({ aboutMe }) {
 
-    const [showCss, useShowCss] = useState('py-24 w-4/5 pl-8 transition-opacity')
+    const [showCss, useShowCss] = useState(genericSectionTransition())
 
     const handleScroll = () => {
-        useShowCss = 'py-24 w-4/5 pl-8'
+        useShowCss =`${genericSectionTransition()}`
     }
 
     useEffect(() => {
@@ -19,7 +20,7 @@ export default function AboutMe({ aboutMe }) {
     }, [])
 
     return (
-        <section id="AboutMeSection" className={showCss}>
+        <section id="AboutMeSection" className={genericSectionTransition()}>
             <h3 className={`text-xl dark:${baseDarkText()} py-1 font-semibold`}>
                 About Me
             </h3>

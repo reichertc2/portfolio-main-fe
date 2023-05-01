@@ -1,13 +1,14 @@
 import Link from 'next/link'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { baseDarkText, baseText } from '../../styles/colors'
+import { genericSectionLayout } from '../../styles/styles'
 import BasicSectionHeader from '../common/BasicSectionHeader'
 
 
 export default function ContactMe({ contactInfo }) {
 
     return (
-        <section id="ContactSection" className="py-24 w-full pl-8">
+        <section id="ContactSection" className={`${genericSectionLayout()}`}>
             <BasicSectionHeader 
                 headerTitle={"Contact"}
             />

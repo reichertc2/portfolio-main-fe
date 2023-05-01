@@ -3,10 +3,11 @@ import Image from "next/image";
 import Link from "next/link";
 import BasicSectionHeader from "../common/BasicSectionHeader";
 import { baseDarkText } from "../../styles/colors";
+import { genericSectionLayout } from "../../styles/styles";
 
 export default function SubWork({ projectWorks }) {
   return (
-    <section id="WorkSection" className="py-24 w-4/5 pl-8">
+    <section id="WorkSection" className={`${genericSectionLayout()}`}>
       <BasicSectionHeader headerTitle={"Other Projects"} />
       <div className="inline-grid grid-cols-3 gap-3">
         {projectWorks.map((project, idx) => (

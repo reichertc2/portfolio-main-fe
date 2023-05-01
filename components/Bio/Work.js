@@ -1,10 +1,10 @@
 import BasicSectionHeader from "../common/BasicSectionHeader";
 import WorkBasic from "./Work/WorkBasic";
-
+import { genericSectionLayout } from "../../styles/styles";
 
 export default function Work({ projectWorks }) {
   return (
-    <section id="WorkSection" className="py-24 w-4/5 pl-8">
+    <section id="WorkSection" className={`${genericSectionLayout()}`}>
       <BasicSectionHeader 
       headerTitle={"Work"} />
 

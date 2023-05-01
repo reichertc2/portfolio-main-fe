@@ -14,6 +14,10 @@ export const baseDarkText = () =>{
     return `text-sky-200`
 }
 
+export const accentDarkText = () =>{
+    return `text-sky-600`
+}
+
 export const baseDarkBorder = () =>{
     return `border-sky-200`
 }
