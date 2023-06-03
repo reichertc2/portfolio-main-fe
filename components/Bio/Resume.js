@@ -9,7 +9,7 @@ export default function Resume() {
   
             <a>
                 <button
-                    className={`p-2 inline-block border-2 border-solid dark:${baseDarkBorder()} rounded-md`}
+                    className={`p-2 inline-block border-2 border-solid dark:${baseDarkBorder} rounded-md`}
                     onClick={() => openResume()}
                 >
                     Resume

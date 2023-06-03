@@ -23,12 +23,12 @@ export default function SubWork({ projectWorks }) {
 
               <div className="absolute -left-0 -bottom-0 opacity-0 hover:opacity-90 pb-4 pl-1">
                 <h3
-                  className={`text-xl dark:${baseDarkText()} py-1 font-semibold`}
+                  className={`text-xl dark:${baseDarkText} py-1 font-semibold`}
                 >
                   {project.title}
                 </h3>
                 <p
-                  className={`text-md dark:${baseDarkText()} py-1 font-semibold`}
+                  className={`text-md dark:${baseDarkText} py-1 font-semibold`}
                 >
                   {project.description}
                 </p>
@@ -37,7 +37,7 @@ export default function SubWork({ projectWorks }) {
                   {project.urlList.map((url) => (
                     <li
                       key={url.name}
-                      className={`inline-block px-2 dark:${baseDarkText()}`}
+                      className={`inline-block px-2 dark:${baseDarkText}`}
                     >
                       <Link href={url.url}>
                         <a>

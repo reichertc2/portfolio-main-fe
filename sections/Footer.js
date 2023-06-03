@@ -11,7 +11,7 @@ export default function Footer({ profileMain }) {
     
     return (
         <footer className="p-3 text-center content-center">
-            <h6 className={`dark:${baseDarkText()} italic py-4`}>
+            <h6 className={`dark:${baseDarkText} italic py-4`}>
                 <Link href={profileMain.profile.profileURL}>
                     <a>{profileMain.profile.name} {renderCopyrightYear()} &copy;</a>
                 </Link>

@@ -1,27 +1,15 @@
-export const baseText = () => {
-    return `text-stone-900`
-}
+export const testBackgroundColor = `bg-red-600`
 
-export const lightText = () =>{
-    return `text-sky-100`
-}
+export const baseText = `text-stone-900`
 
-export const bulkText = () =>{
-    return `text-gray-500`
-}
+export const lightText = `text-sky-100`
 
-export const baseBorder = () =>{
-    return `border-sky-700`
-}
+export const bulkText = `text-gray-500`
 
-export const baseDarkText = () =>{
-    return `text-sky-200`
-}
+export const baseBorder = `border-sky-700`
 
-export const accentDarkText = () =>{
-    return `text-sky-400`
-}
+export const baseDarkText =  `text-sky-200`
 
-export const baseDarkBorder = () =>{
-    return `border-sky-200`
-}
+export const accentDarkText =`text-sky-400`
+
+export const baseDarkBorder = `border-sky-200`

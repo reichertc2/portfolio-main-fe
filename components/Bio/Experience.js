@@ -27,7 +27,7 @@ export default function Experience({ jobExperience }) {
                             <button
                                 key={comp["id"]}
                                 onClick={() => openExperience(comp.id)}
-                                className={`block pl-2 py-3 border-l ${baseBorder()} dark:${baseDarkText()} text-xs text-left`}
+                                className={`block pl-2 py-3 border-l ${baseBorder} dark:${baseDarkText} text-xs text-left`}
                             >
                                 {comp["CompanyName"]}
                             </button>
@@ -35,12 +35,12 @@ export default function Experience({ jobExperience }) {
                     }
 
                 </div>
-                <div className={`dark:${baseDarkText()} inline-block w-4/5 align-top`} >
+                <div className={`dark:${baseDarkText} inline-block w-4/5 align-top`} >
                     <h3 className="text-lg inline-block">{displayedCompany.Position} </h3>
                     <Link className="inline-block" href={displayedCompany.CompanyURL}>
                         <a > --&gt; <span className="hover-underline-animation">{displayedCompany.CompanyName}</span></a>
                     </Link>
-                    <p className={`text-xs dark:${baseDarkText()} font-semibold`}>{displayedCompany.Tenure}</p>
+                    <p className={`text-xs dark:${baseDarkText} font-semibold`}>{displayedCompany.Tenure}</p>
                     <ul className="p-4 text-sm w-4/5">
 
                         {
