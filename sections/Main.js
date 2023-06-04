@@ -1,10 +1,10 @@
 import Head from 'next/head'
-import Headline from '../features/Bio/Headline'
-import AboutMe from '../features/Bio/AboutMe'
-import Experience from '../features/Bio/Experience'
-import Work from '../features/Bio/Work'
-import SubWork from '../features/Bio/SubWork'
-import ContactMe from '../features/Bio/Contact'
+import Headline from '../DevPortfolio/features/Bio/Headline'
+import AboutMe from '../DevPortfolio/features/Bio/AboutMe'
+import Experience from '../DevPortfolio/features/Bio/Experience'
+import Work from '../DevPortfolio/features/Bio/Work'
+import SubWork from '../DevPortfolio/features/Bio/SubWork'
+import ContactMe from '../DevPortfolio/features/Bio/Contact'
 
 
 export default function Main({ profileMain }) {

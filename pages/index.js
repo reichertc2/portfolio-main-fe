@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import MainPage from '../sections/MainPage'
+import MainPage from '../DevPortfolio/default/MainPage'
 import Landing from '../DevPortfolio/default/Landing'
 
 export default function Home() {

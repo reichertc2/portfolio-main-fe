@@ -1,6 +1,6 @@
 import Image from "next/image"
 import NavBar from "./NavBar"
-import { headerSectionLayout } from "../styles/styles"
+import { headerSectionLayout } from "../../styles/styles"
 
 
 export default function Header({ profileMain }) {

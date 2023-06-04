@@ -1,6 +1,6 @@
-import Header from './Header'
-import Main from './Main'
-import Footer from './Footer'
+import Header from '../../sections/Header'
+import Main from '../../sections/Main'
+import Footer from '../../sections/Footer'
 
 export default function MainPage({ profileMain }) {
 

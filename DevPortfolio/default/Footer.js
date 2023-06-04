@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { baseDarkText } from "../styles/colors"
+import { baseDarkText } from "../../styles/colors"
 
 
 export default function Footer({ profileMain }) {
