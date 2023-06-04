@@ -3,7 +3,7 @@ import 'tailwindcss/tailwind.css';
 import { config } from '@fortawesome/fontawesome-svg-core';
 import '@fortawesome/fontawesome-svg-core/styles.css';
 import { ThemeProvider } from 'next-themes';
-import Layout from '../components/Layout'
+import Layout from '../DevPortfolio/default/Layout'
 
 config.autoAddCss = false
 

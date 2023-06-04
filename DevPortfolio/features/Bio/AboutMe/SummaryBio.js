@@ -1,4 +1,4 @@
-import { bulkText } from "../../../styles/colors"
+
 
 
 export default function SummaryBio({ elevator }) {

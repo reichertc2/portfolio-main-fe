@@ -1,8 +1,8 @@
-import BasicSectionHeader from "../common/BasicSectionHeader";
+import BasicSectionHeader from "../../default/common/BasicSectionHeader";
 import Link from "next/link";
 import React from "react";
-import { baseDarkText, baseBorder } from "../../styles/colors";
-import { genericSectionLayout } from "../../styles/styles";
+import { baseDarkText, baseBorder } from "../../../styles/colors";
+import { genericSectionLayout } from "../../../styles/styles";
 
 export default function Experience({ jobExperience }) {
 
@@ -14,7 +14,7 @@ export default function Experience({ jobExperience }) {
     }
 
     return (
-        <section id="ExperienceSection" className={`${genericSectionLayout()}`}>
+        <section id="ExperienceSection" className={`${genericSectionLayout}`}>
             <BasicSectionHeader 
                 headerTitle={"Experience"}
             />

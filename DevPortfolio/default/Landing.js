@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import placeHolderImage from '../public/logo_basic.png'
+import placeHolderImage from '../../public/logo_basic.png'
 
 
 export default function Landing() {

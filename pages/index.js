@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 import MainPage from '../sections/MainPage'
-import Landing from '../components/Landing'
+import Landing from '../DevPortfolio/default/Landing'
 
 export default function Home() {
 

@@ -1,5 +1,5 @@
 import Header from './Header'
-import Main from '../DevPortfolio/default/Main'
+import Main from './Main'
 import Footer from './Footer'
 
 export default function MainPage({ profileMain }) {

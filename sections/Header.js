@@ -1,5 +1,5 @@
 import Image from "next/image"
-import NavBar from "../components/NavBar"
+import NavBar from "../DevPortfolio/default/NavBar"
 
 
 export default function Header({profileMain}) {

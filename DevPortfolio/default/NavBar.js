@@ -1,5 +1,5 @@
 import Link from "next/link"
-import Resume from "./Bio/Resume"
+import Resume from "../features/Bio/Resume"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useTheme } from "next-themes"
 import { library } from '@fortawesome/fontawesome-svg-core'

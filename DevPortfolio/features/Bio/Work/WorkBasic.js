@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { baseDarkBorder, baseDarkText } from "../../../styles/colors"
+import { baseDarkBorder, baseDarkText } from "../../../../styles/colors"
 
 
 export default function WorkBasic({ project }) {

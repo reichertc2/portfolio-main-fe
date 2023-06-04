@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react"
 import Image from "next/image"
-import { baseDarkText,  } from "../../styles/colors"
-import { genericSectionLayout, genericSectionTransition } from "../../styles/styles"
+import { genericSectionLayout, genericSectionTransition } from "../../../styles/styles"
 import SummaryBio from "./AboutMe/SummaryBio"
 import ListBlock from "./AboutMe/ListBlock"
-import BasicSectionHeader from "../common/BasicSectionHeader"
+import BasicSectionHeader from "../../default/common/BasicSectionHeader"
+import { profileImageAboutMe, aboutMeImageSection } from "../../../styles/styles"
 
 
 export default function AboutMe({ aboutMe }) {
@@ -21,17 +21,17 @@ export default function AboutMe({ aboutMe }) {
     // }, [])
 
     return (
-        <section id="AboutMeSection" className={genericSectionLayout()}>
-            <BasicSectionHeader 
+        <section id="AboutMeSection" className={genericSectionLayout}>
+            <BasicSectionHeader
                 headerTitle={"About Me"}
             />
-         
-            <SummaryBio 
+
+            <SummaryBio
                 elevator={aboutMe.elevator}
             />
-            <div className=" w-2/5 px-4 inline-block align-top ">
+            <div className={`${aboutMeImageSection}`}>
                 <Image
-                    className=' rounded-md'
+                    className={`${profileImageAboutMe}`}
                     src={aboutMe.profileImage}
                     alt='profileImage'
                     width={300}
@@ -44,7 +44,7 @@ export default function AboutMe({ aboutMe }) {
                     listProps={aboutMe.languages}
                     orientation={"vertical"}
                 />
-                <ListBlock 
+                <ListBlock
                     title="Tools"
                     listProps={aboutMe.tools}
                     orientation={"horizontal"}
