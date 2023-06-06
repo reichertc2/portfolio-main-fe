@@ -5,6 +5,7 @@ import { useTheme } from "next-themes"
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faMoon } from "@fortawesome/free-solid-svg-icons"
 import { faSun } from "@fortawesome/free-solid-svg-icons"
+import { baseDarkText, baseText, lightText } from "@/app/styles/colors"
 
 
 library.add(faMoon, faSun)
@@ -13,7 +14,7 @@ interface INavBarProps {
 
 }
 
-export const NavBar: React.FC<INavBarProps>=() =>{
+export const NavBar: React.FC<INavBarProps> = () => {
 
     const { systemTheme, theme, setTheme } = useTheme();
 
@@ -23,7 +24,7 @@ export const NavBar: React.FC<INavBarProps>=() =>{
 
         if (currentTheme === 'dark') {
             return (
-                <button className=""
+                <button className={lightText}
                     onClick={() => setTheme('light')}
                 >
                     <FontAwesomeIcon icon={faSun} />
@@ -31,7 +32,7 @@ export const NavBar: React.FC<INavBarProps>=() =>{
             )
         } else {
             return (
-                <button className=""
+                <button className={baseText}
                     onClick={() => setTheme('dark')}
                 >
                     <FontAwesomeIcon icon={faMoon} />
@@ -48,11 +49,17 @@ export const NavBar: React.FC<INavBarProps>=() =>{
     ]
 
     return (
-        <nav id="leftNavBar" className="inline-block w-11/12 align-top">
+        <nav
+            id="leftNavBar"
+            className="inline-block w-11/12 align-top"
+        >
             <ul className="flex justify-end">
 
                 {navigations.map(nav => (
-                    <li key={nav.label} className="px-2 dark:text-sky-200 pt-4">
+                    <li
+                        key={nav.label}
+                        className={`px-2 dark:${baseDarkText} pt-4`}
+                    >
                         <Link href={nav.path}>
                             <span className="hover-underline-animation">{nav.label}</span>
                         </Link>
@@ -61,9 +68,9 @@ export const NavBar: React.FC<INavBarProps>=() =>{
                 )
                 }
 
-                <li className="px-2 dark:text-sky-200 pt-2">
+                <li className={`px-2 dark:${baseDarkText} pt-2`}>
                 </li>
-                <li className="px-2 darK:text-sky-200 pt-4">
+                <li className={`px-2 dark:${baseDarkText} pt-4`}>
                     {renderThemeChanger()}
                 </li>
             </ul>

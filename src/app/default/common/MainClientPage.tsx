@@ -20,7 +20,7 @@ export default function MainClientPage() {
 
     return (
         <>
-            {entered ? <MainPage user={profileMain} /> : <LandingPage />}
+            {entered ? <MainPage user={profileMain} /> : <LandingPage profile={profileMain["profile"]}/>}
         </>
     )
 }

@@ -14,3 +14,7 @@ export const profileImageAboutMe = `rounded-md`
 export const aboutMeImageSection = `w-2/5 px-4 inline-block align-top `
 
 export const subHeaderText = `text-xl dark:${baseDarkText} py-1 font-semibold`
+
+export const landingPageGrid = `m-auto w-4/5 min-h-screen grid grid-cols-7 gap-6 grid-rows-5`
+
+export const landingPageCenterLogo = `col-start-4 col-end-5 row-start-3 row-end-4`
