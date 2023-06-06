@@ -1,12 +1,14 @@
 # Professional Developer Portfolio 
 
 **Author**: Chris Reichert
-**Version**: 1.0.1 Version 1 - Minimalistic
+**Version**: 2.0.1 Version 1 - TS Integration and Testing
 
 ## Architecture
 
 - Next JS
 - Tailwind CSS
+- Jest
+- Typescript
 
 ## Credit and Collaboration(s)
 
