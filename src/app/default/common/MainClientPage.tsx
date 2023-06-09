@@ -1,9 +1,9 @@
 "use client";
 
-import { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react';
 import LandingPage from './LandingPage';
 import MainPage from './MainPage';
-import { user } from '../../../../data/user'
+import { user } from '../../../../data/user';
 import { IUserData } from '../models/user';
 
 export default function MainClientPage() {

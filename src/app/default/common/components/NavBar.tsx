@@ -6,15 +6,17 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { faMoon } from "@fortawesome/free-solid-svg-icons"
 import { faSun } from "@fortawesome/free-solid-svg-icons"
 import { baseDarkText, baseText, lightText } from "@/app/styles/colors"
+import { INavigation } from "../../models/navigation"
 
 
 library.add(faMoon, faSun)
 
 interface INavBarProps {
-
+    navigations: INavigation[];
+    showThemeChange: boolean;
 }
 
-export const NavBar: React.FC<INavBarProps> = () => {
+export const NavBar: React.FC<INavBarProps> = ({ navigations, showThemeChange }) => {
 
     const { systemTheme, theme, setTheme } = useTheme();
 
@@ -41,12 +43,6 @@ export const NavBar: React.FC<INavBarProps> = () => {
         }
     }
 
-    const navigations = [
-        { label: 'About', path: '#AboutMeSection' },
-        { label: 'Experience', path: '#ExperienceSection' },
-        { label: 'Work', path: '#WorkSection' },
-        { label: 'Contact', path: '#ContactSection' },
-    ]
 
     return (
         <nav
@@ -70,9 +66,14 @@ export const NavBar: React.FC<INavBarProps> = () => {
 
                 <li className={`px-2 dark:${baseDarkText} pt-2`}>
                 </li>
-                <li className={`px-2 dark:${baseDarkText} pt-4`}>
-                    {renderThemeChanger()}
-                </li>
+                {
+                    showThemeChange ?
+                        <li className={`px-2 dark:${baseDarkText} pt-4`}>
+                            {renderThemeChanger()}
+                        </li>
+                        : ""
+                }
+
             </ul>
 
         </nav>

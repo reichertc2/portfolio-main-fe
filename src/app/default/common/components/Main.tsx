@@ -23,7 +23,9 @@ export const Main: React.FC<IMainProps> = ({ profileMain }) => {
             </Head>
             <main className='m-auto w-2/3' >
                 <article
-                    id="mainContainer">
+                    id="mainContainer"
+                    className={``}
+                    >
                     <Headline headLine={profileMain["profile"]} />
                     <AboutMe aboutMe={profileMain["aboutMe"]} />
                     <Experience jobExperience={profileMain["jobs"]} />

@@ -7,6 +7,9 @@ export const headerSectionLayout = `pt-2 pl-3`
 
 export const genericSectionLayout = `py-24 w-full pl-8`
 
+export const dynamicSectionLayout = `flex justify-start p-1 w-full`
+
+
 export const genericSectionTransition = `${genericSectionLayout} `
 
 export const profileImageAboutMe = `rounded-md`

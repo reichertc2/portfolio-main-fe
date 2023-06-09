@@ -1,6 +1,7 @@
 import Image from "next/image"
 import NavBar from "./NavBar"
 import { IUserData } from "../../models/user";
+import { INavigation } from "../../models/navigation";
 
 interface IHeaderProps {
     profileMain: IUserData;
@@ -10,6 +11,9 @@ interface IHeaderProps {
 
 export const Header: React.FC<IHeaderProps> = ({ profileMain }) => {
 
+    const navigations: INavigation[] = [
+        { label: 'Profile', path: '#AboutMeSection' },
+    ]
 
 
     return (
@@ -19,7 +23,11 @@ export const Header: React.FC<IHeaderProps> = ({ profileMain }) => {
                 src={profileMain.profile.logo.image}
                 alt={profileMain.profile.logo.alt}
             />
-            <NavBar />
+            <NavBar
+                navigations={navigations}
+                showThemeChange={true}
+
+            />
 
         </header>
     )
