@@ -1,13 +1,11 @@
 "use client"
 
-
 import Image from "next/image"
 import Link from "next/link"
 // import Resume from "../features/Bio/Resume"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useTheme } from "next-themes"
 import { faMoon, faSun, faBars, faXmark } from "@fortawesome/free-solid-svg-icons"
-
 import { INavigation } from "../../models/navigation"
 import { useState } from "react"
 
@@ -20,7 +18,7 @@ interface INavBarProps {
 export const NavBar: React.FC<INavBarProps> = ({ navigations, logo, showThemeChange }) => {
 
     const { systemTheme, theme, setTheme } = useTheme();
-    const [navMenu, setNavMenu] = useState<boolean>(true)
+    const [navMenu, setNavMenu] = useState<boolean>(false)
 
     const renderThemeChanger = () => {
 
@@ -48,7 +46,6 @@ export const NavBar: React.FC<INavBarProps> = ({ navigations, logo, showThemeCha
     const handleNavMenu = () => {
         setNavMenu(!navMenu)
     }
-
 
     return (
         <nav
@@ -104,7 +101,7 @@ export const NavBar: React.FC<INavBarProps> = ({ navigations, logo, showThemeCha
                         {navigations.map(nav => (
                             <li
                                 key={nav.label}
-                                className={`p-4 tex-4xl dark:text-stone-900 hover:text-sky-600`}
+                                className={`p-4 text-4xl dark:text-stone-900 hover:text-sky-600`}
                             >
                                 <Link href={nav.path}>
                                     <span className="hover-underline-animation">{nav.label}</span>
