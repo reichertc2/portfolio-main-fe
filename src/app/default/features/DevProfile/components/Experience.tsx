@@ -19,7 +19,7 @@ export const Experience: React.FC<IExperienceProps> = ({ jobExperience }) => {
     }
 
     return (
-        <section id="ExperienceSection" className={`${genericSectionLayout}`}>
+        <section id="ExperienceSection" className={`py-24 w-full pl-8`}>
             <BasicSectionHeader
                 headerTitle={"Experience"}
             />
@@ -32,7 +32,7 @@ export const Experience: React.FC<IExperienceProps> = ({ jobExperience }) => {
                             <button
                                 key={comp["id"]}
                                 onClick={() => openExperience(comp.id)}
-                                className={`block pl-2 py-3 border-l ${baseBorder} dark:${baseDarkText} text-xs text-left`}
+                                className={`block pl-2 py-3 border-l border-sky-700 dark:text-stone-900 text-xs text-left`}
                             >
                                 {comp["CompanyName"]}
                             </button>
@@ -40,12 +40,12 @@ export const Experience: React.FC<IExperienceProps> = ({ jobExperience }) => {
                     }
 
                 </div>
-                <div className={`dark:${baseDarkText} inline-block w-4/5 align-top`} >
+                <div className={`dark:text-stone-900 inline-block w-4/5 align-top`} >
                     <h3 className="text-lg inline-block">{displayedCompany.Position} </h3>
                     <Link className="inline-block" href={displayedCompany.CompanyURL}>
                         <span> --&gt; <span className="hover-underline-animation">{displayedCompany.CompanyName}</span></span>
                     </Link>
-                    <p className={`text-xs dark:${baseDarkText} font-semibold`}>{displayedCompany.Tenure}</p>
+                    <p className={`text-xs dark:text-stone-900 font-semibold`}>{displayedCompany.Tenure}</p>
                     <ul className="p-4 text-sm w-4/5">
 
                         {

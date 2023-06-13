@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react"
 import Image from "next/image"
-import { genericSectionLayout, profileImageAboutMe, aboutMeImageSection } from "../../../../styles/styles"
 import SummaryBio from "./AboutMe/SummaryBio"
 import ListBlock from "./AboutMe/ListBlock"
 import BasicSectionHeader from "../../../common/components/BasicSectionHeader"
@@ -27,7 +26,7 @@ export const AboutMe: React.FC<IAboutMeProps> = ({ aboutMe }) => {
     // }, [])
 
     return (
-        <section id="AboutMeSection" className={genericSectionLayout}>
+        <section id="AboutMeSection" className={`flex justify-start p-1 w-full`}>
             <BasicSectionHeader
                 headerTitle={"About Me"}
             />
@@ -35,9 +34,9 @@ export const AboutMe: React.FC<IAboutMeProps> = ({ aboutMe }) => {
             <SummaryBio
                 elevator={aboutMe.elevator}
             />
-            <div className={`${aboutMeImageSection}`}>
+            <div className={`w-2/5 px-4 inline-block align-top`}>
                 <Image
-                    className={`${profileImageAboutMe}`}
+                    className={`rounded-md`}
                     src={aboutMe.profileImage}
                     alt='profileImage'
                     width={300}

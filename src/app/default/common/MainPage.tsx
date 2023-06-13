@@ -13,7 +13,7 @@ export const MainPage: React.FC<IMainPageProps> = ({ user }) => {
         <div className='m-auto min-h-screen'>
             <Header profileMain={user} />
             <Main profileMain={user} />
-            <Footer profileMain={user} />
+            {/* <Footer profileMain={user} /> */}
         </div>
     )
 }

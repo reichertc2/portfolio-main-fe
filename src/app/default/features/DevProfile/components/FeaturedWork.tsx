@@ -10,7 +10,7 @@ interface IFeaturedWorkProps {
 
 export const FeaturedWork: React.FC<IFeaturedWorkProps> = ({ projectWorks }) => {
     return (
-        <section id="WorkSection" className={`${genericSectionLayout}`}>
+        <section id="WorkSection" className={`py-24 w-full pl-8`}>
             <BasicSectionHeader
                 headerTitle={"Work"} />
 

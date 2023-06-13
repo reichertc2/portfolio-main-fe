@@ -8,7 +8,7 @@ export const BasicSectionHeader: React.FC<IBasicSectionHeader> = ({ headerTitle 
     return (
 
         <h3
-            className={`${subHeaderText}`}>
+            className={`text-xl dark:text-stone-900 py-1 font-semibold`}>
             {headerTitle}
         </h3>
 

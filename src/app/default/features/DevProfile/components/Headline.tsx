@@ -1,5 +1,3 @@
-import { dynamicSectionLayout, genericSectionLayout } from "../../../../styles/styles";
-import { baseDarkText, lightText } from "../../../../styles/colors";
 import { IProfile } from "@/app/default/models/user";
 import NavBar from "@/app/default/common/components/NavBar";
 import { INavigation } from "@/app/default/models/navigation";
@@ -19,15 +17,15 @@ interface IHeadlineStyle {
 export const Headline: React.FC<IHeadlineProps> = ({ headLine }) => {
 
     const headlineStyleLarge: IHeadlineStyle = {
-        section: `${dynamicSectionLayout}`,
-        name: `dark:${lightText} text-7xl font-semibold py-1`,
-        headline: `dark:${baseDarkText} text-5xl font-semibold italic  pt-1 pb-3 opacity-70`
+        section: `flex justify-start p-1 w-full`,
+        name: `dark:text-stone-100 text-7xl font-semibold py-1`,
+        headline: `dark:text-stone-900 text-5xl font-semibold italic  pt-1 pb-3 opacity-70`
     }
 
     const headlineStyleSmall: IHeadlineStyle = {
-        section: `${dynamicSectionLayout} justify-start`,
-        name: ` ${lightText} text-4xl font-semibold scale-50 w-full`,
-        headline: `dark:${baseDarkText} text-2xl font-semibold italic opacity-70 scale-50 w-full`
+        section: `flex justify-start p-1 w-full justify-start`,
+        name: `text-stone-100 text-4xl font-semibold scale-50 w-full`,
+        headline: `dark:text-stone-900 text-2xl font-semibold italic opacity-70 scale-50 w-full`
     }
 
     const [headlineStyle, setHeadlineStyle] = useState<IHeadlineStyle>(headlineStyleLarge)
@@ -39,15 +37,15 @@ export const Headline: React.FC<IHeadlineProps> = ({ headLine }) => {
         { label: 'Contact', path: '#ContactSection' },
     ]
 
-    const handleSizeStyleChange = () => {
-        setTimeout(() => setHeadlineStyle(headlineStyleSmall), 1000)
+    // const handleSizeStyleChange = () => {
+    //     setTimeout(() => setHeadlineStyle(headlineStyleSmall), 1000)
 
-        console.log("handleSizeStyleChange")
-    }
+    //     console.log("handleSizeStyleChange")
+    // }
 
-    useEffect(() => {
-        handleSizeStyleChange()
-    }, [])
+    // useEffect(() => {
+    //     handleSizeStyleChange()
+    // }, [])
 
     return (
         <section className="flex">
@@ -62,10 +60,10 @@ export const Headline: React.FC<IHeadlineProps> = ({ headLine }) => {
 
      
             </div>
-           <NavBar
+           {/* <NavBar
                 navigations={navigations}
                 showThemeChange={false}
-            />
+            /> */}
         </section>
     )
 }

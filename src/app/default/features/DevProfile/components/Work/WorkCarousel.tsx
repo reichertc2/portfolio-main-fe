@@ -20,7 +20,7 @@ export const WorkCarousel: React.FC<IWorkCarouselProps> = ({ projectWorks }) => 
     return (
         <section id="WorkSection" className="py-24 w-4/5 pl-8">
             <h3
-                className={`text-xl dark:${baseDarkText} py-1 font-semibold`}>
+                className={`text-xl dark:text-stone-900 py-1 font-semibold`}>
                 Work
             </h3>
 
@@ -41,15 +41,15 @@ export const WorkCarousel: React.FC<IWorkCarouselProps> = ({ projectWorks }) => 
                             />
                         </div>
                         <div className="inline-block w-3/5 align-top">
-                            <h4 className={`dark:${baseDarkText} italic text-right`}>Featured Project</h4>
-                            <h3 className={`text-xl dark:${baseDarkText} py-1 font-semibold text-right`}>{project.title}</h3>
-                            <p className={`dark:${baseDarkText} dark:${baseDarkBorder} p-1 rounded-md m-3 text-right`}>{project.description}</p>
+                            <h4 className={`dark:text-stone-900 italic text-right`}>Featured Project</h4>
+                            <h3 className={`text-xl dark:text-stone-900 py-1 font-semibold text-right`}>{project.title}</h3>
+                            <p className={`dark:text-stone-900 dark:border-sky-200 p-1 rounded-md m-3 text-right`}>{project.description}</p>
                             <ul className="text-right p-3">
 
                                 {
                                     project.toolList.map(tool =>
                                         <li key={tool}
-                                            className={`inline-block px-2 dark:${baseDarkText}`}
+                                            className={`inline-block px-2 dark:text-stone-900`}
                                         >
                                             {tool}
                                         </li>
@@ -64,7 +64,7 @@ export const WorkCarousel: React.FC<IWorkCarouselProps> = ({ projectWorks }) => 
                                     project.urlList.map(url =>
                                         <li
                                             key={url.name}
-                                            className={`inline-block px-2 dark:${baseDarkText}`}
+                                            className={`inline-block px-2 dark:text-stone-900`}
                                         >
                                             <Link href={url.url}>
                                                 <span>

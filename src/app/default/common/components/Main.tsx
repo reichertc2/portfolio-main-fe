@@ -26,12 +26,12 @@ export const Main: React.FC<IMainProps> = ({ profileMain }) => {
                     id="mainContainer"
                     className={``}
                     >
-                    <Headline headLine={profileMain["profile"]} />
-                    <AboutMe aboutMe={profileMain["aboutMe"]} />
+                    {/* <Headline headLine={profileMain["profile"]} /> */}
+                    {/* <AboutMe aboutMe={profileMain["aboutMe"]} />
                     <Experience jobExperience={profileMain["jobs"]} />
                     <FeaturedWork projectWorks={profileMain["projects"]} />
                     <SubWork projectWorks={profileMain["subprojects"]} />
-                    <ContactMe contactInfo={profileMain["contactInfo"]} />
+                    <ContactMe contactInfo={profileMain["contactInfo"]} /> */}
                 </article>
             </main>
         </>

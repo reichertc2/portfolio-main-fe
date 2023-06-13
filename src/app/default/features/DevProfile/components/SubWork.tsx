@@ -12,7 +12,7 @@ interface ISubWorkProps {
 
 export const SubWork: React.FC<ISubWorkProps> = ({ projectWorks }) => {
   return (
-    <section id="WorkSection" className={`${genericSectionLayout}`}>
+    <section id="WorkSection" className={`py-24 w-full pl-8`}>
       <BasicSectionHeader headerTitle={"Other Projects"} />
       <div className="inline-grid grid-cols-3 gap-3">
         {projectWorks.map((project, idx) => (
@@ -28,12 +28,12 @@ export const SubWork: React.FC<ISubWorkProps> = ({ projectWorks }) => {
 
               <div className="absolute -left-0 -bottom-0 opacity-0 hover:opacity-90 pb-4 pl-1">
                 <h3
-                  className={`text-xl dark:${baseDarkText} py-1 font-semibold`}
+                  className={`text-xl dark:text-stone-900 py-1 font-semibold`}
                 >
                   {project.title}
                 </h3>
                 <p
-                  className={`text-md dark:${baseDarkText} py-1 font-semibold`}
+                  className={`text-md dark:text-stone-900 py-1 font-semibold`}
                 >
                   {project.description}
                 </p>
@@ -42,7 +42,7 @@ export const SubWork: React.FC<ISubWorkProps> = ({ projectWorks }) => {
                   {project.urlList.map((url) => (
                     <li
                       key={url.name}
-                      className={`inline-block px-2 dark:${baseDarkText}`}
+                      className={`inline-block px-2 dark:text-stone-900`}
                     >
                       <Link href={url.url}>
                         <span>
