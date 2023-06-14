@@ -2,14 +2,14 @@ import { IStyles } from "../MainClientPage";
 
 interface IBasicSectionHeader {
     headerTitle: string;
-    styles: IStyles
+    styles?: IStyles
 }
 export const BasicSectionHeader: React.FC<IBasicSectionHeader> = ({ headerTitle, styles }) => {
 
     return (
 
         <h3
-            className={`text-xl dark:${styles.darkText} py-1 font-semibold`}>
+            className={`text-xl dark:text-stone-100 py-1 font-semibold`}>
             {headerTitle}
         </h3>
 

@@ -12,7 +12,7 @@ import { IStyles } from '../MainClientPage'
 
 interface IMainProps {
     profileMain: IUserData;
-    styles: IStyles;
+    styles?: IStyles;
 }
 
 export const Main: React.FC<IMainProps> = ({ profileMain, styles }) => {
@@ -34,11 +34,14 @@ export const Main: React.FC<IMainProps> = ({ profileMain, styles }) => {
                         headLine={profileMain["profile"]}
                         styles={styles}
                     />
-                    <AboutMe 
-                    aboutMe={profileMain["aboutMe"]} 
-                    styles={styles}
+                    <AboutMe
+                        aboutMe={profileMain["aboutMe"]}
+                        styles={styles}
                     />
-                    {/* <Experience jobExperience={profileMain["jobs"]} /> */}
+                    <Experience
+                        jobExperience={profileMain["jobs"]}
+                        styles={styles}
+                    />
                     {/* <FeaturedWork projectWorks={profileMain["projects"]} /> */}
                     {/* <SubWork projectWorks={profileMain["subprojects"]} /> */}
                     {/* <ContactMe contactInfo={profileMain["contactInfo"]} /> */}

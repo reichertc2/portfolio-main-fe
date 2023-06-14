@@ -42,7 +42,6 @@ export default function MainClientPage() {
             {entered ?
                 <MainPage
                     user={profileMain}
-                    styles={styles}
                 /> :
                 <LandingPage
                     profile={profileMain["profile"]}

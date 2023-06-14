@@ -5,7 +5,7 @@ import { IStyles } from "../MainClientPage";
 
 interface IHeaderProps {
     profileMain: IUserData;
-    styles: IStyles;
+    styles?: IStyles;
 }
 
 

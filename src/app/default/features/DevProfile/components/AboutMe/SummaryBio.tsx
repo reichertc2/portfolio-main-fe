@@ -4,7 +4,7 @@ import { IStyles } from "@/app/default/common/MainClientPage";
 
 interface ISummaryBio {
     elevator: string[];
-    styles: IStyles;
+    styles?: IStyles;
 }
 
 export const SummaryBio: React.FC<ISummaryBio> = ({ elevator, styles }) => {
@@ -17,7 +17,7 @@ export const SummaryBio: React.FC<ISummaryBio> = ({ elevator, styles }) => {
                     elevator.map((text, idx) =>
                         <p
                             key={`${text}-${idx}`}
-                            className={`dark:${styles.darkStandardText} py-2`}
+                            className={`dark:text-sky-200 py-2`}
                         >
                             {text}
                         </p>
@@ -32,7 +32,7 @@ export const SummaryBio: React.FC<ISummaryBio> = ({ elevator, styles }) => {
                     elevator.map((text, idx) =>
                         <p
                             key={`${text}-${idx}`}
-                            className={`dark:${styles.darkStandardText} py-2 text-sm`}
+                            className={`dark:text-sky-200 py-2 text-sm`}
                         >
                             {text}
                         </p>

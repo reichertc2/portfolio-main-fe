@@ -10,7 +10,7 @@ import { IStyles } from "@/app/default/common/MainClientPage";
 
 interface IAboutMeProps {
     aboutMe: IAboutMe;
-    styles: IStyles;
+    styles?: IStyles;
 }
 
 export const AboutMe: React.FC<IAboutMeProps> = ({ aboutMe, styles }) => {

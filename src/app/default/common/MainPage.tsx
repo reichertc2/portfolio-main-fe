@@ -8,7 +8,7 @@ import Main from "./components/Main";
 
 interface IMainPageProps {
     user: IUserData;
-    styles: IStyles;
+    styles?: IStyles;
 }
 
 export const MainPage: React.FC<IMainPageProps> = ({ user, styles }) => {
@@ -17,15 +17,12 @@ export const MainPage: React.FC<IMainPageProps> = ({ user, styles }) => {
         <div className='m-auto min-h-screen'>
             <Header
                 profileMain={user}
-                styles={styles}
             />
             <Main
                 profileMain={user}
-                styles={styles}
             />
             <Footer
                 profileMain={user}
-                styles={styles}
             />
         </div>
     )

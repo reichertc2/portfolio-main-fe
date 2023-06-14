@@ -28,7 +28,7 @@ export const NavBar: React.FC<INavBarProps> = ({ styles, navigations, logo, show
 
         if (currentTheme === 'dark') {
             return (
-                <button className={`${styles.accentText}`}
+                <button className={`text-sky-200`}
                     onClick={() => setTheme('light')}
                 >
                     <FontAwesomeIcon icon={faSun} />
@@ -36,7 +36,7 @@ export const NavBar: React.FC<INavBarProps> = ({ styles, navigations, logo, show
             )
         } else {
             return (
-                <button className={`${styles.standadText}`}
+                <button className={`text-stone-900`}
                     onClick={() => setTheme('dark')}
                 >
                     <FontAwesomeIcon icon={faMoon} />
@@ -66,7 +66,7 @@ export const NavBar: React.FC<INavBarProps> = ({ styles, navigations, logo, show
                     {navigations.map(nav => (
                         <li
                             key={nav.label}
-                            className={`px-2 dark:${styles.accentText} pt-4`}
+                            className={`px-2 dark:text-sky-200 pt-4`}
                         >
                             <Link href={nav.path}>
                                 <span className="hover-underline-animation">{nav.label}</span>
@@ -76,11 +76,11 @@ export const NavBar: React.FC<INavBarProps> = ({ styles, navigations, logo, show
                     )
                     }
 
-                    <li className={`px-2 dark:${styles.standadText} pt-2`}>
+                    <li className={`px-2 dark:text-stone-900 pt-2`}>
                     </li>
                     {
                         showThemeChange ?
-                            <li className={`px-2 dark:${styles.standadText} pt-4`}>
+                            <li className={`px-2 dark:text-stone-900 pt-4`}>
                                 {renderThemeChanger()}
                             </li>
                             : ""
@@ -89,13 +89,13 @@ export const NavBar: React.FC<INavBarProps> = ({ styles, navigations, logo, show
                 </ul>
                 {/* Mobile Button and Menu */}
                 <button
-                    className={navMenu ? `sm:hidden block dark:${styles.standadText} z-10 p-4` : `sm:hidden block dark:${styles.accentText} z-10 p-4`}
+                    className={navMenu ? `sm:hidden block dark:text-stone-900 z-10 p-4` : `sm:hidden block dark:text-sky-200 z-10 p-4`}
                     onClick={handleNavMenu}
                 >
                     {navMenu ? <FontAwesomeIcon icon={faXmark} /> : <FontAwesomeIcon icon={faBars} />}
                 </button>
                 <div
-                    className={navMenu ? `sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen ${styles.whiteBg} text-center ease-in duration-300` : `sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen ${styles.whiteBg} text-center ease-in duration-300`}
+                    className={navMenu ? `sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-stone-200 text-center ease-in duration-300` : `sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-stone-200 text-center ease-in duration-300`}
                 >
 
                     <ul className="">
@@ -103,7 +103,7 @@ export const NavBar: React.FC<INavBarProps> = ({ styles, navigations, logo, show
                         {navigations.map(nav => (
                             <li
                                 key={nav.label}
-                                className={`p-4 text-4xl dark:${styles.standadText} hover:${styles.secondaryAccentText}`}
+                                className={`p-4 text-4xl dark:text-stone-900 hover:text-sky-600`}
                             >
                                 <Link href={nav.path}>
                                     <span className="hover-underline-animation">{nav.label}</span>

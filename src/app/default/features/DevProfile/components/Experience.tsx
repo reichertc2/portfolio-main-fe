@@ -1,15 +1,16 @@
 import BasicSectionHeader from "../../../common/components/BasicSectionHeader";
 import Link from "next/link";
 import React from "react";
-import { baseDarkText, baseBorder } from "../../../../styles/colors";
-import { genericSectionLayout } from "../../../../styles/styles";
+
 import { IJobInfo } from "@/app/default/models/user";
+import { IStyles } from "@/app/default/common/MainClientPage";
 
 interface IExperienceProps {
     jobExperience: IJobInfo[];
+    styles?: IStyles;
 }
 
-export const Experience: React.FC<IExperienceProps> = ({ jobExperience }) => {
+export const Experience: React.FC<IExperienceProps> = ({ jobExperience, styles }) => {
 
     const [displayedCompany, setDisplayedCompany] = React.useState(jobExperience[0])
 
@@ -22,6 +23,7 @@ export const Experience: React.FC<IExperienceProps> = ({ jobExperience }) => {
         <section id="ExperienceSection" className={`py-24 w-full pl-8`}>
             <BasicSectionHeader
                 headerTitle={"Experience"}
+                styles={styles}
             />
             <div id="ExperienceTabs" className="inline-block w-full py-8">
                 <div id="tab" className="w-1/5 inline-block">
@@ -32,7 +34,7 @@ export const Experience: React.FC<IExperienceProps> = ({ jobExperience }) => {
                             <button
                                 key={comp["id"]}
                                 onClick={() => openExperience(comp.id)}
-                                className={`block pl-2 py-3 border-l border-sky-700 dark:text-stone-900 text-xs text-left`}
+                                className={`block pl-2 py-3 border-l border-sky-700 dark:text-stone-100 text-xs text-left`}
                             >
                                 {comp["CompanyName"]}
                             </button>
