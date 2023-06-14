@@ -6,7 +6,7 @@ import AboutMe from '../../features/DevProfile/components/AboutMe'
 import Experience from '../../features/DevProfile/components/Experience'
 import FeaturedWork from '../../features/DevProfile/components/FeaturedWork'
 import SubWork from '../../features/DevProfile/components/SubWork'
-import ContactMe from '../../features/DevProfile/components/Contact'
+import ContactMe from '../../features/DevProfile/components/ContactMe'
 import { IUserData } from '../../models/user'
 import { IStyles } from '../MainClientPage'
 
@@ -42,9 +42,9 @@ export const Main: React.FC<IMainProps> = ({ profileMain, styles }) => {
                         jobExperience={profileMain["jobs"]}
                         styles={styles}
                     />
-                    {/* <FeaturedWork projectWorks={profileMain["projects"]} /> */}
-                    {/* <SubWork projectWorks={profileMain["subprojects"]} /> */}
-                    {/* <ContactMe contactInfo={profileMain["contactInfo"]} /> */}
+                    <FeaturedWork projectWorks={profileMain["projects"]} />
+                    <SubWork projectWorks={profileMain["subprojects"]} />
+                    <ContactMe contactInfo={profileMain["contactInfo"]} />
                 </article>
             </main>
         </>

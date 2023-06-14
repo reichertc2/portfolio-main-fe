@@ -2,19 +2,18 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
 import BasicSectionHeader from "../../../common/components/BasicSectionHeader";
-import { baseDarkText } from "../../../../styles/colors";
-import { genericSectionLayout } from "../../../../styles/styles";
 import { IProjectInfo } from "@/app/default/models/user";
+import UnderConstruction from "@/app/default/common/components/UnderConstruction";
 
 interface ISubWorkProps {
-    projectWorks: IProjectInfo[]
+  projectWorks: IProjectInfo[]
 }
 
 export const SubWork: React.FC<ISubWorkProps> = ({ projectWorks }) => {
   return (
-    <section id="WorkSection" className={`py-24 w-full pl-8`}>
+    <section id="WorkSection" className={`w-full`}>
       <BasicSectionHeader headerTitle={"Other Projects"} />
-      <div className="inline-grid grid-cols-3 gap-3">
+      <div className="hidden sm:grid inline-grid grid-cols-3 gap-3">
         {projectWorks.map((project, idx) => (
           <div key={project["id"]} className="py-8 col-span-1">
             <div className="inline-block w-full relative ">
@@ -60,6 +59,11 @@ export const SubWork: React.FC<ISubWorkProps> = ({ projectWorks }) => {
           </div>
         ))}
       </div>
+      {/* TODO Mobile */}
+      <div className={`sm:hidden flex`}>
+        <UnderConstruction />
+      </div>
+
     </section>
   );
 }

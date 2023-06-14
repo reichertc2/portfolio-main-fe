@@ -1,9 +1,8 @@
 import Link from 'next/link'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { baseDarkText, baseText } from '../../../../styles/colors'
-import { genericSectionLayout } from '../../../../styles/styles'
 import BasicSectionHeader from '../../../common/components/BasicSectionHeader'
 import { IContactInfo } from '@/app/default/models/user'
+import UnderConstruction from '@/app/default/common/components/UnderConstruction';
 
 interface IContactMeProps {
     contactInfo: IContactInfo;
@@ -12,11 +11,11 @@ interface IContactMeProps {
 export const ContactMe: React.FC<IContactMeProps>= ({ contactInfo })=> {
 
     return (
-        <section id="ContactSection" className={`py-24 w-full pl-8`}>
+        <section id="ContactSection" className={`w-full`}>
             <BasicSectionHeader
                 headerTitle={"Contact"}
             />
-            <div className="inline-block w-full text-center">
+            <div className="hidden sm:block inline-block w-full text-center">
 
                 <h2 className={`text-7xl font-semibold italic dark:text-stone-900 pt-1 pb-3 opacity-70`}>
                     Reach Out
@@ -52,6 +51,10 @@ export const ContactMe: React.FC<IContactMeProps>= ({ contactInfo })=> {
 
                 </ul>
             </div>
+                {/* TODO Mobile */}
+      <div className={`sm:hidden flex`}>
+        <UnderConstruction />
+      </div>
         </section>
     )
 }
