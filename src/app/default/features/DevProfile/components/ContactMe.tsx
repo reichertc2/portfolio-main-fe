@@ -36,8 +36,9 @@ export const ContactMe: React.FC<IContactMeProps> = ({ contactInfo }) => {
                     {
                         contactInfo.socials.map((social, idx) => (
                             <li
-                                key={social.icon}
-                                className="inline-block px-2 w-1/12">
+                                key={social.id}
+                                className="inline-block px-2 w-1/12"
+                            >
                                 <Link href={social.url}>
                                     <span>
                                         <FontAwesomeIcon
@@ -67,8 +68,9 @@ export const ContactMe: React.FC<IContactMeProps> = ({ contactInfo }) => {
                     {
                         contactInfo.socials.map((social, idx) => (
                             <li
-                                key={social.icon}
-                                className="inline-block px-2 w-50">
+                                key={`${social.id}-m`}
+                                className="inline-block px-2 w-50"
+                            >
                                 <Link href={social.url}>
                                     <span>
                                         <FontAwesomeIcon

@@ -47,6 +47,7 @@ export interface IContactInfo {
 }
 
 export interface ISocialInfo {
+    id: string;
     url: string;
     icon?: any;
 }

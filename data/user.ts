@@ -217,10 +217,12 @@ export const user: IUserData = {
       "Currently looking for meaningful work and my inbox is open. Please say hello or send me comments. Have a great day.",
     socials: [
       {
+        id: "ci-01",
         url: "https://github.com/reichertc2",
         icon: faGithub,
       },
       {
+        id: "ci-02",
         url: "https://www.linkedin.com/in/christopher-reichert/",
         icon: faLinkedin,
       },
