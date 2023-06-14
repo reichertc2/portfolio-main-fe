@@ -26,15 +26,15 @@ export const user: IUserData = {
       "I revisited programming, after hitting a barrier in the potential of excel. Frustrated by its data limitations, I ventured out and I attended a coding training program at CodeFellows, and fell in love with the power of coding.",
       "In software, there isn't a stack I'm not willing to learn or ecosystem to develop in. I have since learned TypeScript and C# through my positions, and explored the Azure development ecosystem.",
     ],
-    languages: ["Python", "C#", "Javascript"],
-    tools: ["React / React TS", "Flask", "Next.js"],
+    languages: ["Python", "C#", "Javascript / TS"],
+    tools: ["React / TS", "Flask", "NextJS / TS "],
     profileImage: profileImage
 
   },
   jobs: [
     {
       id: "exp-0",
-      CompanyName: "Unite Digitial",
+      CompanyName: "Unite Digital",
       Position: "Software Developer",
       CompanyURL: "https://unitedigital.com/",
       Tenure: "August 2022 - Present",
@@ -52,7 +52,7 @@ export const user: IUserData = {
       CompanyURL: "https://www.divurgent.com",
       Tenure: "February - August 2022",
       BulletPoints: [
-        "Developed SalesForce LWC for the integration of single-signon capability with PowerBI, Azure, and Salesforce for Community Portal.",
+        "Developed SalesForce LWC for the integration of single-sign-on capability with PowerBI, Azure, and Salesforce for Community Portal.",
         "Attended and completed the Health Data Services and Azure API for FHIR Intermediate Level Classroom and Hack training.",
         "Increased testing coverage for proprietary applications in Django and Flask.",
       ],
@@ -160,7 +160,7 @@ export const user: IUserData = {
       images: [
         {
           image:speedPic01,
-          alt:"Speed Typling Pic"
+          alt:"Speed Typing Pic"
         }
         ],
     },
@@ -168,7 +168,7 @@ export const user: IUserData = {
       id: "sub-2",
       title: "Can of Books",
       description:
-        "Reading list appliction. Simple application utilizing CRUD and MongoDB.  ",
+        "Reading list application. Simple application utilizing CRUD and MongoDB.  ",
       toolList: ["React", "Node.js", "Auth0", "MongoDB", "VS Code"],
       urlList: [
         {

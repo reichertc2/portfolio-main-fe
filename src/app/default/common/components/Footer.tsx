@@ -1,13 +1,14 @@
 import Link from "next/link"
-import { baseDarkText } from "../../../styles/colors"
 import { IUserData } from "../../models/user";
+import { IStyles } from "../MainClientPage";
 
 
 interface IFooterProps {
     profileMain: IUserData;
+    styles: IStyles;
 }
 
-export const Footer: React.FC<IFooterProps>=({ profileMain })=> {
+export const Footer: React.FC<IFooterProps>=({ profileMain, styles })=> {
 
     const renderCopyrightYear = () =>{
         let dateYear = new Date()
@@ -16,7 +17,7 @@ export const Footer: React.FC<IFooterProps>=({ profileMain })=> {
     
     return (
         <footer className="p-3 text-center content-center">
-            <h6 className={`dark:text-stone-100 italic py-4`}>
+            <h6 className={`dark:${styles.darkText} italic py-4`}>
                 <Link href={profileMain.profile.profileURL}>
                     <span>{profileMain.profile.name} {renderCopyrightYear()} &copy;</span>
                 </Link>

@@ -6,6 +6,25 @@ import MainPage from './MainPage';
 import { user } from '../../../../data/user';
 import { IUserData } from '../models/user';
 
+export interface IStyles {
+    whiteBg: string;
+    standadText: string;
+    darkText: string;
+    darkStandardText: string;
+    accentText: string;
+    secondaryAccentText: string;
+}
+
+
+const styles: IStyles = {
+    whiteBg: `bg-stone-200`,
+    standadText: `text-stone-900`,
+    darkText: `text-stone-100`,
+    darkStandardText: `text-sky-200`,
+    accentText: `text-sky-200`,
+    secondaryAccentText: `text-sky-600`
+}
+
 export default function MainClientPage() {
 
     const [entered, setEntered] = useState<boolean>(false)
@@ -20,7 +39,14 @@ export default function MainClientPage() {
 
     return (
         <>
-            {entered ? <MainPage user={profileMain} /> : <LandingPage profile={profileMain["profile"]}/>}
+            {entered ?
+                <MainPage
+                    user={profileMain}
+                    styles={styles}
+                /> :
+                <LandingPage
+                    profile={profileMain["profile"]}
+                />}
         </>
     )
 }

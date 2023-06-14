@@ -1,48 +1,61 @@
 "use client";
 
+import { IStyles } from "@/app/default/common/MainClientPage";
 import { useEffect, useState } from "react"
-import { baseDarkText } from "../../../../../styles/colors"
 
 interface IListBlockProps {
     title: string;
     listProps: string[];
     orientation: string;
+    styles: IStyles;
 }
 
-export const ListBlock: React.FC<IListBlockProps> = ({ title, listProps, orientation }) => {
+interface IListBlockStyling {
+    ul: string;
+    liTitle: string;
+    li: string;
+}
 
-    const [verticalStyleUl, setVerticalStyleUl] = useState<string>()
-    const [verticalStyleLi, setVerticalStyleLi] = useState<string>()
+export const ListBlock: React.FC<IListBlockProps> = ({ title, listProps, orientation, styles }) => {
+
+    const defaultOrientation: IListBlockStyling = {
+        ul: `dark:${styles.darkStandardText} inline-block pr-3 text-sm w-3/5`,
+        liTitle: "text-semibold pb-1",
+        li: ``
+    }
+
+    const [verticalStyle, setVerticalStyle] = useState<IListBlockStyling>(defaultOrientation)
 
     const checkOrientation = () => {
-        if (orientation === "vertical") {
-            setVerticalStyleUl(`dark:text-stone-900 inline-block pr-3 align-top text-sm w-1/5`)
-            setVerticalStyleLi("text-semibold pb-1")
+        let verticalStyles = verticalStyle
+        if (orientation === "vertical" || orientation === "v") {
+            setVerticalStyle(defaultOrientation)
         } else {
-            setVerticalStyleUl(`dark:text-stone-900 inline-block inline-grid grid-cols-5 gap-2 text-sm pl-5 w-4/5`)
-            setVerticalStyleLi("text-semibold col-span-full")
-
+            verticalStyles.ul = `dark:${styles.darkStandardText} inline-block text-sm pl-5 w-4/5`
+            verticalStyles.liTitle = `pb-1 text-semibold col-span-full`
+            verticalStyles.li = `inline`
+            setVerticalStyle(verticalStyles)
         }
     }
 
     useEffect(() => {
         checkOrientation()
 
-    }, [])
+    }, [orientation])
 
     return (
 
-        <ul className={verticalStyleUl}>
+        <ul className={verticalStyle.ul}>
 
 
-            <li className={verticalStyleLi}>{title}: </li>
+            <li className={verticalStyle.liTitle}>{title}: </li>
 
             {
                 listProps.map((item, idx) =>
 
                     <li
                         key={idx}
-                        className="img-li pl-5 list-inside"
+                        className={`${verticalStyle.li} img-li pl-5 list-inside italic`}
                     >
                         {item}
                     </li>

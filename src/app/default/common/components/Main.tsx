@@ -1,3 +1,5 @@
+"use client"
+
 import Head from 'next/head'
 import Headline from '../../features/DevProfile/components/Headline'
 import AboutMe from '../../features/DevProfile/components/AboutMe'
@@ -6,12 +8,14 @@ import FeaturedWork from '../../features/DevProfile/components/FeaturedWork'
 import SubWork from '../../features/DevProfile/components/SubWork'
 import ContactMe from '../../features/DevProfile/components/Contact'
 import { IUserData } from '../../models/user'
+import { IStyles } from '../MainClientPage'
 
 interface IMainProps {
     profileMain: IUserData;
+    styles: IStyles;
 }
 
-export const Main: React.FC<IMainProps> = ({ profileMain }) => {
+export const Main: React.FC<IMainProps> = ({ profileMain, styles }) => {
 
     return (
         <>
@@ -25,13 +29,19 @@ export const Main: React.FC<IMainProps> = ({ profileMain }) => {
                 <article
                     id="mainContainer"
                     className={``}
-                    >
-                    <Headline headLine={profileMain["profile"]} />
-                    {/* <AboutMe aboutMe={profileMain["aboutMe"]} />
-                    <Experience jobExperience={profileMain["jobs"]} />
-                    <FeaturedWork projectWorks={profileMain["projects"]} />
-                    <SubWork projectWorks={profileMain["subprojects"]} />
-                    <ContactMe contactInfo={profileMain["contactInfo"]} /> */}
+                >
+                    <Headline
+                        headLine={profileMain["profile"]}
+                        styles={styles}
+                    />
+                    <AboutMe 
+                    aboutMe={profileMain["aboutMe"]} 
+                    styles={styles}
+                    />
+                    {/* <Experience jobExperience={profileMain["jobs"]} /> */}
+                    {/* <FeaturedWork projectWorks={profileMain["projects"]} /> */}
+                    {/* <SubWork projectWorks={profileMain["subprojects"]} /> */}
+                    {/* <ContactMe contactInfo={profileMain["contactInfo"]} /> */}
                 </article>
             </main>
         </>
