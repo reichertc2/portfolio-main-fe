@@ -6,7 +6,9 @@ export const UnderConstruction: React.FC<IUnderConstructionProps> = () => {
 
     return (
         <>
-            <h1>Under Construction. Come Back Soon!!</h1>
+            <h1
+            className="dark:text-stone-200"
+            >Under Construction. Come Back Soon!!</h1>
 
         </>
     )

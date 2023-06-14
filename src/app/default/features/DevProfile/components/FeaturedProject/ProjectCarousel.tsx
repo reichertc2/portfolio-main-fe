@@ -4,17 +4,16 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import projectImage1 from '../../public/stick2.png'
-import { baseDarkBorder, baseDarkText } from "../../../../../styles/colors"
 import { IProjectInfo } from "@/app/default/models/user"
 
 
 library.add(faGithub)
 
-interface IWorkCarouselProps {
+interface IProjectCarouselProps {
     projectWorks: IProjectInfo[]
 }
 
-export const WorkCarousel: React.FC<IWorkCarouselProps> = ({ projectWorks }) => {
+export const ProjectCarousel: React.FC<IProjectCarouselProps> = ({ projectWorks }) => {
 
     const projectImages = [projectImage1]
     return (
@@ -89,4 +88,4 @@ export const WorkCarousel: React.FC<IWorkCarouselProps> = ({ projectWorks }) => 
     )
 }
 
-export default WorkCarousel;
+export default ProjectCarousel;

@@ -1,14 +1,14 @@
 import { UnderConstruction } from "@/app/default/common/components/UnderConstruction";
 import BasicSectionHeader from "../../../common/components/BasicSectionHeader";
-import WorkBasic from "./Work/WorkBasic";
+import ProjectBasic from "./FeaturedProject/ProjectBasic";
 import { IJobInfo, IProjectInfo } from "@/app/default/models/user";
 
 
-interface IFeaturedWorkProps {
+interface IFeaturedProjectProps {
     projectWorks: IProjectInfo[]
 }
 
-export const FeaturedWork: React.FC<IFeaturedWorkProps> = ({ projectWorks }) => {
+export const FeaturedProject: React.FC<IFeaturedProjectProps> = ({ projectWorks }) => {
     return (
         <section id="WorkSection" className={`w-full`}>
             <BasicSectionHeader
@@ -16,7 +16,7 @@ export const FeaturedWork: React.FC<IFeaturedWorkProps> = ({ projectWorks }) => 
             <div className={`hidden sm:block`}>
 
                 {projectWorks.map((project: IProjectInfo) => (
-                    <WorkBasic key={"featuredProject"} project={project} />
+                    <ProjectBasic key={"featuredProject"} project={project} />
                 ))}
             </div>
             {/* TODO Mobile */}
@@ -27,4 +27,4 @@ export const FeaturedWork: React.FC<IFeaturedWorkProps> = ({ projectWorks }) => 
     );
 }
 
-export default FeaturedWork;
+export default FeaturedProject;

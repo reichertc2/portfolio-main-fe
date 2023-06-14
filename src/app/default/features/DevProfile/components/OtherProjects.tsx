@@ -5,11 +5,11 @@ import BasicSectionHeader from "../../../common/components/BasicSectionHeader";
 import { IProjectInfo } from "@/app/default/models/user";
 import UnderConstruction from "@/app/default/common/components/UnderConstruction";
 
-interface ISubWorkProps {
+interface IOtherProjectsProps {
   projectWorks: IProjectInfo[]
 }
 
-export const SubWork: React.FC<ISubWorkProps> = ({ projectWorks }) => {
+export const OtherProjects: React.FC<IOtherProjectsProps> = ({ projectWorks }) => {
   return (
     <section id="WorkSection" className={`w-full`}>
       <BasicSectionHeader headerTitle={"Other Projects"} />
@@ -68,4 +68,4 @@ export const SubWork: React.FC<ISubWorkProps> = ({ projectWorks }) => {
   );
 }
 
-export default SubWork;
+export default OtherProjects;

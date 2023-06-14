@@ -45,7 +45,8 @@ export default function MainClientPage() {
                 /> :
                 <LandingPage
                     profile={profileMain["profile"]}
-                />}
+                />
+            }
         </>
     )
 }

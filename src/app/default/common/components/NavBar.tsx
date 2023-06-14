@@ -52,7 +52,7 @@ export const NavBar: React.FC<INavBarProps> = ({ styles, navigations, logo, show
     return (
         <nav
             id="leftNavBar"
-            className={`fixed left-0 top-0 w-full z-10 ease-in duration-300`}
+            className={`fixed left-0 top-0 w-full z-10 ease-in duration-300 bg-slate-400 dark:bg-stone-800`}
         >
             <div className={`max-w-[1240px] m-auto flex justify-between items-center`}>
                 <Image

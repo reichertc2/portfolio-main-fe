@@ -1,14 +1,13 @@
 import Image from "next/image"
 import Link from "next/link"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { baseDarkBorder, baseDarkText } from "../../../../../styles/colors"
-import { IJobInfo, IProjectInfo } from "@/app/default/models/user"
+import { IProjectInfo } from "@/app/default/models/user"
 
-interface IWorkBasicProps {
+interface IProjectBasicProps {
     project: IProjectInfo
 }
 
-export const WorkBasic: React.FC<IWorkBasicProps> = ({ project }) => {
+export const ProjectBasic: React.FC<IProjectBasicProps> = ({ project }) => {
 
     return (<div
         key={project["id"]}
@@ -69,4 +68,4 @@ export const WorkBasic: React.FC<IWorkBasicProps> = ({ project }) => {
 }
 
 
-export default WorkBasic;
+export default ProjectBasic;
