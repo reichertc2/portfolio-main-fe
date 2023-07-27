@@ -1,4 +1,4 @@
-import { IStyles } from "../MainClientPage";
+import { IStyles } from "../ui/MainClientPage";
 
 interface IBasicSectionHeader {
     headerTitle: string;

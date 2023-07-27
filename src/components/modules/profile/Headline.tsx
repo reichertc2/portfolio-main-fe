@@ -1,6 +1,6 @@
-import { IProfile } from "@/app/default/models/user";
-import { INavigation } from "@/app/default/models/navigation";
-import { IStyles } from "@/app/default/common/MainClientPage";
+import { IProfile } from "@/models/user";
+import { INavigation } from "@/models/navigation";
+import { IStyles } from "@/components/ui/MainClientPage";
 
 interface IHeadlineProps {
     headLine: IProfile;

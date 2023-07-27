@@ -2,8 +2,8 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
-import { IJobInfo } from "@/app/default/models/user";
-import { IStyles } from "@/app/default/common/MainClientPage";
+import { IJobInfo } from "@/models/user";
+import { IStyles } from "@/components/ui/MainClientPage";
 
 interface ITabSelectorProps {
     jobExperience: IJobInfo[];

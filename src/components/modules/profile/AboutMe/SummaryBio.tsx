@@ -1,6 +1,7 @@
 "use client"
 
-import { IStyles } from "@/app/default/common/MainClientPage";
+import { IStyles } from "@/components/ui/MainClientPage";
+
 
 interface ISummaryBio {
     elevator: string[];

@@ -6,7 +6,7 @@ import pursuitPic01 from "../public/coders-pursuit-ss.png";
 import profileImage from '../public/profile.jpeg'
 import stickPic01 from '../public/stick2.png'
 import confinPic01 from '../public/consapp.jpg'
-import { IUserData } from "@/app/default/models/user";
+import { IUserData } from "@/models/user";
 
 
 export const user: IUserData = {

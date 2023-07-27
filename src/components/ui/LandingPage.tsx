@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import { IProfile } from '../models/user';
+import { IProfile } from '../../models/user';
 
 
 interface ILandingPageProps {

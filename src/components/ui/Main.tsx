@@ -1,14 +1,15 @@
 "use client"
 
+import { IUserData } from '@/models/user';
 import Head from 'next/head'
-import Headline from '../../features/DevProfile/components/Headline'
-import AboutMe from '../../features/DevProfile/components/AboutMe'
-import Experience from '../../features/DevProfile/components/Experience'
-import FeaturedProject from '../../features/DevProfile/components/FeaturedProject'
-import OtherProjects from '../../features/DevProfile/components/OtherProjects'
-import ContactMe from '../../features/DevProfile/components/ContactMe'
-import { IUserData } from '../../models/user'
-import { IStyles } from '../MainClientPage'
+import AboutMe from '../modules/profile/AboutMe';
+import ContactMe from '../modules/profile/ContactMe';
+import Experience from '../modules/profile/Experience';
+import FeaturedProject from '../modules/profile/FeaturedProject';
+import Headline from '../modules/profile/Headline';
+import OtherProjects from '../modules/profile/OtherProjects';
+import { IStyles } from './MainClientPage';
+
 
 interface IMainProps {
     profileMain: IUserData;

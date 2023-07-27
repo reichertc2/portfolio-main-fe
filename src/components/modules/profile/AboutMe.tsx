@@ -1,11 +1,11 @@
 "use client";
 
 import Image from "next/image"
-import SummaryBio from "./AboutMe/SummaryBio"
 import ListBlock from "./AboutMe/ListBlock"
-import BasicSectionHeader from "../../../common/components/BasicSectionHeader"
-import { IAboutMe } from "@/app/default/models/user";
-import { IStyles } from "@/app/default/common/MainClientPage";
+import BasicSectionHeader from "../../common/BasicSectionHeader"
+import { IAboutMe } from "@/models/user";
+import { IStyles } from "@/components/ui/MainClientPage";
+import SummaryBio from "./AboutMe/SummaryBio";
 
 
 interface IAboutMeProps {

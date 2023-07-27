@@ -1,4 +1,4 @@
-import MainClientPage from "./default/common/MainClientPage";
+import MainClientPage from "@/components/ui/MainClientPage";
 
 
 export default function Home() {

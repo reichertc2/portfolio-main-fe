@@ -1,7 +1,7 @@
-import { UnderConstruction } from "@/app/default/common/components/UnderConstruction";
-import BasicSectionHeader from "../../../common/components/BasicSectionHeader";
+import BasicSectionHeader from "@/components/common/BasicSectionHeader";
+import UnderConstruction from "@/components/common/UnderConstruction";
 import ProjectBasic from "./FeaturedProject/ProjectBasic";
-import { IProjectInfo } from "@/app/default/models/user";
+import { IProjectInfo } from "@/models/user";
 
 
 interface IFeaturedProjectProps {
