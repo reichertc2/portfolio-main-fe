@@ -1,10 +1,9 @@
 import ProfileMain from "@/components/modules/profile/ProfileMain";
 import { user } from "../../data/user"
 
-interface IProfileHomeProps { }
 
 
-export const ProfileHome: React.FC<IProfileHomeProps> = () => {
+export default function Home() {
 
   return (
     <ProfileMain profileMain={user} />
@@ -12,4 +11,3 @@ export const ProfileHome: React.FC<IProfileHomeProps> = () => {
   )
 }
 
-export default ProfileHome;
