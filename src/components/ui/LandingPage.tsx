@@ -8,13 +8,19 @@ interface ILandingPageProps {
 
 export const LandingPage: React.FC<ILandingPageProps> = ({ profile }) => {
 
-    return (
-        <div className='m-auto transition delay-1000'>
+    const styles = {
+        container: `m-auto transition delay-1000`,
+        main: `flex justify-center items-center w-full h-screen text-center ease-in duration-300`,
+        logo: `animate-pulse rounded-full w-28 h-28`
+    }
 
-            <main id="landingMain" className={`flex justify-center items-center w-full h-screen text-center ease-in duration-300`} >
+    return (
+        <div className={styles.container}>
+
+            <main id="landingMain" className={styles.main} >
 
                 <Image
-                    className='animate-pulse rounded-full w-28 h-28'
+                    className={styles.logo}
                     src={profile.logo.image}
                     alt={profile.logo.alt}
                 />

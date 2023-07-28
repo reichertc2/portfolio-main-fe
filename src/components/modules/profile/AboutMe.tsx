@@ -1,33 +1,32 @@
-"use client";
-
 import Image from "next/image"
 import ListBlock from "./AboutMe/ListBlock"
-import BasicSectionHeader from "../../common/BasicSectionHeader"
 import { IAboutMe } from "@/models/user";
-import { IStyles } from "@/components/ui/MainClientPage";
 import SummaryBio from "./AboutMe/SummaryBio";
+import ProfileSection from "@/components/common/ProfileSection";
+import { IStyles } from "@/models/styles";
 
 
 interface IAboutMeProps {
     aboutMe: IAboutMe;
-    styles?: IStyles;
+    styling?: IStyles;
 }
 
-export const AboutMe: React.FC<IAboutMeProps> = ({ aboutMe, styles }) => {
+export const AboutMe: React.FC<IAboutMeProps> = ({ aboutMe, styling }) => {
 
     return (
-        <section id="AboutMeSection" className={`flex flex-col`}>
-            <BasicSectionHeader
-                headerTitle={"About Me"}
-                styles={styles}
-            />
+        <ProfileSection
+            id={"AboutMeSection"}
+            title={"About Me"}
+            styling={styling}
+        >
+
             <div className={`w-full`}>
                 <div className={`hidden sm:flex justify-start p-1 w-full`}>
 
 
                     <SummaryBio
                         elevator={aboutMe.elevator}
-                        styles={styles}
+                        styles={styling}
                     />
 
                     <div className={`w-50 px-6`}>
@@ -46,13 +45,13 @@ export const AboutMe: React.FC<IAboutMeProps> = ({ aboutMe, styles }) => {
                         title="Languages"
                         listProps={aboutMe.languages}
                         orientation={"vertical"}
-                        styles={styles}
+                        styles={styling}
                     />
                     <ListBlock
                         title="Tools"
                         listProps={aboutMe.tools}
                         orientation={"horizontal"}
-                        styles={styles}
+                        styles={styling}
                     />
 
                 </div>
@@ -72,7 +71,7 @@ export const AboutMe: React.FC<IAboutMeProps> = ({ aboutMe, styles }) => {
 
                     <SummaryBio
                         elevator={aboutMe.elevator}
-                        styles={styles}
+                        styles={styling}
                     />
 
 
@@ -82,7 +81,7 @@ export const AboutMe: React.FC<IAboutMeProps> = ({ aboutMe, styles }) => {
                         title="Languages"
                         listProps={aboutMe.languages}
                         orientation={"vertical"}
-                        styles={styles}
+                        styles={styling}
                     />
 
 
@@ -93,12 +92,12 @@ export const AboutMe: React.FC<IAboutMeProps> = ({ aboutMe, styles }) => {
                         title="Tools"
                         listProps={aboutMe.tools}
                         orientation={"vertical"}
-                        styles={styles}
+                        styles={styling}
                     />
 
                 </div>
             </div>
-        </section>
+        </ProfileSection>
     )
 }
 

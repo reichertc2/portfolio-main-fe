@@ -2,17 +2,23 @@ import BasicSectionHeader from "@/components/common/BasicSectionHeader";
 import UnderConstruction from "@/components/common/UnderConstruction";
 import ProjectBasic from "./FeaturedProject/ProjectBasic";
 import { IProjectInfo } from "@/models/user";
+import { IStyles } from "@/models/styles";
+import ProfileSection from "@/components/common/ProfileSection";
 
 
 interface IFeaturedProjectProps {
-    projectWorks: IProjectInfo[]
+    projectWorks: IProjectInfo[],
+    styling: IStyles;
 }
 
-export const FeaturedProject: React.FC<IFeaturedProjectProps> = ({ projectWorks }) => {
+export const FeaturedProject: React.FC<IFeaturedProjectProps> = ({ projectWorks, styling }) => {
     return (
-        <section id="WorkSection" className={`w-full`}>
-            <BasicSectionHeader
-                headerTitle={"Featured Project"} />
+        <ProfileSection
+            id={"WorkSection"}
+            title={"Featured Project"}
+            styling={styling}
+        >
+
             <div className={`hidden sm:block`}>
 
                 {projectWorks.map((project: IProjectInfo) => (
@@ -23,7 +29,7 @@ export const FeaturedProject: React.FC<IFeaturedProjectProps> = ({ projectWorks 
             <div className={`sm:hidden flex`}>
                 <UnderConstruction />
             </div>
-        </section>
+        </ProfileSection>
     );
 }
 

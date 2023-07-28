@@ -1,26 +1,30 @@
 "use client"
 
-import Image from "next/image"
-import Link from "next/link"
-// import Resume from "../features/Bio/Resume"
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useTheme } from "next-themes"
-import { faMoon, faSun, faBars, faXmark } from "@fortawesome/free-solid-svg-icons"
-import { useState } from "react"
-import { IStyles } from "./MainClientPage"
+import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons"
 import { INavigation } from "@/models/navigation"
+import { IStyles } from "@/models/styles"
+import NavBarContainer from "./NavBar/NavBarContainer"
+import NavBarStandardView from "./NavBar/NavBarStandardView"
+import NavBarMobileView from "./NavBar/NavBarMobileView"
 
 interface INavBarProps {
-    styles: IStyles;
+    styling?: IStyles;
     navigations: INavigation[];
     logo: any;
     showThemeChange: boolean;
 }
 
-export const NavBar: React.FC<INavBarProps> = ({ styles, navigations, logo, showThemeChange }) => {
+export const NavBar: React.FC<INavBarProps> = ({ styling, navigations, logo, showThemeChange }) => {
 
     const { systemTheme, theme, setTheme } = useTheme();
-    const [navMenu, setNavMenu] = useState<boolean>(false)
+
+    const styles = {
+        lightText: `text-sky-200`,
+        darkText: `text-stone-900`
+    }
 
     const renderThemeChanger = () => {
 
@@ -28,7 +32,7 @@ export const NavBar: React.FC<INavBarProps> = ({ styles, navigations, logo, show
 
         if (currentTheme === 'dark') {
             return (
-                <button className={`text-sky-200`}
+                <button className={styles.lightText}
                     onClick={() => setTheme('light')}
                 >
                     <FontAwesomeIcon icon={faSun} />
@@ -36,7 +40,7 @@ export const NavBar: React.FC<INavBarProps> = ({ styles, navigations, logo, show
             )
         } else {
             return (
-                <button className={`text-stone-900`}
+                <button className={styles.darkText}
                     onClick={() => setTheme('dark')}
                 >
                     <FontAwesomeIcon icon={faMoon} />
@@ -45,79 +49,24 @@ export const NavBar: React.FC<INavBarProps> = ({ styles, navigations, logo, show
         }
     }
 
-    const handleNavMenu = () => {
-        setNavMenu(!navMenu)
-    }
-
     return (
-        <nav
-            id="leftNavBar"
-            className={`fixed left-0 top-0 w-full z-10 ease-in duration-300 bg-slate-400 dark:bg-stone-800`}
+        <NavBarContainer
+            logo={logo}
         >
-            <div className={`max-w-[1240px] m-auto flex justify-between items-center`}>
-                <Image
-                    className='flex flex-initial basis-1/8 rounded-full w-20 h-20'
-                    src={logo?.image}
-                    alt={logo?.alt}
-                />
+            <NavBarStandardView
+                navigations={navigations}
+                styling={styling}
+                renderThemeChanger={renderThemeChanger}
+                showThemeChange={showThemeChange}
 
-                <ul className={`hidden sm:flex`}>
+            />
+            {/* Mobile Button and Menu */}
+            <NavBarMobileView
+                navigations={navigations}
+                styling={styling}
+            />
 
-                    {navigations.map(nav => (
-                        <li
-                            key={nav.label}
-                            className={`px-2 dark:text-sky-200 pt-4`}
-                        >
-                            <Link href={nav.path}>
-                                <span className="hover-underline-animation">{nav.label}</span>
-                            </Link>
-                        </li>
-                    )
-                    )
-                    }
-
-                    <li className={`px-2 dark:text-stone-900 pt-2`}>
-                    </li>
-                    {
-                        showThemeChange ?
-                            <li className={`px-2 dark:text-stone-900 pt-4`}>
-                                {renderThemeChanger()}
-                            </li>
-                            : ""
-                    }
-
-                </ul>
-                {/* Mobile Button and Menu */}
-                <button
-                    className={navMenu ? `sm:hidden block dark:text-stone-900 z-10 p-4` : `sm:hidden block dark:text-sky-200 z-10 p-4`}
-                    onClick={handleNavMenu}
-                >
-                    {navMenu ? <FontAwesomeIcon icon={faXmark} /> : <FontAwesomeIcon icon={faBars} />}
-                </button>
-                <div
-                    className={navMenu ? `sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-stone-200 text-center ease-in duration-300` : `sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-stone-200 text-center ease-in duration-300`}
-                >
-
-                    <ul className="">
-
-                        {navigations.map(nav => (
-                            <li
-                                key={nav.label}
-                                className={`p-4 text-4xl dark:text-stone-900 hover:text-sky-600`}
-                            >
-                                <Link href={nav.path}>
-                                    <span className="hover-underline-animation">{nav.label}</span>
-                                </Link>
-                            </li>
-                        )
-                        )
-                        }
-
-
-                    </ul>
-                </div>
-            </div>
-        </nav>
+        </NavBarContainer>
     )
 }
 

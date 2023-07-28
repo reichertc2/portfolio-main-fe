@@ -1,19 +1,23 @@
 import Link from 'next/link'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { IContactInfo } from '@/models/user'
-import BasicSectionHeader from '@/components/common/BasicSectionHeader';
+import { IStyles } from '@/models/styles';
+import ProfileSection from '@/components/common/ProfileSection';
 
 interface IContactMeProps {
     contactInfo: IContactInfo;
+    styling: IStyles;
 }
 
-export const ContactMe: React.FC<IContactMeProps> = ({ contactInfo }) => {
+export const ContactMe: React.FC<IContactMeProps> = ({ contactInfo, styling }) => {
 
     return (
-        <section id="ContactSection" className={`w-full`}>
-            <BasicSectionHeader
-                headerTitle={"Contact"}
-            />
+        <ProfileSection
+            id={"ContactSection"}
+            title={"Contact"}
+            styling={styling}
+        >
+
             <div className="hidden sm:block inline-block w-full text-center">
 
                 <h2 className={`text-7xl font-semibold italic dark:text-sky-200 pt-1 pb-3 opacity-70`}>
@@ -82,7 +86,7 @@ export const ContactMe: React.FC<IContactMeProps> = ({ contactInfo }) => {
                     }
                 </ul>
             </div>
-        </section>
+        </ProfileSection>
     )
 }
 

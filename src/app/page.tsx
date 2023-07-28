@@ -1,12 +1,15 @@
-import MainClientPage from "@/components/ui/MainClientPage";
+import ProfileMain from "@/components/modules/profile/ProfileMain";
+import { user } from "../../data/user"
+
+interface IProfileHomeProps { }
 
 
-export default function Home() {
+export const ProfileHome: React.FC<IProfileHomeProps> = () => {
 
   return (
-    <div className="">
-      <MainClientPage />
-    </div>
+    <ProfileMain profileMain={user} />
 
   )
 }
+
+export default ProfileHome;

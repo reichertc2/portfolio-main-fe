@@ -2,17 +2,23 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
 import { IProjectInfo } from "@/models/user";
-import BasicSectionHeader from "@/components/common/BasicSectionHeader";
 import UnderConstruction from "@/components/common/UnderConstruction";
+import { IStyles } from "@/models/styles";
+import ProfileSection from "@/components/common/ProfileSection";
 
 interface IOtherProjectsProps {
-  projectWorks: IProjectInfo[]
+  projectWorks: IProjectInfo[];
+  styling: IStyles;
 }
 
-export const OtherProjects: React.FC<IOtherProjectsProps> = ({ projectWorks }) => {
+export const OtherProjects: React.FC<IOtherProjectsProps> = ({ projectWorks, styling }) => {
   return (
-    <section id="WorkSection" className={`w-full`}>
-      <BasicSectionHeader headerTitle={"Other Projects"} />
+    <ProfileSection
+      id={"WorkSection"}
+      title={"Other Projects"}
+      styling={styling}
+    >
+
       <div className="hidden sm:grid inline-grid grid-cols-3 gap-3">
         {projectWorks.map((project, idx) => (
           <div key={project["id"]} className="py-8 col-span-1">
@@ -64,7 +70,7 @@ export const OtherProjects: React.FC<IOtherProjectsProps> = ({ projectWorks }) =
         <UnderConstruction />
       </div>
 
-    </section>
+    </ProfileSection>
   );
 }
 

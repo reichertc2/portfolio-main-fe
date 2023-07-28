@@ -1,15 +1,19 @@
 import { IProfile } from "@/models/user";
 import { INavigation } from "@/models/navigation";
-import { IStyles } from "@/components/ui/MainClientPage";
+import HeadlineMobileView from "./Headline/HeadlineMobileView";
+import HeadlineStandardView from "./Headline/HeadlineStandardView";
+import { IStyles } from "@/models/styles";
 
 interface IHeadlineProps {
     headLine: IProfile;
-    styles?: IStyles;
+    styling?: IStyles;
 }
 
+export const Headline: React.FC<IHeadlineProps> = ({ headLine, styling }) => {
 
-
-export const Headline: React.FC<IHeadlineProps> = ({ headLine, styles }) => {
+    const styles = {
+        container: `flex flex-col justify-start p-1 w-full`
+    }
 
     const navigations: INavigation[] = [
         { label: 'About', path: '#AboutMeSection' },
@@ -21,26 +25,19 @@ export const Headline: React.FC<IHeadlineProps> = ({ headLine, styles }) => {
 
     return (
         <>
-            <section className={`flex flex-col justify-start p-1 w-full`}>
-                <div className="hidden md:block">
-                    <p className={`dark:text-stone-100 text-7xl font-semibold py-1`}>
-                        {headLine["name"]}
-                    </p>
-                    <p className={`dark:text-sky-200 text-5xl font-semibold italic pt-1 pb-3 opacity-70`}>
-                        {headLine["headline"]}
-                    </p>
-                </div>
+            <section className={styles.container}>
+
+                <HeadlineStandardView
+                    headLine={headLine}
+                    styling={styling}
+                />
 
                 {/* Mobile Version */}
 
-                <div className="sm:hidden block">
-                    <p className={`dark:text-stone-100 text-xl font-semibold py-1`}>
-                        {headLine["name"]}
-                    </p>
-                    <p className={`dark:text-sky-200 text-sm font-semibold italic pb-3 opacity-70`}>
-                        {headLine["headline"]}
-                    </p>
-                </div>
+                <HeadlineMobileView
+                    headLine={headLine}
+                    styling={styling}
+                />
             </section>
         </>
 

@@ -1,17 +1,17 @@
 import { INavigation } from "@/models/navigation";
 import { IUserData } from "@/models/user";
-import { IStyles } from "./MainClientPage";
 import NavBar from "./NavBar"
+import { IStyles } from "@/models/styles";
 
 
 interface IHeaderProps {
     profileMain: IUserData;
-    styles?: IStyles;
+    styling?: IStyles;
 }
 
 
 
-export const Header: React.FC<IHeaderProps> = ({ profileMain, styles }) => {
+export const Header: React.FC<IHeaderProps> = ({ profileMain, styling }) => {
 
     const navigations: INavigation[] = [
         { label: 'Profile', path: '#AboutMeSection' },
@@ -22,7 +22,7 @@ export const Header: React.FC<IHeaderProps> = ({ profileMain, styles }) => {
         <header className="flex flex-row w-full">
 
             <NavBar
-                styles={styles}
+                styling={styling}
                 navigations={navigations}
                 logo={profileMain.profile.logo}
                 showThemeChange={true}

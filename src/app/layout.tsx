@@ -4,6 +4,7 @@ import './styles/globals.css';
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from 'next-themes';
 import { Metadata } from 'next';
+import MainClientView from '@/components/ui/MainClientView';
 
 
 
@@ -20,7 +21,9 @@ export default function RootLayout({ children, }: { children: React.ReactNode })
     <html lang="en">
       <body className={inter.className}>
         <ThemeProvider attribute='class'>
-          {children}
+          <MainClientView>
+            {children}
+          </MainClientView>
         </ThemeProvider>
       </body>
     </html>
