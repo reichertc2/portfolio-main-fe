@@ -43,7 +43,7 @@ export const ListBlock: React.FC<IListBlockProps> = ({ title, listProps, orienta
     useEffect(() => {
         checkOrientation()
 
-    }, [orientation])
+    })
 
     return (
 
