@@ -9,14 +9,19 @@ interface IFeaturedProjectStandardViewProps {
 }
 
 export const FeaturedProjectStandardView: React.FC<IFeaturedProjectStandardViewProps> = ({ projectWorks, styling }) => {
+
+    const styles = {
+        container: `hidden sm:block`
+    }
+
     return (
 
-
-        <div className={`hidden sm:block`}>
+        <div className={styles.container}>
 
             {projectWorks.map((project: IProjectInfo) => (
                 <ProjectBasic key={"featuredProject"} project={project} />
             ))}
+
         </div>
 
     );

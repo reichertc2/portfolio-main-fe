@@ -2,7 +2,7 @@ import Image from "next/image"
 import { IAboutMe } from "@/models/user";
 import { IStyles } from "@/models/styles";
 import ListBlock from "./ListBlock";
-import SummaryBio from "./SummaryBio";
+import { SummaryBioMobile } from "./Mobile/SummaryBioMobile";
 
 
 interface IAboutMeMobileViewProps {
@@ -12,15 +12,22 @@ interface IAboutMeMobileViewProps {
 
 export const AboutMeMobileView: React.FC<IAboutMeMobileViewProps> = ({ aboutMe, styling }) => {
 
+    const styles = {
+        bioContainer: `sm:hidden flex flex-col justify-start p-1 w-full items-center`,
+        bioImageContainer: `w-11/12`,
+        bioImage: `rounded-md w-9/12`,
+        skillsContainer: `sm:hidden flex`
+    }
+
     return (
         <>
             {/* Mobile */}
 
-            <div className={`sm:hidden flex flex-col justify-start p-1 w-full items-center`}>
-                <div className={`w-11/12`}>
+            <div className={styles.bioContainer}>
+                <div className={styles.bioImageContainer}>
 
                     <Image
-                        className={`rounded-md w-9/12`}
+                        className={styles.bioImage}
                         src={aboutMe.profileImage}
                         alt='profileImage'
 
@@ -28,14 +35,14 @@ export const AboutMeMobileView: React.FC<IAboutMeMobileViewProps> = ({ aboutMe, 
                     />
                 </div>
 
-                <SummaryBio
+                <SummaryBioMobile
                     elevator={aboutMe.elevator}
-                    styles={styling}
+                    styling={styling}
                 />
 
 
             </div>
-            <div className={`sm:hidden flex`}>
+            <div className={styles.skillsContainer}>
                 <ListBlock
                     title="Languages"
                     listProps={aboutMe.languages}
@@ -45,7 +52,7 @@ export const AboutMeMobileView: React.FC<IAboutMeMobileViewProps> = ({ aboutMe, 
 
 
             </div>
-            <div className={`sm:hidden flex`}>
+            <div className={styles.skillsContainer}>
 
                 <ListBlock
                     title="Tools"

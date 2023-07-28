@@ -11,11 +11,15 @@ interface IExperienceMobileViewProps {
 
 export const ExperienceMobileView: React.FC<IExperienceMobileViewProps> = ({ jobExperience, styling }) => {
 
+    const styles = {
+        container: `sm:hidden flex`
+    }
+    
     return (
- 
-            <div className={`sm:hidden flex`}>
-                <UnderConstruction />
-            </div>
+
+        <div className={styles.container}>
+            <UnderConstruction />
+        </div>
 
     )
 }

@@ -1,7 +1,7 @@
 import React from "react";
 import { IJobInfo } from "@/models/user";
 import { IStyles } from "@/models/styles";
-import TabSelector from "./TabSelector";
+import TabSelector from "./Standard/TabSelector";
 
 
 interface IExperienceStandardViewProps {
@@ -11,8 +11,12 @@ interface IExperienceStandardViewProps {
 
 export const ExperienceStandardView: React.FC<IExperienceStandardViewProps> = ({ jobExperience, styling }) => {
 
+    const styles = {
+        container: `hidden sm:block`
+    }
+
     return (
-        <div className={`hidden sm:block`}>
+        <div className={styles.container}>
             <TabSelector
                 jobExperience={jobExperience}
             />
