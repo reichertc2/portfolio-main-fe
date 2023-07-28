@@ -1,41 +1,48 @@
-"use client"
-
 import { IUserData } from '@/models/user';
 import AboutMe from './AboutMe';
-import ContactMe from './ContactMe';
 import Experience from './Experience';
-import FeaturedProject from './FeaturedProject';
 import Headline from './Headline';
-import OtherProjects from './OtherProjects';
 import { IStyles } from '@/models/styles';
 import MainContainer from '@/components/common/MainContainer';
+import OtherProjects from './OtherProjects';
+import ContactMe from './ContactMe';
+import FeaturedProject from './FeaturedProject';
 
 
 interface IProfileMainProps {
     profileMain: IUserData;
-    styles?: IStyles;
+    styling?: IStyles;
 }
 
-export const ProfileMain: React.FC<IProfileMainProps> = ({ profileMain, styles }) => {
+export const ProfileMain: React.FC<IProfileMainProps> = ({ profileMain, styling }) => {
 
     return (
         <MainContainer>
 
             <Headline
                 headLine={profileMain["profile"]}
-                styling={styles}
+                styling={styling}
             />
             <AboutMe
                 aboutMe={profileMain["aboutMe"]}
-                styling={styles}
+                styling={styling}
             />
             <Experience
                 jobExperience={profileMain["jobs"]}
-                styles={styles}
+                styling={styling}
             />
-            <FeaturedProject projectWorks={profileMain["projects"]} />
-            <OtherProjects projectWorks={profileMain["subprojects"]} />
-            <ContactMe contactInfo={profileMain["contactInfo"]} />
+            <FeaturedProject
+                projectWorks={profileMain["projects"]}
+                styling={styling}
+            />
+            <OtherProjects
+                projectWorks={profileMain["subprojects"]}
+                styling={styling}
+            />
+            <ContactMe
+                contactInfo={profileMain["contactInfo"]}
+                styling={styling}
+            />
 
         </MainContainer>
     )

@@ -1,6 +1,6 @@
 "use client";
 
-import { IStyles } from "@/components/ui/MainClientPage";
+import { IStyles } from "@/models/styles";
 import { useEffect, useState } from "react"
 
 interface IListBlockProps {

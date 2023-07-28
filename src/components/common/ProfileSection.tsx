@@ -3,7 +3,7 @@ import BasicSectionHeader from "./BasicSectionHeader";
 
 interface IProfileSectionProps {
     id: string;
-    title: string;
+    title?: string;
     styling?: IStyles;
     children: React.ReactNode;
 }
@@ -11,15 +11,20 @@ interface IProfileSectionProps {
 export const ProfileSection: React.FC<IProfileSectionProps> = ({ id, title, styling, children }) => {
 
     const styles = {
-        container: `flex flex-col`
+        container: `snap-start h-screen flex flex-col justify-center items-center ${styling}`
     }
 
     return (
         <section id={id} className={styles.container}>
-            <BasicSectionHeader
-                headerTitle={title}
-                styles={styling}
-            />
+
+            {
+                title ?
+                    <BasicSectionHeader
+                        headerTitle={title}
+                        styles={styling}
+                    /> : ""
+            }
+
             {children}
 
         </section>

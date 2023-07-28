@@ -6,7 +6,7 @@ import ProfileSection from '@/components/common/ProfileSection';
 
 interface IContactMeProps {
     contactInfo: IContactInfo;
-    styling: IStyles;
+    styling?: IStyles;
 }
 
 export const ContactMe: React.FC<IContactMeProps> = ({ contactInfo, styling }) => {

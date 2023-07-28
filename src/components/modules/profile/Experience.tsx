@@ -1,9 +1,9 @@
 import React from "react";
-import TabSelector from "./Experience/TabSelector";
 import { IJobInfo } from "@/models/user";
-import UnderConstruction from "@/components/common/UnderConstruction";
 import ProfileSection from "@/components/common/ProfileSection";
 import { IStyles } from "@/models/styles";
+import ExperienceMobileView from "./Experience/ExperienceMobileView";
+import ExperienceStandardView from "./Experience/ExperienceStandardView";
 
 
 interface IExperienceProps {
@@ -20,15 +20,14 @@ export const Experience: React.FC<IExperienceProps> = ({ jobExperience, styling 
             styling={styling}
         >
 
-            <div className={`hidden sm:block`}>
-                <TabSelector
-                    jobExperience={jobExperience}
-                />
-            </div>
-            {/* TODO Mobile */}
-            <div className={`sm:hidden flex`}>
-                <UnderConstruction />
-            </div>
+            <ExperienceStandardView
+                jobExperience={jobExperience}
+                styling={styling}
+            />
+            <ExperienceMobileView
+                jobExperience={jobExperience}
+                styling={styling}
+            />
 
         </ProfileSection>
     )

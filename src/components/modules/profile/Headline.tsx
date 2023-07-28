@@ -3,6 +3,7 @@ import { INavigation } from "@/models/navigation";
 import HeadlineMobileView from "./Headline/HeadlineMobileView";
 import HeadlineStandardView from "./Headline/HeadlineStandardView";
 import { IStyles } from "@/models/styles";
+import ProfileSection from "@/components/common/ProfileSection";
 
 interface IHeadlineProps {
     headLine: IProfile;
@@ -11,10 +12,6 @@ interface IHeadlineProps {
 
 export const Headline: React.FC<IHeadlineProps> = ({ headLine, styling }) => {
 
-    const styles = {
-        container: `flex flex-col justify-start p-1 w-full`
-    }
-
     const navigations: INavigation[] = [
         { label: 'About', path: '#AboutMeSection' },
         { label: 'Experience', path: '#ExperienceSection' },
@@ -22,10 +19,11 @@ export const Headline: React.FC<IHeadlineProps> = ({ headLine, styling }) => {
         { label: 'Contact', path: '#ContactSection' },
     ]
 
-
     return (
         <>
-            <section className={styles.container}>
+            <ProfileSection
+                id={"Headline"}
+            >
 
                 <HeadlineStandardView
                     headLine={headLine}
@@ -38,7 +36,7 @@ export const Headline: React.FC<IHeadlineProps> = ({ headLine, styling }) => {
                     headLine={headLine}
                     styling={styling}
                 />
-            </section>
+            </ProfileSection>
         </>
 
     )
