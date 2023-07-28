@@ -1,6 +1,8 @@
 "use client";
 
 import { IStyles } from "@/models/styles";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCode} from "@fortawesome/free-solid-svg-icons"
 import { useEffect, useState } from "react"
 
 interface IListBlockProps {
@@ -57,7 +59,7 @@ export const ListBlock: React.FC<IListBlockProps> = ({ title, listProps, orienta
                         key={idx}
                         className={`${verticalStyle.li} img-li pl-5 list-inside italic`}
                     >
-                        {item}
+                       <FontAwesomeIcon icon={faCode} /> {item}
                     </li>
                 )
             }

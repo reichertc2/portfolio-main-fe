@@ -9,9 +9,14 @@ interface IFeaturedProjectMobileViewProps {
 }
 
 export const FeaturedProjectMobileView: React.FC<IFeaturedProjectMobileViewProps> = ({ projectWorks, styling }) => {
+
+    const styles = {
+        container: `sm:hidden flex`
+    }
+
     return (
 
-        <div className={`sm:hidden flex`}>
+        <div className={styles.container}>
             <UnderConstruction />
         </div>
 
