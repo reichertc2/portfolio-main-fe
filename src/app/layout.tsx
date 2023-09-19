@@ -10,7 +10,7 @@ import MainClientView from '@/components/ui/MainClientView';
 
 const inter = Inter({ subsets: ['latin'] })
 
-export const metadata: Metadata = {
+const metadata: Metadata = {
   title: 'Portfolio Landing Page ',
   description: 'Portfolio of ',
 }
