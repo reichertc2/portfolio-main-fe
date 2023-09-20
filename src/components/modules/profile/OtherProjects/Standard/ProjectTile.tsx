@@ -11,8 +11,8 @@ interface IProjectTileProps {
 export const ProjectTile: React.FC<IProjectTileProps> = ({ project, styling }) => {
 
   const styles = {
-    container: "py-8 col-span-1",
-    subContainer: "inline-block w-full relative ",
+    container: "py-0 min-w-[25%] min-h-[30%] py-8 col-span-1 ",
+    subContainer: "block w-full relative ",
     image: "opacity-40 rounded-md ",
   }
   return (

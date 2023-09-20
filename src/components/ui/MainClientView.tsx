@@ -21,7 +21,7 @@ export const MainClientView: React.FC<IMainClientViewProps> = ({ children }) => 
     }
 
     useEffect(() => {
-        setTimeout(() => setEntered(true), 3000)
+        setTimeout(() => setEntered(true), 10)
     }, []
     )
 

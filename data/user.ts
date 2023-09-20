@@ -1,35 +1,34 @@
-import { faGithub, faLinkedin  } from "@fortawesome/free-brands-svg-icons";
-import logoImage from '../public/logo_basic.png'
+import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+import { faXTwitter } from '@fortawesome/free-brands-svg-icons'
+import logoImage from "../public/logo_basic.png";
 import speedPic01 from "../public/speed.png";
 import booksPic01 from "../public/books.png";
 import pursuitPic01 from "../public/coders-pursuit-ss.png";
-import profileImage from '../public/profile.jpeg'
-import stickPic01 from '../public/stick2.png'
-import confinPic01 from '../public/consapp.jpg'
+import profileImage from "../public/profile.jpeg";
+import stickPic01 from "../public/stick2.png";
+import confinPic01 from "../public/consapp.jpg";
 import { IUserData } from "@/models/user";
-
 
 export const user: IUserData = {
   profile: {
     name: "Chris Reichert",
     headline: "Software Engineer | Veteran | PMP",
     profileURL: "https://github.com/reichertc2/portfolio-main-fe",
-    logo:{
-      image:logoImage,
-      alt:"CR Logo"
-    }
+    logo: {
+      image: logoImage,
+      alt: "CR Logo",
+    },
   },
   aboutMe: {
     elevator: [
-      "Hello. I'm Chris and I enjoy creating and automating processes through the power of code. Getting my feet wet with excel, and graduating to first JavaScript, then my language of choice Python.",
-      "A veteran of the US Army aviation as an officer and pilot of the AH-64D Apache attack helicopter.",
+      "Hello. I'm Chris and I enjoy creating and automating processes through the power of code. Getting my feet wet with excel, and graduating to initially to JavaScript, then to my language of choice Python.",
+      "A veteran of the US Army aviation as an officer, company commander, and pilot of the AH-64D Apache attack helicopter.",
       "I revisited programming, after hitting a barrier in the potential of excel. Frustrated by its data limitations, I ventured out and I attended a coding training program at CodeFellows, and fell in love with the power of coding.",
       "In software, there isn't a stack I'm not willing to learn or ecosystem to develop in. I have since learned TypeScript and C# through my positions, and explored the Azure development ecosystem.",
     ],
     languages: ["Python", "C#", "Javascript / TS"],
     tools: ["React / TS", "Flask", "NextJS / TS "],
-    profileImage: profileImage
-
+    profileImage: profileImage,
   },
   jobs: [
     {
@@ -39,10 +38,9 @@ export const user: IUserData = {
       CompanyURL: "https://unitedigital.com/",
       Tenure: "August 2022 - Present",
       BulletPoints: [
-        "Developed features and fixed bugs per assigned tasks."
-        // "TBA",
-        // "TBA",
-
+        "Module lead for Dealer Settings.",
+        "Assisted in multi-tenant module development of Enrollment Center including frontend, backend, and SQL database setup.",
+        "Member of team initiating development of second generation client facing Dashboard in NextJS.",
       ],
     },
     {
@@ -65,9 +63,9 @@ export const user: IUserData = {
       CompanyURL: "https://www.codefellows.com",
       Tenure: "July 2021- February 2022",
       BulletPoints: [
-        "Developed full stack applications from MERN to Django and Next with Postgres.",
-        "Pair and mob programmed full stack applications for projects. See below for some examples",
-        // "TBA",
+        "Developed full stack applications from MERN to Django and Next with Postgres. Introduced to TDD with Pytest.",
+        "Pair and mob programmed full stack applications for projects. Examples are below.",
+        "",
       ],
     },
     {
@@ -106,15 +104,15 @@ export const user: IUserData = {
         {
           name: "github",
           url: "https://github.com/reichertc2",
-          icon: faGithub
+          icon: faGithub,
         },
       ],
       images: [
         {
-          image:confinPic01,
-          alt:"Personal Fintech App Pic"
-        }
-        ],
+          image: confinPic01,
+          alt: "Personal Fintech App Pic",
+        },
+      ],
     },
   ],
   subprojects: [
@@ -133,10 +131,9 @@ export const user: IUserData = {
       ],
       images: [
         {
-          image:stickPic01,
-          alt:"Stick Figure Adventure"
-        }
-        
+          image: stickPic01,
+          alt: "Stick Figure Adventure",
+        },
       ],
     },
     {
@@ -159,10 +156,10 @@ export const user: IUserData = {
       ],
       images: [
         {
-          image:speedPic01,
-          alt:"Speed Typing Pic"
-        }
-        ],
+          image: speedPic01,
+          alt: "Speed Typing Pic",
+        },
+      ],
     },
     {
       id: "sub-2",
@@ -184,10 +181,10 @@ export const user: IUserData = {
       ],
       images: [
         {
-          image:booksPic01,
-          alt:"Can of Books Pic"
-        }
-        ],
+          image: booksPic01,
+          alt: "Can of Books Pic",
+        },
+      ],
     },
     {
       id: "sub-3",
@@ -204,17 +201,16 @@ export const user: IUserData = {
       ],
       images: [
         {
-          image:pursuitPic01,
-          alt:"Coders Pursuit Pic"
-        }
-        , 
-    ],
+          image: pursuitPic01,
+          alt: "Coders Pursuit Pic",
+        },
+      ],
     },
   ],
   contactInfo: {
     email: "chris.a.reichert@gmail.com",
     contactBrief:
-      "Currently looking for meaningful work and my inbox is open. Please say hello or send me comments. Have a great day.",
+      "Not currently looking, but will entertain inquiries. Please say hello or send me comments. Have a great day.",
     socials: [
       {
         id: "ci-01",
@@ -226,6 +222,11 @@ export const user: IUserData = {
         url: "https://www.linkedin.com/in/christopher-reichert/",
         icon: faLinkedin,
       },
+      {
+        id: "ci-01",
+        url: "https://twitter.com/c2_reichert",
+        icon: faXTwitter,
+      }
     ],
   },
 };

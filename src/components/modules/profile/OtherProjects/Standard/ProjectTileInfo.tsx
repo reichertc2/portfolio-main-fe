@@ -11,11 +11,11 @@ interface IProjectTileInfoProps {
 export const ProjectTileInfo: React.FC<IProjectTileInfoProps> = ({ project, styling }) => {
 
   const styles = {
-    container: "absolute -left-0 -bottom-0 opacity-0 hover:opacity-90 pb-4 pl-1",
-    tileHeader: `text-xl dark:text-stone-900 py-1 font-semibold`,
-    tileDescription: `text-md dark:text-stone-900 py-1 font-semibold`,
-    urlContainer: `inline-block px-2 dark:text-stone-900`,
-    urlIcon: "text-2xl"
+    container: "pb-4 pl-1",
+    tileHeader: `pb-0 text-lg dark:text-sky-200 py-1 font-semibold`,
+    tileDescription: `px-1 text-xs dark:text-sky-100 py-1 font-semibold`,
+    urlContainer: `inline-block px-2 dark:text-sky-200`,
+    urlIcon: "text-md"
   }
   return (
 
