@@ -1,9 +1,9 @@
-import BasicSectionHeader from "../../../common/components/BasicSectionHeader";
+import BasicSectionHeader from "../../../../_components/common/BasicSectionHeader";
 import React from "react";
 import TabSelector from "./Experience/TabSelector";
-import { IJobInfo } from "@/app/default/models/user";
+import { IJobInfo } from "@/app/models/user";
 import { IStyles } from "@/app/default/common/MainClientPage";
-import UnderConstruction from "@/app/default/common/components/UnderConstruction";
+import UnderConstruction from "@/app/_components/common/UnderConstruction";
 
 interface IExperienceProps {
     jobExperience: IJobInfo[];

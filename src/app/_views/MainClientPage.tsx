@@ -3,8 +3,8 @@
 import { useEffect, useState } from 'react';
 import LandingPage from './LandingPage';
 import MainPage from './MainPage';
-import { user } from '../../../../data/user';
-import { IUserData } from '../models/user';
+import { IUserData } from '../_models/user';
+import { user } from '../../../data/user';
 
 export interface IStyles {
     whiteBg: string;

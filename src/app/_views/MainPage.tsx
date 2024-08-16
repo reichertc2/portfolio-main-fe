@@ -1,10 +1,11 @@
 "use client"
 
-import { IUserData } from "../models/user";
+import Footer from "../_components/common/Footer";
+import Header from "../_components/common/Header";
+import Main from "../_components/common/Main";
+import { IUserData } from "../_models/user";
 import { IStyles } from "./MainClientPage";
-import Footer from "./components/Footer";
-import Header from "./components/Header";
-import Main from "./components/Main";
+
 
 interface IMainPageProps {
     user: IUserData;

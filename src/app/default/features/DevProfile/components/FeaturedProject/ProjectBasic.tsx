@@ -1,7 +1,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { IProjectInfo } from "@/app/default/models/user"
+import { IProjectInfo } from "@/app/models/user"
 
 interface IProjectBasicProps {
     project: IProjectInfo

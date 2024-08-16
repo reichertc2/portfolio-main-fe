@@ -1,6 +1,6 @@
 import Link from "next/link"
-import { IUserData } from "../../models/user";
-import { IStyles } from "../MainClientPage";
+import { IUserData } from "../../_models/user";
+import { IStyles } from "../../default/common/MainClientPage";
 
 
 interface IFooterProps {

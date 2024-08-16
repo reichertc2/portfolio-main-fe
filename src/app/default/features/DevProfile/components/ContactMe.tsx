@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import BasicSectionHeader from '../../../common/components/BasicSectionHeader'
-import { IContactInfo } from '@/app/default/models/user'
-import UnderConstruction from '@/app/default/common/components/UnderConstruction';
+import BasicSectionHeader from '../../../../_components/common/BasicSectionHeader'
+import { IContactInfo } from '@/app/models/user'
+import UnderConstruction from '@/app/_components/common/UnderConstruction';
 
 interface IContactMeProps {
     contactInfo: IContactInfo;

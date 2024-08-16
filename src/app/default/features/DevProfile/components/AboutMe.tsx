@@ -3,8 +3,8 @@
 import Image from "next/image"
 import SummaryBio from "./AboutMe/SummaryBio"
 import ListBlock from "./AboutMe/ListBlock"
-import BasicSectionHeader from "../../../common/components/BasicSectionHeader"
-import { IAboutMe } from "@/app/default/models/user";
+import BasicSectionHeader from "../../../../_components/common/BasicSectionHeader"
+import { IAboutMe } from "@/app/models/user";
 import { IStyles } from "@/app/default/common/MainClientPage";
 
 

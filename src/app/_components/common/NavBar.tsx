@@ -6,9 +6,9 @@ import Link from "next/link"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { useTheme } from "next-themes"
 import { faMoon, faSun, faBars, faXmark } from "@fortawesome/free-solid-svg-icons"
-import { INavigation } from "../../models/navigation"
+import { INavigation } from "../../_models/navigation"
 import { useState } from "react"
-import { IStyles } from "../MainClientPage"
+import { IStyles } from "../../default/common/MainClientPage"
 
 interface INavBarProps {
     styles: IStyles;

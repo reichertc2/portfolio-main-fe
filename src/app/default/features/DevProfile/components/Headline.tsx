@@ -1,15 +1,36 @@
-import { IProfile } from "@/app/default/models/user";
-import { INavigation } from "@/app/default/models/navigation";
-import { IStyles } from "@/app/default/common/MainClientPage";
+'use client'
+
+import { IProfile } from "@/app/models/user";
+import NavBar from "@/app/_components/common/NavBar";
+import { INavigation } from "@/app/_models/navigation";
+import { useEffect, useState } from "react";
 
 interface IHeadlineProps {
     headLine: IProfile;
-    styles?: IStyles;
 }
 
+interface IHeadlineStyle {
+    section: string;
+    name: string;
+    headline: string;
+    navBar?: string
+}
 
+export const Headline: React.FC<IHeadlineProps> = ({ headLine }) => {
 
-export const Headline: React.FC<IHeadlineProps> = ({ headLine, styles }) => {
+    const headlineStyleLarge: IHeadlineStyle = {
+        section: `flex justify-start p-1 w-full`,
+        name: `dark:text-sky-100 text-7xl font-semibold py-1`,
+        headline: `dark:text-sky-200 text-5xl font-semibold italic pt-1 pb-3 opacity-70`
+    }
+
+    const headlineStyleSmall: IHeadlineStyle = {
+        section: `justify-start`,
+        name: `text-4xl font-semibold scale-50 w-full`,
+        headline: `text-2xl font-semibold italic opacity-70 scale-50 w-full`
+    }
+
+    const [headlineStyle, setHeadlineStyle] = useState<IHeadlineStyle>(headlineStyleLarge)
 
     const navigations: INavigation[] = [
         { label: 'About', path: '#AboutMeSection' },
@@ -18,32 +39,34 @@ export const Headline: React.FC<IHeadlineProps> = ({ headLine, styles }) => {
         { label: 'Contact', path: '#ContactSection' },
     ]
 
+    const handleSizeStyleChange = () => {
+        setTimeout(() => setHeadlineStyle(headlineStyleSmall), 1000)
+
+        console.log("handleSizeStyleChange")
+    }
+
+    useEffect(() => {
+        handleSizeStyleChange()
+    }, [])
 
     return (
-        <>
-            <section className={`flex flex-col justify-start p-1 w-full`}>
-                <div className="hidden md:block">
-                    <p className={`dark:text-stone-100 text-7xl font-semibold py-1`}>
-                        {headLine["name"]}
-                    </p>
-                    <p className={`dark:text-sky-200 text-5xl font-semibold italic pt-1 pb-3 opacity-70`}>
-                        {headLine["headline"]}
-                    </p>
-                </div>
+        <section className="flex">
+            <div className={headlineStyle["section"]}>
 
-                {/* Mobile Version */}
+                <p className={headlineStyle["name"]}>
+                    {headLine["name"]}
+                </p>
+                <p className={headlineStyle["headline"]}>
+                    {headLine["headline"]}
+                </p>
 
-                <div className="sm:hidden block">
-                    <p className={`dark:text-stone-100 text-xl font-semibold py-1`}>
-                        {headLine["name"]}
-                    </p>
-                    <p className={`dark:text-sky-200 text-sm font-semibold italic pb-3 opacity-70`}>
-                        {headLine["headline"]}
-                    </p>
-                </div>
-            </section>
-        </>
-
+     
+            </div>
+           <NavBar
+                navigations={navigations}
+                showThemeChange={false}
+            />
+        </section>
     )
 }
 

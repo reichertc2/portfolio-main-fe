@@ -1,7 +1,7 @@
 import NavBar from "./NavBar"
-import { IUserData } from "../../models/user";
-import { INavigation } from "../../models/navigation";
-import { IStyles } from "../MainClientPage";
+import { IUserData } from "../../_models/user";
+import { INavigation } from "../../_models/navigation";
+import { IStyles } from "../../default/common/MainClientPage";
 
 interface IHeaderProps {
     profileMain: IUserData;

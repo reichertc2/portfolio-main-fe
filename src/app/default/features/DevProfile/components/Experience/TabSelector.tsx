@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import React, { useState } from "react";
-import { IJobInfo } from "@/app/default/models/user";
+import { IJobInfo } from "@/app/models/user";
 import { IStyles } from "@/app/default/common/MainClientPage";
 
 interface ITabSelectorProps {

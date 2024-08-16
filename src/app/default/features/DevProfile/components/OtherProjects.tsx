@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image from "next/image";
 import Link from "next/link";
-import BasicSectionHeader from "../../../common/components/BasicSectionHeader";
-import { IProjectInfo } from "@/app/default/models/user";
-import UnderConstruction from "@/app/default/common/components/UnderConstruction";
+import BasicSectionHeader from "../../../../_components/common/BasicSectionHeader";
+import { IProjectInfo } from "@/app/models/user";
+import UnderConstruction from "@/app/_components/common/UnderConstruction";
 
 interface IOtherProjectsProps {
   projectWorks: IProjectInfo[]
