@@ -1,12 +1,18 @@
-import MainClientPage from "./_views/MainClientPage";
+import { user } from "../../../../data/user";
+import MainContainer from "@/app/_components/common/MainContainer";
+import ContactMe from "@/app/_components/modules/profile/ContactMe";
 
+interface IContactMePageProps {}
 
-export default function Home() {
-
+const ContactMePage: React.FC<IContactMePageProps> = () => {
   return (
-    <div className="">
-      <MainClientPage />
-    </div>
+    <MainContainer>
+      <ContactMe
+        contactInfo={user["contactInfo"]}
+        //styling={styling}
+      />
+    </MainContainer>
+  );
+};
 
-  )
-}
+export default ContactMePage;

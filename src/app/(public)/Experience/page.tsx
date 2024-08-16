@@ -1,12 +1,18 @@
-import MainClientPage from "./_views/MainClientPage";
+import { user } from "../../../../data/user";
+import MainContainer from "@/app/_components/common/MainContainer";
+import Experience from "@/app/_components/modules/profile/Experience";
 
+interface IAExperiencePageProps {}
 
-export default function Home() {
-
+const ExperiencePage: React.FC<IAExperiencePageProps> = () => {
   return (
-    <div className="">
-      <MainClientPage />
-    </div>
+    <MainContainer>
+      <Experience
+        jobExperience={user["jobs"]}
+        //styling={styling}
+      />
+    </MainContainer>
+  );
+};
 
-  )
-}
+export default ExperiencePage;
