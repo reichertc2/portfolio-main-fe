@@ -6,6 +6,7 @@ import { IUserData } from '@/app/_models/user';
 import Header from './Header';
 import Footer from './Footer';
 import { user } from '../../../../data/user';
+import {theme} from '../../../../data/theme';
 
 interface IMainClientViewProps {
     children?: React.ReactNode;
@@ -17,7 +18,7 @@ export const MainClientView: React.FC<IMainClientViewProps> = ({ children }) => 
     const [profileMain, setProfileMain] = useState<IUserData>(user)
 
     const styles = {
-        container:`m-auto min-h-screen`
+        container:`m-auto min-h-screen ${theme.backgrounds.light} dark:${theme.backgrounds.dark} ${theme.texts.light}`
     }
 
     useEffect(() => {
@@ -33,18 +34,21 @@ export const MainClientView: React.FC<IMainClientViewProps> = ({ children }) => 
                     <>
                         <Header
                             profileMain={user}
+                            theme={theme}
                         />
                         <div>
                             {children}
                         </div>
                         <Footer
                             profileMain={user}
+                            theme={theme}
                         />
 
                     </>
                     :
                     <LandingPage
                         profile={profileMain["profile"]}
+                        theme={theme}
                     />
                 }
             </div>

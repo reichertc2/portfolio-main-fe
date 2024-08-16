@@ -8,25 +8,25 @@ import ExperienceStandardView from "./Experience/ExperienceStandardView";
 
 interface IExperienceProps {
     jobExperience: IJobInfo[];
-    styling?: IStyles;
+    theme: IStyles;
 }
 
-export const Experience: React.FC<IExperienceProps> = ({ jobExperience, styling }) => {
+export const Experience: React.FC<IExperienceProps> = ({ jobExperience, theme }) => {
 
     return (
         <ProfileSection
             id={"ExperienceSection"}
             title={"Experience"}
-            styling={styling}
+            theme={theme}
         >
 
             <ExperienceStandardView
                 jobExperience={jobExperience}
-                styling={styling}
+                styling={theme}
             />
             <ExperienceMobileView
                 jobExperience={jobExperience}
-                styling={styling}
+                styling={theme}
             />
 
         </ProfileSection>

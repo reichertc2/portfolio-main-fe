@@ -2,14 +2,14 @@ import { IStyles } from "@/app/_models/styles";
 
 interface IBasicSectionHeader {
     headerTitle: string;
-    styles?: IStyles
+    theme: IStyles
 }
-export const BasicSectionHeader: React.FC<IBasicSectionHeader> = ({ headerTitle, styles }) => {
+export const BasicSectionHeader: React.FC<IBasicSectionHeader> = ({ headerTitle, theme }) => {
 
     return (
 
         <h3
-            className={`flex justify-self-start text-xl dark:text-stone-100 py-1 font-semibold `}>
+            className={`flex justify-self-start text-xl dark:${theme.texts.headerDark} py-1 font-semibold `}>
             {headerTitle}
         </h3>
 

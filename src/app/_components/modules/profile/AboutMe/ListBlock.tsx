@@ -9,7 +9,7 @@ interface IListBlockProps {
     title: string;
     listProps: string[];
     orientation: string;
-    styles?: IStyles;
+    theme: IStyles;
 }
 
 interface IListBlockStyling {
@@ -18,7 +18,7 @@ interface IListBlockStyling {
     li: string;
 }
 
-export const ListBlock: React.FC<IListBlockProps> = ({ title, listProps, orientation, styles }) => {
+export const ListBlock: React.FC<IListBlockProps> = ({ title, listProps, orientation, theme }) => {
 
     const defaultOrientation: IListBlockStyling = {
         ul: `dark:text-sky-200 inline-block pr-3 text-sm w-3/5`,

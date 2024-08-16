@@ -1,6 +1,7 @@
 import { user } from "../../../../data/user";
 import MainContainer from "@/app/_components/common/MainContainer";
 import ContactMe from "@/app/_components/modules/profile/ContactMe";
+import { theme } from "../../../../data/theme";
 
 interface IContactMePageProps {}
 
@@ -9,7 +10,7 @@ const ContactMePage: React.FC<IContactMePageProps> = () => {
     <MainContainer>
       <ContactMe
         contactInfo={user["contactInfo"]}
-        //styling={styling}
+        theme={theme}
       />
     </MainContainer>
   );

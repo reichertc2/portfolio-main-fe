@@ -2,6 +2,7 @@ import { user } from "../../../../data/user";
 import MainContainer from "@/app/_components/common/MainContainer";
 import FeaturedProject from "@/app/_components/modules/profile/FeaturedProject";
 import OtherProjects from "@/app/_components/modules/profile/OtherProjects";
+import { theme } from "../../../../data/theme";
 
 interface IProjectsPageProps {}
 
@@ -10,11 +11,11 @@ const ProjectsPage: React.FC<IProjectsPageProps> = () => {
     <MainContainer>
       <FeaturedProject
         projectWorks={user["projects"]}
-        //styling={styling}
+        theme={theme}
       />
       <OtherProjects
         projectWorks={user["subprojects"]}
-        //styling={styling}
+        theme={theme}
       />
     </MainContainer>
   );

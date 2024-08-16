@@ -1,12 +1,14 @@
+import { IStyles } from '@/app/_models/styles';
+import { IProfile } from '@/app/_models/user';
 import Image from 'next/image';
-import { IProfile } from '../../app/_models/user';
 
 
 interface ILandingPageProps {
     profile: IProfile;
+    theme: IStyles;
 }
 
-export const LandingPage: React.FC<ILandingPageProps> = ({ profile }) => {
+export const LandingPage: React.FC<ILandingPageProps> = ({ profile, theme }) => {
 
     const styles = {
         container: `m-auto transition delay-1000`,

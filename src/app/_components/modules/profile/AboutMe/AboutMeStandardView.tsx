@@ -7,10 +7,10 @@ import SummaryBio from "./Standard/SummaryBio";
 
 interface IAboutMeStandardViewProps {
     aboutMe: IAboutMe;
-    styling?: IStyles;
+    theme: IStyles;
 }
 
-export const AboutMeStandardView: React.FC<IAboutMeStandardViewProps> = ({ aboutMe, styling }) => {
+export const AboutMeStandardView: React.FC<IAboutMeStandardViewProps> = ({ aboutMe, theme }) => {
     const styles = {
         bioContainer: `hidden sm:flex justify-start p-2 w-full`,
         bioImageContainer: "mx-2",
@@ -25,7 +25,7 @@ export const AboutMeStandardView: React.FC<IAboutMeStandardViewProps> = ({ about
 
             <SummaryBio
                 elevator={aboutMe.elevator}
-                styling={styling}
+                theme={theme}
             />
 
             <div className={styles.bioImageContainer}>
@@ -42,13 +42,13 @@ export const AboutMeStandardView: React.FC<IAboutMeStandardViewProps> = ({ about
                         title="Languages"
                         listProps={aboutMe.languages}
                         orientation={"vertical"}
-                        styles={styling}
+                        theme={theme}
                     />
                     <ListBlock
                         title="Tools"
                         listProps={aboutMe.tools}
                         orientation={"vertical"}
-                        styles={styling}
+                        theme={theme}
                     />
 
                 </div>

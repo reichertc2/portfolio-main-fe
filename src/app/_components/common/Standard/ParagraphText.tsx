@@ -1,11 +1,13 @@
+import { IStyles } from "@/app/_models/styles";
 
 interface IParagraphTextProps {
     text: string;
+    theme: IStyles
 }
 
-export const ParagraphText: React.FC<IParagraphTextProps> = ({ text }) => {
+export const ParagraphText: React.FC<IParagraphTextProps> = ({ text, theme }) => {
     const styles = {
-        text: `dark:text-sky-200 py-2`
+        text: `dark:${theme.texts.dark} py-2`
     }
 
     return (

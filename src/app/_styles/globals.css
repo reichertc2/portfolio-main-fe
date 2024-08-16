@@ -28,13 +28,7 @@
     rgb(var(--background-start-rgb));
 } */
 
-@layer base {
-  body {
-    /* @apply mx-auto; */
-    @apply bg-slate-400 dark:bg-stone-800 text-stone-800;
 
-  }
-}
 
 * {
   box-sizing: border-box;

@@ -5,21 +5,21 @@ import { IStyles } from "@/app/_models/styles";
 
 interface IHeaderProps {
   profileMain: IUserData;
-  styling?: IStyles;
+  theme: IStyles;
 }
 
-export const Header: React.FC<IHeaderProps> = ({ profileMain, styling }) => {
+export const Header: React.FC<IHeaderProps> = ({ profileMain, theme }) => {
   const navigations: INavigation[] = [
     { label: "About", path: "/AboutMe" },
     { label: "Experience", path: "/Experience" },
-    { label: "Projects", path: "/Projecs" },
+    { label: "Projects", path: "/Projects" },
     { label: "Contact", path: "/ContactMe" },
   ];
 
   return (
     <header className="flex flex-row w-full">
       <NavBar
-        styling={styling}
+        themeStyle={theme}
         navigations={navigations}
         logo={profileMain.profile.logo}
         showThemeChange={true}

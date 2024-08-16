@@ -7,16 +7,16 @@ import ContactMeStandardView from './ContactMe/ContactMeStandardView';
 
 interface IContactMeProps {
     contactInfo: IContactInfo;
-    styling?: IStyles;
+    theme: IStyles;
 }
 
-export const ContactMe: React.FC<IContactMeProps> = ({ contactInfo, styling }) => {
+export const ContactMe: React.FC<IContactMeProps> = ({ contactInfo, theme}) => {
 
     return (
         <ProfileSection
             id={"ContactSection"}
             title={"Contact"}
-            styling={styling}
+            theme={theme}
         >
 
             <ContactMeStandardView

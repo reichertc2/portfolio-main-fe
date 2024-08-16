@@ -11,13 +11,13 @@ import NavBarStandardView from "./NavBar/NavBarStandardView"
 import NavBarMobileView from "./NavBar/NavBarMobileView"
 
 interface INavBarProps {
-    styling?: IStyles;
+    themeStyle: IStyles;
     navigations: INavigation[];
     logo: any;
     showThemeChange: boolean;
 }
 
-export const NavBar: React.FC<INavBarProps> = ({ styling, navigations, logo, showThemeChange }) => {
+export const NavBar: React.FC<INavBarProps> = ({ themeStyle, navigations, logo, showThemeChange }) => {
 
     const { systemTheme, theme, setTheme } = useTheme();
 
@@ -52,10 +52,11 @@ export const NavBar: React.FC<INavBarProps> = ({ styling, navigations, logo, sho
     return (
         <NavBarContainer
             logo={logo}
+            theme={themeStyle}
         >
             <NavBarStandardView
                 navigations={navigations}
-                styling={styling}
+                theme={themeStyle}
                 renderThemeChanger={renderThemeChanger}
                 showThemeChange={showThemeChange}
 
@@ -63,7 +64,7 @@ export const NavBar: React.FC<INavBarProps> = ({ styling, navigations, logo, sho
             {/* Mobile Button and Menu */}
             <NavBarMobileView
                 navigations={navigations}
-                styling={styling}
+                theme={themeStyle}
             />
 
         </NavBarContainer>

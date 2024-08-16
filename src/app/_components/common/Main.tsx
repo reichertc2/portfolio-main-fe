@@ -1,14 +1,15 @@
 "use client"
 
+import { IStyles } from '@/app/_models/styles';
+import { IUserData } from '@/app/_models/user';
 import Head from 'next/head'
-import Headline from '../../default/features/DevProfile/components/Headline'
-import AboutMe from '../../default/features/DevProfile/components/AboutMe'
-import Experience from '../../default/features/DevProfile/components/Experience'
-import FeaturedProject from '../../default/features/DevProfile/components/FeaturedProject'
-import OtherProjects from '../../default/features/DevProfile/components/OtherProjects'
-import ContactMe from '../../default/features/DevProfile/components/ContactMe'
-import { IUserData } from '../../_models/user'
-import { IStyles } from '../../default/common/MainClientPage'
+import AboutMe from '../modules/profile/AboutMe';
+import ContactMe from '../modules/profile/ContactMe';
+import Experience from '../modules/profile/Experience';
+import FeaturedProject from '../modules/profile/FeaturedProject';
+import Headline from '../modules/profile/Headline';
+import OtherProjects from '../modules/profile/OtherProjects';
+
 
 interface IMainProps {
     profileMain: IUserData;
@@ -32,15 +33,12 @@ export const Main: React.FC<IMainProps> = ({ profileMain, styles }) => {
                 >
                     <Headline
                         headLine={profileMain["profile"]}
-                        styles={styles}
+                        //styles={styles}
                     />
-                    <AboutMe
-                        aboutMe={profileMain["aboutMe"]}
-                        styles={styles}
-                    />
+          
                     <Experience
                         jobExperience={profileMain["jobs"]}
-                        styles={styles}
+                     //   styles={styles}
                     />
                     <FeaturedProject projectWorks={profileMain["projects"]} />
                     <OtherProjects projectWorks={profileMain["subprojects"]} />

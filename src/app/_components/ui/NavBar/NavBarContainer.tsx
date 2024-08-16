@@ -1,15 +1,17 @@
+import { IStyles } from "@/app/_models/styles";
 import Image from "next/image"
 
 
 interface INavBarContainerProps {
     logo: any;
+    theme: IStyles;
     children: React.ReactNode;
 }
 
-export const NavBarContainer: React.FC<INavBarContainerProps> = ({ logo, children }) => {
+export const NavBarContainer: React.FC<INavBarContainerProps> = ({ logo, theme, children }) => {
 
     const styles = {
-        container: `fixed left-0 top-0 w-full z-10 ease-in duration-300 bg-slate-400 dark:bg-stone-800`,
+        container: `fixed left-0 top-0 w-full z-10 ease-in duration-300 ${theme.backgrounds.light} dark:${theme.backgrounds.dark}`,
         subContainer: `max-w-[1240px] m-auto flex justify-between items-center`,
         image: `flex flex-initial basis-1/8 rounded-full w-20 h-20`
     }

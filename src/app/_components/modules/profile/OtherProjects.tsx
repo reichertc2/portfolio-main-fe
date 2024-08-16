@@ -6,25 +6,25 @@ import OtherProjectsStandardView from "./OtherProjects/OtherProjectsStandardView
 
 interface IOtherProjectsProps {
   projectWorks: IProjectInfo[];
-  styling?: IStyles;
+  theme: IStyles;
 }
 
-export const OtherProjects: React.FC<IOtherProjectsProps> = ({ projectWorks, styling }) => {
+export const OtherProjects: React.FC<IOtherProjectsProps> = ({ projectWorks, theme}) => {
   return (
     <ProfileSection
       id={"WorkSection"}
       title={"Other Projects"}
-      styling={styling}
+      theme={theme}
     >
 
       <OtherProjectsStandardView
         projectWorks={projectWorks}
-        styling={styling}
+        styling={theme}
       />
       {/* TODO Mobile */}
       <OtherProjectsMobileView
         projectWorks={projectWorks}
-        styling={styling}
+        styling={theme}
       />
 
     </ProfileSection>

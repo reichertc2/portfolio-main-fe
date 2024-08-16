@@ -4,11 +4,7 @@ import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub } from "@fortawesome/free-brands-svg-icons"
 import projectImage1 from '../../public/stick2.png'
-<<<<<<< HEAD:src/app/default/features/DevProfile/components/FeaturedProject/ProjectCarousel.tsx
-import { IProjectInfo } from "@/app/models/user"
-=======
-import { IProjectInfo } from "@/models/user"
->>>>>>> db6b0c32859b664658cfba0567ebbb4c8937a288:src/components/modules/profile/FeaturedProject/ProjectCarousel.tsx
+import { IProjectInfo } from "@/app/_models/user"
 
 
 library.add(faGithub)

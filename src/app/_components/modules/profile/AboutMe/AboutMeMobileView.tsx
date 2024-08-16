@@ -7,10 +7,10 @@ import { SummaryBioMobile } from "./Mobile/SummaryBioMobile";
 
 interface IAboutMeMobileViewProps {
     aboutMe: IAboutMe;
-    styling?: IStyles;
+    theme: IStyles;
 }
 
-export const AboutMeMobileView: React.FC<IAboutMeMobileViewProps> = ({ aboutMe, styling }) => {
+export const AboutMeMobileView: React.FC<IAboutMeMobileViewProps> = ({ aboutMe, theme }) => {
 
     const styles = {
         bioContainer: `sm:hidden flex flex-col justify-start p-1 w-full items-center`,
@@ -37,7 +37,7 @@ export const AboutMeMobileView: React.FC<IAboutMeMobileViewProps> = ({ aboutMe, 
 
                 <SummaryBioMobile
                     elevator={aboutMe.elevator}
-                    styling={styling}
+                    theme={theme}
                 />
 
 
@@ -47,7 +47,7 @@ export const AboutMeMobileView: React.FC<IAboutMeMobileViewProps> = ({ aboutMe, 
                     title="Languages"
                     listProps={aboutMe.languages}
                     orientation={"vertical"}
-                    styles={styling}
+                    styles={theme}
                 />
 
 
@@ -58,7 +58,7 @@ export const AboutMeMobileView: React.FC<IAboutMeMobileViewProps> = ({ aboutMe, 
                     title="Tools"
                     listProps={aboutMe.tools}
                     orientation={"vertical"}
-                    styles={styling}
+                    styles={theme}
                 />
 
             </div>

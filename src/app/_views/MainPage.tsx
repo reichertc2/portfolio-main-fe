@@ -1,8 +1,9 @@
 "use client"
 
-import Footer from "../_components/common/Footer";
-import Header from "../_components/common/Header";
+
 import Main from "../_components/common/Main";
+import Footer from "../_components/ui/Footer";
+import Header from "../_components/ui/Header";
 import { IUserData } from "../_models/user";
 import { IStyles } from "./MainClientPage";
 

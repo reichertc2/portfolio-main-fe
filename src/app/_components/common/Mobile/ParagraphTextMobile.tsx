@@ -1,11 +1,13 @@
+import { IStyles } from "@/app/_models/styles";
 
 interface IParagraphTextMobileProps {
     text: string;
+    theme: IStyles
 }
 
-export const ParagraphTextMobile: React.FC<IParagraphTextMobileProps> = ({ text }) => {
+export const ParagraphTextMobile: React.FC<IParagraphTextMobileProps> = ({ text, theme }) => {
     const styles = {
-        text: `dark:text-sky-200 py-2 text-sm`
+        text: `dark:${theme.texts.dark} py-2 text-sm`
     }
 
     return (

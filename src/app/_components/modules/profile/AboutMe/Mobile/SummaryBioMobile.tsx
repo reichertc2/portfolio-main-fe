@@ -3,10 +3,10 @@ import { IStyles } from "@/app/_models/styles";
 
 interface ISummaryBioMobileProps {
     elevator: string[];
-    styling?: IStyles;
+    theme: IStyles;
 }
 
-export const SummaryBioMobile: React.FC<ISummaryBioMobileProps> = ({ elevator, styling }) => {
+export const SummaryBioMobile: React.FC<ISummaryBioMobileProps> = ({ elevator, theme }) => {
 
     const styles = {
         container: `w-50`,
@@ -20,6 +20,7 @@ export const SummaryBioMobile: React.FC<ISummaryBioMobileProps> = ({ elevator, s
                 {
                     elevator.map((text, idx) =>
                         <ParagraphTextMobile
+                        theme={theme}
                             key={`${text}-${idx}`}
                             text={text}
                         />

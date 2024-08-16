@@ -3,10 +3,10 @@ import { IStyles } from "@/app/_models/styles";
 
 interface ISummaryBio {
     elevator: string[];
-    styling?: IStyles;
+    theme: IStyles;
 }
 
-export const SummaryBio: React.FC<ISummaryBio> = ({ elevator, styling }) => {
+export const SummaryBio: React.FC<ISummaryBio> = ({ elevator, theme }) => {
 
     const styles = {
         container: `w-50`,
@@ -22,6 +22,7 @@ export const SummaryBio: React.FC<ISummaryBio> = ({ elevator, styling }) => {
                         <ParagraphText
                             key={`${text}-${idx}`}
                             text={text}
+                            theme={theme}
                         />
                     )
                 }

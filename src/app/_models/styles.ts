@@ -1,9 +1,16 @@
-
 export interface IStyles {
-    whiteBg: string;
-    standadText: string;
-    darkText: string;
-    darkStandardText: string;
-    accentText: string;
-    secondaryAccentText: string;
+  texts: ITextStyles;
+  backgrounds: IBackgroundColors;
+}
+
+interface ITextStyles {
+  light: string;
+  dark: string;
+  headerLight: string;
+  headerDark: string;
+}
+
+interface IBackgroundColors {
+  light: string;
+  dark: string;
 }

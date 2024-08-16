@@ -3,17 +3,16 @@ import { IUserData } from "@/app/_models/user";
 import Link from "next/link"
 
 
-
 interface IFooterProps {
     profileMain: IUserData;
-    styling?: IStyles;
+    theme: IStyles;
 }
 
-export const Footer: React.FC<IFooterProps> = ({ profileMain, styling }) => {
+export const Footer: React.FC<IFooterProps> = ({ profileMain, theme }) => {
 
     const styles = {
         footer: `p-3 text-center content-center`,
-        copyright: `dark:text-stone-100 italic py-4`
+        copyright: `dark:${theme.texts.dark} italic py-4`
     }
 
     const renderCopyrightYear = () => {

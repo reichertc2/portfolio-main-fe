@@ -6,8 +6,6 @@ import { ThemeProvider } from 'next-themes';
 import { Metadata } from 'next';
 import MainClientView from './_components/ui/MainClientView';
 
-
-
 const inter = Inter({ subsets: ['latin'] })
 
 const metadata: Metadata = {
