@@ -1,12 +1,13 @@
-import MainClientPage from "./_views/MainClientPage";
+
+import ProfileMain from "@/app/_components/modules/profile/ProfileMain";
+import { user } from "../../data/user"
 
 
 export default function Home() {
 
   return (
-    <div className="">
-      <MainClientPage />
-    </div>
+    <ProfileMain profileMain={user} />
 
   )
 }
+

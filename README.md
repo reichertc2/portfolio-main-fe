@@ -1,7 +1,7 @@
 # Professional Developer Portfolio 
 
 **Author**: Chris Reichert
-**Version**: 2.0.1 Version 1 - TS Integration and Testing
+**Version**: 2.0.4 Version 1 - Styling Improvements
 
 ## Architecture
 

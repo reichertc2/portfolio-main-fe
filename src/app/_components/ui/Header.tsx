@@ -1,7 +1,7 @@
 import { INavigation } from "@/app/_models/navigation";
-import { IStyles } from "@/app/_models/styles";
 import { IUserData } from "@/app/_models/user";
-import NavBar from "./NavBar";
+import NavBar from "./NavBar"
+import { IStyles } from "@/app/_models/styles";
 
 
 interface IHeaderProps {
