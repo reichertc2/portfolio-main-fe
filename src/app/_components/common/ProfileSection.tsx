@@ -11,7 +11,7 @@ interface IProfileSectionProps {
 export const ProfileSection: React.FC<IProfileSectionProps> = ({ id, title, theme, children }) => {
 
     const styles = {
-        container: `snap-start h-screen flex flex-col justify-center items-center ${theme} w-3/5 m-auto`
+        container: `min-h-[90vh] flex flex-col justify-center items-center ${theme} w-3/4 m-auto`
     }
 
     return (

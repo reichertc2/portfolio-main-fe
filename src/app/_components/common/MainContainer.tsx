@@ -6,7 +6,7 @@ interface IMainContainerProps {
 export const MainContainer: React.FC<IMainContainerProps> = ({ children }) => {
 
     const styles = {
-        container: `snap-y snap-mandatory m-auto w-4/5`
+        container: `m-auto w-3/4`
     }
 
     return (

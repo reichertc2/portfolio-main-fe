@@ -1,7 +1,7 @@
-# Professional Developer Portfolio 
+# Professional Developer Portfolio
 
 **Author**: Chris Reichert
-**Version**: 2.0.4 Version 1 - Styling Improvements
+**Version**: 2.1.0 Version 2 - Revamp to multi page app
 
 ## Architecture
 
@@ -20,7 +20,7 @@
 
 [30 Seconds of code](https://www.30secondsofcode.org/css/s/hover-underline-animation)
 
-## Helpful items 
+## Helpful items
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
