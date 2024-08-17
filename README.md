@@ -12,10 +12,6 @@
 
 ## Credit and Collaboration(s)
 
-### Inspiration
-
-[Brittany Chiang](https://brittanychiang.com/)
-
 ### Hover Underline Animation
 
 [30 Seconds of code](https://www.30secondsofcode.org/css/s/hover-underline-animation)
