@@ -4,10 +4,11 @@ import logoImage from "../public/logo_basic.png";
 import speedPic01 from "../public/speed.png";
 import booksPic01 from "../public/books.png";
 import pursuitPic01 from "../public/coders-pursuit-ss.png";
-import profileImage from "../public/profile.jpeg";
-import stickPic01 from "../public/stick2.png";
-import confinPic01 from "../public/consapp.jpg";
-import { IUserData } from "@/models/user";
+import profileImage from '../public/profile.jpeg'
+import stickPic01 from '../public/stick2.png'
+import confinPic01 from '../public/consapp.jpg'
+import { IUserData } from "@/app/_models/user";
+
 
 export const user: IUserData = {
   profile: {

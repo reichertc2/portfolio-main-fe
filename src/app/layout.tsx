@@ -1,12 +1,10 @@
 'use client'
 
-import './styles/globals.css';
+import './_styles/globals.css';
 import { Inter } from 'next/font/google';
 import { ThemeProvider } from 'next-themes';
 import { Metadata } from 'next';
-import MainClientView from '@/components/ui/MainClientView';
-
-
+import MainClientView from './_components/ui/MainClientView';
 
 const inter = Inter({ subsets: ['latin'] })
 
