@@ -47,7 +47,7 @@ export const AboutMeMobileView: React.FC<IAboutMeMobileViewProps> = ({ aboutMe, 
                     title="Languages"
                     listProps={aboutMe.languages}
                     orientation={"vertical"}
-                    styles={theme}
+                    theme={theme}
                 />
 
 
@@ -58,7 +58,7 @@ export const AboutMeMobileView: React.FC<IAboutMeMobileViewProps> = ({ aboutMe, 
                     title="Tools"
                     listProps={aboutMe.tools}
                     orientation={"vertical"}
-                    styles={theme}
+                    theme={theme}
                 />
 
             </div>

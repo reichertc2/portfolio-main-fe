@@ -13,10 +13,10 @@ import OtherProjects from '../modules/profile/OtherProjects';
 
 interface IMainProps {
     profileMain: IUserData;
-    styles?: IStyles;
+    theme: IStyles;
 }
 
-export const Main: React.FC<IMainProps> = ({ profileMain, styles }) => {
+export const Main: React.FC<IMainProps> = ({ profileMain, theme }) => {
 
     return (
         <>
@@ -33,16 +33,10 @@ export const Main: React.FC<IMainProps> = ({ profileMain, styles }) => {
                 >
                     <Headline
                         headLine={profileMain["profile"]}
-                        //styles={styles}
+                        theme={theme}
                     />
           
-                    <Experience
-                        jobExperience={profileMain["jobs"]}
-                     //   styles={styles}
-                    />
-                    <FeaturedProject projectWorks={profileMain["projects"]} />
-                    <OtherProjects projectWorks={profileMain["subprojects"]} />
-                    <ContactMe contactInfo={profileMain["contactInfo"]} />
+       
                 </article>
             </main>
         </>

@@ -5,16 +5,16 @@ import MainContainer from "@/app/_components/common/MainContainer";
 
 interface IProfileMainProps {
   profileMain: IUserData;
-  styling?: IStyles;
+  theme: IStyles;
 }
 
 export const ProfileMain: React.FC<IProfileMainProps> = ({
   profileMain,
-  styling,
+  theme,
 }) => {
   return (
     <MainContainer>
-      <Headline headLine={profileMain["profile"]} styling={styling} />
+      <Headline headLine={profileMain["profile"]} theme={theme} />
     </MainContainer>
   );
 };

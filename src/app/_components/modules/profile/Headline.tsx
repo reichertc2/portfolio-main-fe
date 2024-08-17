@@ -7,10 +7,10 @@ import ProfileSection from "@/app/_components/common/ProfileSection";
 
 interface IHeadlineProps {
     headLine: IProfile;
-    styling?: IStyles;
+    theme: IStyles;
 }
 
-export const Headline: React.FC<IHeadlineProps> = ({ headLine, styling }) => {
+export const Headline: React.FC<IHeadlineProps> = ({ headLine, theme }) => {
 
     const navigations: INavigation[] = [
         { label: 'About', path: '#AboutMeSection' },
@@ -23,18 +23,19 @@ export const Headline: React.FC<IHeadlineProps> = ({ headLine, styling }) => {
         <>
             <ProfileSection
                 id={"Headline"}
+                theme={theme}
             >
 
                 <HeadlineStandardView
                     headLine={headLine}
-                    styling={styling}
+                    theme={theme}
                 />
 
                 {/* Mobile Version */}
 
                 <HeadlineMobileView
                     headLine={headLine}
-                    styling={styling}
+                    theme={theme}
                 />
             </ProfileSection>
         </>
