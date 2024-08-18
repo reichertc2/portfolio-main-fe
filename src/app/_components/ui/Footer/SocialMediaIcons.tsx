@@ -17,8 +17,8 @@ export const SocialMediaIcons: React.FC<ISocialMediaIconsProps> = ({
   return (
     <div className={styles.iconsContainer}>
       {socialMedia.map((item) => (
-        <div className={styles.icons}>
-          <Link href={item.url}>
+        <div className={styles.icons} key={item.id}>
+          <Link href={item.url} >
             <FontAwesomeIcon icon={item.icon} />
           </Link>
         </div>
