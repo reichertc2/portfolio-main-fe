@@ -8,10 +8,7 @@ interface IContactMePageProps {}
 const ContactMePage: React.FC<IContactMePageProps> = () => {
   return (
     <MainContainer>
-      <ContactMe
-        contactInfo={user["contactInfo"]}
-        theme={theme}
-      />
+      <ContactMe contactInfo={user["contactInfo"]} theme={theme} />
     </MainContainer>
   );
 };

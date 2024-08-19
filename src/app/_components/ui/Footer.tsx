@@ -1,6 +1,6 @@
+import React from "react";
 import { IStyles } from "@/app/_models/styles";
 import { IUserData } from "@/app/_models/user";
-import Link from "next/link";
 import ThreeQuarterView from "./SubViews/ThreeQuarterView";
 import CopyrightText from "./Footer/CopyrightText";
 import SocialMediaIcons from "./Footer/SocialMediaIcons";
@@ -21,7 +21,6 @@ export const Footer: React.FC<IFooterProps> = ({ profileMain, theme }) => {
       <ThreeQuarterView divider={true}>
         <CopyrightText text={profileMain.profile.name} />
         <SocialMediaIcons socialMedia={profileMain.contactInfo.socials} />
-
       </ThreeQuarterView>
     </footer>
   );

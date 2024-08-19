@@ -5,7 +5,7 @@ import LandingPage from "./LandingPage";
 import MainPage from "./MainPage";
 import { IUserData } from "../_models/user";
 import { user } from "../../../data/user";
-import {theme} from "../../../data/theme"
+import { theme } from "../../../data/theme";
 
 interface IStyles {
   whiteBg: string;
@@ -36,7 +36,7 @@ export default function MainClientPage() {
   return (
     <>
       {entered ? (
-        <MainPage user={profileMain} theme={theme}/>
+        <MainPage user={profileMain} theme={theme} />
       ) : (
         <LandingPage profile={profileMain["profile"]} />
       )}

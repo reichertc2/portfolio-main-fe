@@ -1,5 +1,5 @@
-export interface INavigation{
-    label: string;
-    path:string;
-    image?: any;
+export interface INavigation {
+  label: string;
+  path: string;
+  image?: any;
 }

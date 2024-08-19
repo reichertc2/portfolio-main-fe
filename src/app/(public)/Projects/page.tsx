@@ -9,14 +9,8 @@ interface IProjectsPageProps {}
 const ProjectsPage: React.FC<IProjectsPageProps> = () => {
   return (
     <MainContainer>
-      <FeaturedProject
-        projectWorks={user["projects"]}
-        theme={theme}
-      />
-      <OtherProjects
-        projectWorks={user["subprojects"]}
-        theme={theme}
-      />
+      <FeaturedProject projectWorks={user["projects"]} theme={theme} />
+      <OtherProjects projectWorks={user["subprojects"]} theme={theme} />
     </MainContainer>
   );
 };

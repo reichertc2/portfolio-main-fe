@@ -1,3 +1,4 @@
+import React from "react";
 import { ISocialInfo } from "@/app/_models/user";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
@@ -18,7 +19,7 @@ export const SocialMediaIcons: React.FC<ISocialMediaIconsProps> = ({
     <div className={styles.iconsContainer}>
       {socialMedia.map((item) => (
         <div className={styles.icons} key={item.id}>
-          <Link href={item.url} >
+          <Link href={item.url}>
             <FontAwesomeIcon icon={item.icon} />
           </Link>
         </div>
