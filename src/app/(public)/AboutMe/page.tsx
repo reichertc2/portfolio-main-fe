@@ -8,9 +8,7 @@ interface IAboutMePageProps {}
 const AboutMePage: React.FC<IAboutMePageProps> = () => {
   return (
     <MainContainer>
-      <AboutMe 
-        aboutMe={user["aboutMe"]} 
-        theme={theme} />
+      <AboutMe aboutMe={user["aboutMe"]} theme={theme} />
     </MainContainer>
   );
 };

@@ -1,3 +1,4 @@
+import React from "react";
 import { getCurrentYear } from "../../../_utilities/dateUtils";
 
 interface ICopyrightTextProps {

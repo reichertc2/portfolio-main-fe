@@ -1,3 +1,4 @@
+import React from "react";
 import { IStyles } from "@/app/_models/styles";
 import BasicSectionHeader from "./BasicSectionHeader";
 
@@ -15,7 +16,7 @@ export const ProfileSection: React.FC<IProfileSectionProps> = ({
   children,
 }) => {
   const styles = {
-    container: `min-h-[90vh] flex flex-col justify-center items-center ${theme} w-3/4 m-auto`,
+    container: `min-h-[85vh] flex ${theme} w-3/4 m-auto`,
   };
 
   return (

@@ -1,3 +1,4 @@
+import React from "react";
 import { IProfile } from "@/app/_models/user";
 import { INavigation } from "@/app/_models/navigation";
 import HeadlineMobileView from "./Headline/HeadlineMobileView";
@@ -6,41 +7,29 @@ import { IStyles } from "@/app/_models/styles";
 import ProfileSection from "@/app/_components/common/ProfileSection";
 
 interface IHeadlineProps {
-    headLine: IProfile;
-    theme: IStyles;
+  headLine: IProfile;
+  theme: IStyles;
 }
 
 export const Headline: React.FC<IHeadlineProps> = ({ headLine, theme }) => {
+  const navigations: INavigation[] = [
+    { label: "About", path: "#AboutMeSection" },
+    { label: "Experience", path: "#ExperienceSection" },
+    { label: "Work", path: "#WorkSection" },
+    { label: "Contact", path: "#ContactSection" },
+  ];
 
-    const navigations: INavigation[] = [
-        { label: 'About', path: '#AboutMeSection' },
-        { label: 'Experience', path: '#ExperienceSection' },
-        { label: 'Work', path: '#WorkSection' },
-        { label: 'Contact', path: '#ContactSection' },
-    ]
+  return (
+    <>
+      <ProfileSection id={"Headline"} theme={theme}>
+        <HeadlineStandardView headLine={headLine} theme={theme} />
 
-    return (
-        <>
-            <ProfileSection
-                id={"Headline"}
-                theme={theme}
-            >
+        {/* Mobile Version */}
 
-                <HeadlineStandardView
-                    headLine={headLine}
-                    theme={theme}
-                />
-
-                {/* Mobile Version */}
-
-                <HeadlineMobileView
-                    headLine={headLine}
-                    theme={theme}
-                />
-            </ProfileSection>
-        </>
-
-    )
-}
+        <HeadlineMobileView headLine={headLine} theme={theme} />
+      </ProfileSection>
+    </>
+  );
+};
 
 export default Headline;

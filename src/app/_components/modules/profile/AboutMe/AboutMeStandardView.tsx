@@ -1,7 +1,7 @@
+import React from "react";
 import Image from "next/image";
 import { IAboutMe } from "@/app/_models/user";
 import { IStyles } from "@/app/_models/styles";
-import ListBlock from "./ListBlock";
 import SummaryBio from "./Standard/SummaryBio";
 import Skills from "./Standard/Skills";
 

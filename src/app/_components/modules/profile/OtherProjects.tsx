@@ -1,3 +1,4 @@
+import React from "react";
 import { IProjectInfo } from "@/app/_models/user";
 import { IStyles } from "@/app/_models/styles";
 import ProfileSection from "@/app/_components/common/ProfileSection";
@@ -9,26 +10,17 @@ interface IOtherProjectsProps {
   theme: IStyles;
 }
 
-export const OtherProjects: React.FC<IOtherProjectsProps> = ({ projectWorks, theme}) => {
+export const OtherProjects: React.FC<IOtherProjectsProps> = ({
+  projectWorks,
+  theme,
+}) => {
   return (
-    <ProfileSection
-      id={"WorkSection"}
-      title={"Other Projects"}
-      theme={theme}
-    >
-
-      <OtherProjectsStandardView
-        projectWorks={projectWorks}
-        styling={theme}
-      />
+    <ProfileSection id={"WorkSection"} title={"Other Projects"} theme={theme}>
+      <OtherProjectsStandardView projectWorks={projectWorks} styling={theme} />
       {/* TODO Mobile */}
-      <OtherProjectsMobileView
-        projectWorks={projectWorks}
-        styling={theme}
-      />
-
+      <OtherProjectsMobileView projectWorks={projectWorks} styling={theme} />
     </ProfileSection>
   );
-}
+};
 
 export default OtherProjects;

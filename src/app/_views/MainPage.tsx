@@ -15,7 +15,7 @@ export const MainPage: React.FC<IMainPageProps> = ({ user, theme }) => {
   return (
     <div className="m-auto min-h-screen">
       <Header profileMain={user} theme={theme} />
-      <Main profileMain={user} theme={theme}/>
+      <Main profileMain={user} theme={theme} />
       <Footer profileMain={user} theme={theme} />
     </div>
   );
