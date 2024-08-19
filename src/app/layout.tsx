@@ -9,9 +9,10 @@ import MainClientView from "./_components/ui/MainClientView";
 const inter = Inter({ subsets: ["latin"] });
 
 const metadata: Metadata = {
-  title: "Portfolio Landing Page ",
-  description: "Portfolio of ",
-};
+  title: 'Portfolio Landing Page ',
+  description: 'Portfolio Landing Page  ',
+}
+
 
 // formally MyApp
 export default function RootLayout({
