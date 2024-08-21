@@ -1,7 +1,7 @@
 import React from "react";
 import { IJobInfo } from "@/app/_models/user";
-import UnderConstruction from "@/app/_components/common/UnderConstruction";
 import { IStyles } from "@/app/_models/styles";
+import ExperienceTimeline from "./Mobile/ExperienceTimeline";
 
 interface IExperienceMobileViewProps {
   jobExperience: IJobInfo[];
@@ -13,12 +13,12 @@ export const ExperienceMobileView: React.FC<IExperienceMobileViewProps> = ({
   styling,
 }) => {
   const styles = {
-    container: `sm:hidden flex`,
+    container: `sm:hidden sm:flex`,
   };
 
   return (
     <div className={styles.container}>
-      <UnderConstruction />
+      <ExperienceTimeline jobExperience={jobExperience} />
     </div>
   );
 };

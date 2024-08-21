@@ -11,7 +11,7 @@ export interface IProfile {
   name: string;
   headline: string;
   profileURL: string;
-  logo: IImageData;
+  logo?: IImageData;
 }
 
 export interface IAboutMe {

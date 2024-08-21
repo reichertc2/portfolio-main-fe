@@ -12,11 +12,13 @@ export const LandingPage: React.FC<ILandingPageProps> = ({ profile }) => {
         id="landingMain"
         className={`flex justify-center items-center w-full h-screen text-center ease-in duration-300`}
       >
-        <Image
-          className="animate-pulse rounded-full w-28 h-28"
-          src={profile.logo.image}
-          alt={profile.logo.alt}
-        />
+        {profile.logo && (
+          <Image
+            className="animate-pulse rounded-full w-28 h-28"
+            src={profile.logo.image}
+            alt={profile.logo.alt}
+          />
+        )}
       </main>
     </div>
   );

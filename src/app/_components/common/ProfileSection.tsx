@@ -16,7 +16,7 @@ export const ProfileSection: React.FC<IProfileSectionProps> = ({
   children,
 }) => {
   const styles = {
-    container: `min-h-[85vh] flex ${theme} w-3/4 m-auto`,
+    container: `min-h-[85vh] flex flex-col items-center justify-center ${theme} md:w-3/4 m-auto`,
   };
 
   return (

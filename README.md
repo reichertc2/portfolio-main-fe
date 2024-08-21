@@ -1,7 +1,7 @@
 # Professional Developer Portfolio
 
 **Author**: Chris Reichert
-**Version**: 2.1.1 Version 2 - Adding Unit Test Coverage up to 20% across all coverage
+**Version**: 2.2.0 Version 2 - About Me covered in tests and V1 built out, updated packages
 
 ## Architecture
 

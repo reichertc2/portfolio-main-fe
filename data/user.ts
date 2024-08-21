@@ -23,7 +23,7 @@ export const user: IUserData = {
   aboutMe: {
     elevator: [
       "Hello. I'm Chris and I enjoy creating and automating processes through the power of code. Getting my feet wet with excel, and graduating to initially to JavaScript, then to my language of choice Python.",
-      "A veteran of the US Army aviation as an officer, company commander, and pilot of the AH-64D Apache attack helicopter.",
+      "A veteran of the US Army aviation as an officer, company commander, and a AH-64D Apache attack helicopter pilot.",
       "I revisited programming, after hitting a barrier in the potential of excel. Frustrated by its data limitations, I ventured out and I attended a coding training program at CodeFellows, and fell in love with the power of coding.",
       "In software, there isn't a stack I'm not willing to learn or ecosystem to develop in. I have since learned TypeScript and C# through my positions, and explored the Azure development ecosystem.",
     ],

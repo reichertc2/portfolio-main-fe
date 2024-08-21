@@ -15,22 +15,30 @@ export const AboutMeStandardView: React.FC<IAboutMeStandardViewProps> = ({
   theme,
 }) => {
   const styles = {
-    bioContainer: `hidden sm:flex justify-start p-2 w-full`,
-    bioImageContainer: "mx-2",
-    bioImage: `inline rounded-md w-9/12`,
+    bioContainer: `hidden sm:flex justify-start w-full border-gray-200 border-2 border-solid`,
+    summaryContainer: `w-1/2`,
+    innerContainer: `flex items-center flex-col justify-center w-1/2`,
+    skillsContainer: `ml-auto w-3/4 pb-1`,
+    imageContainer: `p-2 w-2/3 m-0`,
+    bioImage: `rounded-md `,
   };
 
   return (
     <div className={styles.bioContainer}>
-      <SummaryBio elevator={aboutMe.elevator} theme={theme} />
-
-      <div className={styles.bioImageContainer}>
-        <Image
-          className={styles.bioImage}
-          src={aboutMe.profileImage}
-          alt="profileImage"
-        />
-        <Skills aboutMe={aboutMe} theme={theme} />
+      <div className={styles.summaryContainer}>
+        <SummaryBio elevator={aboutMe.elevator} theme={theme} />
+      </div>
+      <div className={styles.innerContainer}>
+        <div className={styles.imageContainer}>
+          <Image
+            className={styles.bioImage}
+            src={aboutMe.profileImage}
+            alt="profileImage"
+          />
+        </div>
+        <div className={styles.skillsContainer}>
+          <Skills aboutMe={aboutMe} theme={theme} />
+        </div>
       </div>
     </div>
   );

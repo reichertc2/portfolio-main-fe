@@ -1,4 +1,6 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import Image from "next/image";
 import { IAboutMe } from "@/app/_models/user";
 import { IStyles } from "@/app/_models/styles";
@@ -14,6 +16,8 @@ export const AboutMeMobileView: React.FC<IAboutMeMobileViewProps> = ({
   aboutMe,
   theme,
 }) => {
+  const [moreButton, setMoreButton] = useState<boolean>(true);
+
   const styles = {
     bioContainer: `sm:hidden flex flex-col justify-start p-1 w-full items-center`,
     bioImageContainer: `w-11/12`,
@@ -34,24 +38,33 @@ export const AboutMeMobileView: React.FC<IAboutMeMobileViewProps> = ({
           />
         </div>
 
-        <SummaryBioMobile elevator={aboutMe.elevator} theme={theme} />
-      </div>
-      <div className={styles.skillsContainer}>
-        <ListBlock
-          title="Languages"
-          listProps={aboutMe.languages}
-          orientation={"vertical"}
+        <SummaryBioMobile
+          elevator={aboutMe.elevator}
           theme={theme}
+          moreButton={moreButton}
+          setMoreButton={setMoreButton}
         />
       </div>
-      <div className={styles.skillsContainer}>
-        <ListBlock
-          title="Tools"
-          listProps={aboutMe.tools}
-          orientation={"vertical"}
-          theme={theme}
-        />
-      </div>
+      {!moreButton && (
+        <>
+          <div className={styles.skillsContainer}>
+            <ListBlock
+              title="Languages"
+              listProps={aboutMe.languages}
+              orientation={"vertical"}
+              theme={theme}
+            />
+          </div>
+          <div className={styles.skillsContainer}>
+            <ListBlock
+              title="Tools"
+              listProps={aboutMe.tools}
+              orientation={"vertical"}
+              theme={theme}
+            />
+          </div>
+        </>
+      )}
     </>
   );
 };

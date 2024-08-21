@@ -13,7 +13,7 @@ export const TabSelectorBody: React.FC<ITabSelectorBodyProps> = ({
   styling,
 }) => {
   const styles = {
-    container: `px-4 dark:text-stone-100 inline-block w-4/5 align-top`,
+    container: `px-4 dark:text-stone-100 inline-block w-4/5 align-top border border-slate-600 rounded-r-md mt-1 h-80`,
     bodyHeader: "text-lg inline-block",
     link: "inline-block",
     hoverAnimation: "hover-underline-animation",
