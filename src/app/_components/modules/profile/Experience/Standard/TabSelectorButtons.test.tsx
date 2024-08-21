@@ -41,6 +41,7 @@ describe("TabSelectorButtons component", () => {
       <TabSelectorButtons
         jobExperience={mockJobExperience}
         openExperience={mockOpenExperience}
+        companyInBodyId={""}
       />
     );
     expect(
@@ -56,6 +57,7 @@ describe("TabSelectorButtons component", () => {
       <TabSelectorButtons
         jobExperience={mockJobExperience}
         openExperience={mockOpenExperience}
+        companyInBodyId={""}
       />
     );
     const tabContainer = screen
@@ -69,6 +71,7 @@ describe("TabSelectorButtons component", () => {
       <TabSelectorButtons
         jobExperience={mockJobExperience}
         openExperience={mockOpenExperience}
+        companyInBodyId={""}
       />
     );
     const buttonA = screen.getByRole("button", { name: /Company A/i });
@@ -85,6 +88,7 @@ describe("TabSelectorButtons component", () => {
       <TabSelectorButtons
         jobExperience={mockJobExperience}
         openExperience={mockOpenExperience}
+        companyInBodyId={""}
       />
     );
     const buttons = screen.getAllByRole("button");
@@ -96,6 +100,7 @@ describe("TabSelectorButtons component", () => {
       <TabSelectorButtons
         jobExperience={[]}
         openExperience={mockOpenExperience}
+        companyInBodyId={""}
       />
     );
     const buttons = screen.queryAllByRole("button");

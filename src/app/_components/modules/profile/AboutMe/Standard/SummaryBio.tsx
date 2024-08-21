@@ -9,7 +9,7 @@ interface ISummaryBio {
 
 export const SummaryBio: React.FC<ISummaryBio> = ({ elevator, theme }) => {
   const styles = {
-    container: `w-50`,
+    container: `w-50 p-4`,
     containerStandard: "hidden sm:flex flex-col",
   };
 

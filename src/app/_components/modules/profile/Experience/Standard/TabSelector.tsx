@@ -35,12 +35,13 @@ export const TabSelector: React.FC<ITabSelectorProps> = ({
     }
     setDisplayedCompany(company[0] ?? fallBackJobInfo);
   };
-
+ 
   return (
     <div id="ExperienceTabs" className={styles.container}>
       <TabSelectorButtons
         jobExperience={jobExperience}
         openExperience={openExperience}
+        companyInBodyId={displayedCompany.id}
       />
 
       <TabSelectorBody displayedCompany={displayedCompany} />

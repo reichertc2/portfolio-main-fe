@@ -34,7 +34,9 @@ describe("SummaryBioMobile component", () => {
   //   });
 
   test("displays each elevator pitch text correctly", () => {
-    render(<SummaryBioMobile elevator={mockElevator} theme={mockTheme} />);
+    render(<SummaryBioMobile elevator={mockElevator} theme={mockTheme} moreButton={false} setMoreButton={function (click: boolean): void {
+      throw new Error("Function not implemented.");
+    } } />);
 
     mockElevator.forEach((text) => {
       expect(screen.getByText(text)).toBeInTheDocument();
@@ -49,7 +51,9 @@ describe("SummaryBioMobile component", () => {
   //   });
 
   test("renders correctly with an empty elevator array", () => {
-    render(<SummaryBioMobile elevator={[]} theme={mockTheme} />);
+    render(<SummaryBioMobile elevator={[]} theme={mockTheme} moreButton={false} setMoreButton={function (click: boolean): void {
+      throw new Error("Function not implemented.");
+    } } />);
 
     const paragraphElements = screen.queryAllByRole("paragraph");
     expect(paragraphElements).toHaveLength(0);

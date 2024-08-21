@@ -8,7 +8,17 @@ module.exports = {
   ],
   darkMode: 'class',
   theme:{
-    extend: {},
+    extend: {
+      animation: {
+        'moveline': 'moveline 6s linear forwards',
+      },
+      keyframes: {
+        moveline: {
+          '0%': { height: '0%' },
+          '100%': { height:'100%' }, 
+        },
+      },
+    },
 
   },
   fontFamily: {

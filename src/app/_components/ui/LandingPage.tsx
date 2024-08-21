@@ -21,11 +21,13 @@ export const LandingPage: React.FC<ILandingPageProps> = ({
   return (
     <div className={styles.container}>
       <main id="landingMain" className={styles.main}>
-        <Image
-          className={styles.logo}
-          src={profile.logo.image}
-          alt={profile.logo.alt}
-        />
+        {profile.logo && (
+          <Image
+            className="animate-pulse rounded-full w-28 h-28"
+            src={profile.logo.image}
+            alt={profile.logo.alt}
+          />
+        )}
       </main>
     </div>
   );

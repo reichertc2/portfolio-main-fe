@@ -13,7 +13,7 @@ export const ExperienceStandardView: React.FC<IExperienceStandardViewProps> = ({
   styling,
 }) => {
   const styles = {
-    container: `hidden sm:block`,
+    container: `hidden sm:block border-gray-200 border-2 border-solid w-full`,
   };
 
   return (
