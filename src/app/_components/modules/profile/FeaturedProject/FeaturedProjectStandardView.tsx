@@ -12,7 +12,7 @@ export const FeaturedProjectStandardView: React.FC<
   IFeaturedProjectStandardViewProps
 > = ({ projectWorks, styling }) => {
   const styles = {
-    container: `hidden sm:block`,
+    container: `hidden sm:block border-gray-200 border-2 border-solid`,
   };
 
   return (
