@@ -12,12 +12,12 @@ export const OtherProjectsStandardView: React.FC<
   IOtherProjectsStandardViewProps
 > = ({ projectWorks, styling }) => {
   const styles = {
-    container: "hidden sm:grid inline-grid grid-cols-3 gap-3",
+    container: "hidden sm:grid inline-grid grid-cols-3 gap-3 border-gray-200 border-2 border-solid",
   };
 
   return (
     <div className={styles.container}>
-      {projectWorks.map((project, idx) => (
+      {projectWorks.map((project) => (
         <ProjectTile key={project["id"]} project={project} />
       ))}
     </div>
