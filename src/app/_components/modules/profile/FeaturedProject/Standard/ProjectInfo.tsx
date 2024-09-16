@@ -11,7 +11,7 @@ interface IProjectInfoProps {
 
 export const ProjectInfo: React.FC<IProjectInfoProps> = ({ project }) => {
   const styles = {
-    container: "inline-block w-3/5 align-top border-slate-500 border-solid border-r-4",
+    container: "inline-block w-3/5 align-top border-gray-200 dark:border-slate-500 border-solid border-r-4",
   };
 
   return (

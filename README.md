@@ -1,7 +1,7 @@
 # Professional Developer Portfolio
 
 **Author**: Chris Reichert
-**Version**: 2.2.0 Version 2 - About Me covered in tests and V1 built out, updated packages
+**Version**: 2.2.2 Version 2 - Featured Project covered in tests and V1 built out, updated packages
 
 ## Architecture
 
