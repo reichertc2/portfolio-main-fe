@@ -2,6 +2,7 @@ import React from "react";
 import UnderConstruction from "@/app/_components/common/UnderConstruction";
 import { IProjectInfo } from "@/app/_models/user";
 import { IStyles } from "@/app/_models/styles";
+import ProjectInfoMobile from "./Mobile/ProjectInfoMobile";
 
 interface IFeaturedProjectMobileViewProps {
   projectWorks: IProjectInfo[];
@@ -17,7 +18,9 @@ export const FeaturedProjectMobileView: React.FC<
 
   return (
     <div className={styles.container}>
-      <UnderConstruction />
+      {projectWorks.map((project: IProjectInfo) => (
+        <ProjectInfoMobile key={"featuredProject"} project={project} />
+      ))}{" "}
     </div>
   );
 };
