@@ -54,9 +54,9 @@ export const NavBarMobileView: React.FC<INavBarMobileViewProps> = ({
           {navigations.map((nav) => (
             <li key={nav.label} className={styles.navLi}>
               <button onClick={handleNavMenu}>
-              <Link href={nav.path}>
-                <span className={styles.hoverAnimation}>{nav.label}</span>
-              </Link>
+                <Link href={nav.path}>
+                  <span className={styles.hoverAnimation}>{nav.label}</span>
+                </Link>
               </button>
             </li>
           ))}

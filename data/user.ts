@@ -225,7 +225,7 @@ export const user: IUserData = {
       },
       {
         id: "ci-01",
-        url: "https://twitter.com/c2_reichert",
+        url: "https://twitter.com/_chrisreichert_",
         icon: faXTwitter,
       }
     ],
