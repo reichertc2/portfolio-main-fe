@@ -1,11 +1,19 @@
 import React from "react";
-import MarkdownComponent from "../../common/markdown/MarkdownComponent";
-import { IStyles } from "@/app/_models/styles";
+import ThreeQuarterView from "../../ui/SubViews/ThreeQuarterView";
+import PageHeader from "../../common/headers/PageHeader";
+import ArticleCard from "./ArticleCard";
 
 interface IArticlesHomeProps {}
 
 export const ArticlesHome: React.FC<IArticlesHomeProps> = ({}) => {
-  return <MarkdownComponent markdown={"# Test \n\n ## Test 2"} />;
+  return (
+    <>
+      <PageHeader title={"Articles"} />
+      <ThreeQuarterView>
+        <ArticleCard />
+      </ThreeQuarterView>
+    </>
+  );
 };
 
 export default ArticlesHome;
