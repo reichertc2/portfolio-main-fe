@@ -1,6 +1,6 @@
 "use client";
 
-import "./_styles/globals.css";
+import './_styles/globals.css'
 import { Inter } from "next/font/google";
 import { ThemeProvider } from "next-themes";
 import { Metadata } from "next";
