@@ -4,10 +4,9 @@ import ParagraphText from "../../../../common/Standard/ParagraphText";
 
 interface ISummaryBio {
   elevator: string[];
-  theme: IStyles;
 }
 
-export const SummaryBio: React.FC<ISummaryBio> = ({ elevator, theme }) => {
+export const SummaryBio: React.FC<ISummaryBio> = ({ elevator }) => {
   const styles = {
     container: `w-50 p-4`,
     containerStandard: "hidden sm:flex flex-col",
@@ -17,7 +16,7 @@ export const SummaryBio: React.FC<ISummaryBio> = ({ elevator, theme }) => {
     <div className={styles.container}>
       <div className={styles.containerStandard}>
         {elevator.map((text, idx) => (
-          <ParagraphText key={`${text}-${idx}`} text={text} theme={theme} />
+          <ParagraphText key={`${text}-${idx}`} text={text}  />
         ))}
       </div>
     </div>

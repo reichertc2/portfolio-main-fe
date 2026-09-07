@@ -7,20 +7,17 @@ import FeaturedProjectStandardView from "./FeaturedProject/FeaturedProjectStanda
 
 interface IFeaturedProjectProps {
   projectWorks: IProjectInfo[];
-  theme: IStyles;
 }
 
 export const FeaturedProject: React.FC<IFeaturedProjectProps> = ({
   projectWorks,
-  theme,
 }) => {
   return (
-    <ProfileSection id={"WorkSection"} title={"Featured Project"} theme={theme}>
+    <ProfileSection id={"WorkSection"} title={"Featured Project"} >
       <FeaturedProjectStandardView
         projectWorks={projectWorks}
-        styling={theme}
       />
-      <FeaturedProjectMobileView projectWorks={projectWorks} styling={theme} />
+      <FeaturedProjectMobileView projectWorks={projectWorks}  />
     </ProfileSection>
   );
 };

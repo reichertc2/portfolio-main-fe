@@ -4,12 +4,10 @@ import { IStyles } from "@/app/_models/styles";
 
 interface IHeadlineStandardViewProps {
   headLine: IProfile;
-  theme: IStyles;
 }
 
 export const HeadlineStandardView: React.FC<IHeadlineStandardViewProps> = ({
   headLine,
-  theme,
 }) => {
   const styles = {
     container: `hidden md:block`,

@@ -7,12 +7,10 @@ import Skills from "./Standard/Skills";
 
 interface IAboutMeStandardViewProps {
   aboutMe: IAboutMe;
-  theme: IStyles;
 }
 
 export const AboutMeStandardView: React.FC<IAboutMeStandardViewProps> = ({
   aboutMe,
-  theme,
 }) => {
   const styles = {
     bioContainer: `hidden sm:flex justify-start w-full border-gray-200 border-2 border-solid`,
@@ -26,7 +24,7 @@ export const AboutMeStandardView: React.FC<IAboutMeStandardViewProps> = ({
   return (
     <div className={styles.bioContainer}>
       <div className={styles.summaryContainer}>
-        <SummaryBio elevator={aboutMe.elevator} theme={theme} />
+        <SummaryBio elevator={aboutMe.elevator} />
       </div>
       <div className={styles.innerContainer}>
         <div className={styles.imageContainer}>
@@ -37,7 +35,7 @@ export const AboutMeStandardView: React.FC<IAboutMeStandardViewProps> = ({
           />
         </div>
         <div className={styles.skillsContainer}>
-          <Skills aboutMe={aboutMe} theme={theme} />
+          <Skills aboutMe={aboutMe}  />
         </div>
       </div>
     </div>

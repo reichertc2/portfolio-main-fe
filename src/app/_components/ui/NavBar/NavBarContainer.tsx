@@ -4,17 +4,15 @@ import Image from "next/image";
 
 interface INavBarContainerProps {
   logo: any;
-  theme: IStyles;
   children: React.ReactNode;
 }
 
 export const NavBarContainer: React.FC<INavBarContainerProps> = ({
   logo,
-  theme,
   children,
 }) => {
   const styles = {
-    container: `w-full z-10 ${theme.backgrounds.light} dark:${theme.backgrounds.dark}`,
+    container: `w-full z-10`,
     subContainer: `max-w-[1240px] m-auto flex justify-between items-center`,
     image: `flex flex-initial basis-1/8 rounded-full w-20 h-20`,
   };

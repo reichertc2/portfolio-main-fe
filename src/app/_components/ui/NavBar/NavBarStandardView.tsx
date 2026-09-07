@@ -4,24 +4,22 @@ import { INavigation } from "@/app/_models/navigation";
 import { IStyles } from "@/app/_models/styles";
 
 interface INavBarStandardViewProps {
-  theme: IStyles;
   navigations: INavigation[];
   showThemeChange: boolean;
   renderThemeChanger: () => React.ReactNode;
 }
 
 export const NavBarStandardView: React.FC<INavBarStandardViewProps> = ({
-  theme,
   navigations,
   showThemeChange,
   renderThemeChanger,
 }) => {
   const styles = {
     container: `hidden sm:flex`,
-    navLi: `px-2 dark:${theme.texts.dark} pt-4`,
+    navLi: `px-2 dark:text-text-dark pt-4`,
     hoverAnimation: `hover-underline-animation`,
-    spacingLi: `px-2 dark:${theme.texts.dark} pt-2`,
-    themeChangerLi: `px-2 dark:${theme.texts.dark} pt-4`,
+    spacingLi: `px-2 dark:text-text-dark pt-2`,
+    themeChangerLi: `px-2 dark:text-text-dark pt-4`,
   };
 
   return (

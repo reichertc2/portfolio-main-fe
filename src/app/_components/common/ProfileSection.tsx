@@ -5,23 +5,21 @@ import BasicSectionHeader from "./headers/BasicSectionHeader";
 interface IProfileSectionProps {
   id: string;
   title?: string;
-  theme: IStyles;
   children: React.ReactNode;
 }
 
 export const ProfileSection: React.FC<IProfileSectionProps> = ({
   id,
   title,
-  theme,
   children,
 }) => {
   const styles = {
-    container: `min-h-[85vh] flex flex-col items-center justify-center ${theme} md:w-3/4 m-auto`,
+    container: `min-h-[85vh] flex flex-col items-center justify-center md:w-3/4 m-auto`,
   };
 
   return (
     <section id={id} className={styles.container}>
-      {title && <BasicSectionHeader headerTitle={title} theme={theme} />}
+      {title && <BasicSectionHeader headerTitle={title} />}
 
       {children}
     </section>

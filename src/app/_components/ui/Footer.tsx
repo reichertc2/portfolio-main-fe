@@ -7,13 +7,12 @@ import SocialMediaIcons from "./Footer/SocialMediaIcons";
 
 interface IFooterProps {
   profileMain: IUserData;
-  theme: IStyles;
 }
 
-export const Footer: React.FC<IFooterProps> = ({ profileMain, theme }) => {
+export const Footer: React.FC<IFooterProps> = ({ profileMain}) => {
   const styles = {
     footer: `p-3 text-center content-center`,
-    copyright: `text-text dark:${theme.texts.dark} italic py-4`,
+    copyright: `text-text dark:text-text-dark italic py-4`,
   };
 
   return (

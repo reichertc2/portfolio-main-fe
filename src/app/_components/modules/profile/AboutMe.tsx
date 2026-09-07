@@ -7,15 +7,14 @@ import AboutMeMobileView from "./AboutMe/AboutMeMobileView";
 
 interface IAboutMeProps {
   aboutMe: IAboutMe;
-  theme: IStyles;
 }
 
-export const AboutMe: React.FC<IAboutMeProps> = ({ aboutMe, theme }) => {
+export const AboutMe: React.FC<IAboutMeProps> = ({ aboutMe}) => {
   return (
-    <ProfileSection id={"AboutMeSection"} title={"About Me"} theme={theme}>
-      <AboutMeStandardView aboutMe={aboutMe} theme={theme} />
+    <ProfileSection id={"AboutMeSection"} title={"About Me"} >
+      <AboutMeStandardView aboutMe={aboutMe} />
 
-      <AboutMeMobileView aboutMe={aboutMe} theme={theme} />
+      <AboutMeMobileView aboutMe={aboutMe}  />
     </ProfileSection>
   );
 };

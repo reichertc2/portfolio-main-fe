@@ -5,10 +5,9 @@ import ListBlock from "../ListBlock";
 
 interface ISkills {
   aboutMe: IAboutMe;
-  theme: IStyles;
 }
 
-export const Skills: React.FC<ISkills> = ({ aboutMe, theme }) => {
+export const Skills: React.FC<ISkills> = ({ aboutMe }) => {
   const styles = {
     skillsContainer: `hidden sm:flex pl-4 border-gray-200 border-2 order-solid rounded-l-md dark:bg-gray-800 bg-gray-200 z-15`,
   };
@@ -19,13 +18,12 @@ export const Skills: React.FC<ISkills> = ({ aboutMe, theme }) => {
         title="Languages"
         listProps={aboutMe.languages}
         orientation={"vertical"}
-        theme={theme}
       />
       <ListBlock
         title="Tools"
         listProps={aboutMe.tools}
         orientation={"vertical"}
-        theme={theme}
+
       />
     </div>
   );

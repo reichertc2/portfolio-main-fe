@@ -1,5 +1,6 @@
 import MainContainer from "@/app/_components/common/MainContainer";
 import ArticlesHome from "@/app/_components/modules/articles/ArticlesHome";
+import React from "react";
 
 interface IArticlePageProps {}
 

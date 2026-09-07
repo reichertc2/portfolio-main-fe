@@ -11,14 +11,12 @@ import NavBarStandardView from "./NavBar/NavBarStandardView";
 import NavBarMobileView from "./NavBar/NavBarMobileView";
 
 interface INavBarProps {
-  themeStyle: IStyles;
   navigations: INavigation[];
   logo: any;
   showThemeChange: boolean;
 }
 
 export const NavBar: React.FC<INavBarProps> = ({
-  themeStyle,
   navigations,
   logo,
   showThemeChange,
@@ -49,15 +47,15 @@ export const NavBar: React.FC<INavBarProps> = ({
   };
 
   return (
-    <NavBarContainer logo={logo} theme={themeStyle}>
+    <NavBarContainer logo={logo} >
       <NavBarStandardView
         navigations={navigations}
-        theme={themeStyle}
+
         renderThemeChanger={renderThemeChanger}
         showThemeChange={showThemeChange}
       />
       {/* Mobile Button and Menu */}
-      <NavBarMobileView navigations={navigations} theme={themeStyle} />
+      <NavBarMobileView navigations={navigations}  />
     </NavBarContainer>
   );
 };

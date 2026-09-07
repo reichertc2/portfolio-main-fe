@@ -9,12 +9,10 @@ import { SummaryBioMobile } from "./Mobile/SummaryBioMobile";
 
 interface IAboutMeMobileViewProps {
   aboutMe: IAboutMe;
-  theme: IStyles;
 }
 
 export const AboutMeMobileView: React.FC<IAboutMeMobileViewProps> = ({
   aboutMe,
-  theme,
 }) => {
   const [moreButton, setMoreButton] = useState<boolean>(true);
 
@@ -40,7 +38,6 @@ export const AboutMeMobileView: React.FC<IAboutMeMobileViewProps> = ({
 
         <SummaryBioMobile
           elevator={aboutMe.elevator}
-          theme={theme}
           moreButton={moreButton}
           setMoreButton={setMoreButton}
         />
@@ -52,7 +49,6 @@ export const AboutMeMobileView: React.FC<IAboutMeMobileViewProps> = ({
               title="Languages"
               listProps={aboutMe.languages}
               orientation={"vertical"}
-              theme={theme}
             />
           </div>
           <div className={styles.skillsContainer}>
@@ -60,7 +56,6 @@ export const AboutMeMobileView: React.FC<IAboutMeMobileViewProps> = ({
               title="Tools"
               listProps={aboutMe.tools}
               orientation={"vertical"}
-              theme={theme}
             />
           </div>
         </>

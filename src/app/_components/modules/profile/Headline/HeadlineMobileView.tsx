@@ -4,12 +4,10 @@ import { IStyles } from "@/app/_models/styles";
 
 interface IHeadlineMobileViewProps {
   headLine: IProfile;
-  theme: IStyles;
 }
 
 export const HeadlineMobileView: React.FC<IHeadlineMobileViewProps> = ({
   headLine,
-  theme,
 }) => {
   const styles = {
     container: `sm:hidden block`,

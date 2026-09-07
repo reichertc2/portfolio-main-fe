@@ -8,10 +8,9 @@ import Headline from "../modules/profile/Headline";
 
 interface IMainProps {
   profileMain: IUserData;
-  theme: IStyles;
 }
 
-export const Main: React.FC<IMainProps> = ({ profileMain, theme }) => {
+export const Main: React.FC<IMainProps> = ({ profileMain }) => {
   return (
     <>
       <Head>
@@ -20,7 +19,7 @@ export const Main: React.FC<IMainProps> = ({ profileMain, theme }) => {
       </Head>
       <main className="m-auto w-2/3 mt-24">
         <article id="mainContainer" className={``}>
-          <Headline headLine={profileMain["profile"]} theme={theme} />
+          <Headline headLine={profileMain["profile"]}  />
         </article>
       </main>
     </>
