@@ -4,7 +4,6 @@ import ExperienceStandardView from "./ExperienceStandardView";
 import TabSelector from "./Standard/TabSelector";
 import { IJobInfo } from "@/app/_models/user";
 
-// Mock the TabSelector component
 jest.mock("./Standard/TabSelector", () => ({
   __esModule: true,
   default: jest.fn(() => <div data-testid="tab-selector" />),
@@ -30,6 +29,10 @@ describe("ExperienceStandardView", () => {
     },
   ];
 
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
   test("renders without crashing", () => {
     render(<ExperienceStandardView jobExperience={mockJobExperience} />);
     expect(screen.getByTestId("tab-selector")).toBeInTheDocument();
@@ -39,17 +42,16 @@ describe("ExperienceStandardView", () => {
     render(<ExperienceStandardView jobExperience={mockJobExperience} />);
     const container = screen.getByTestId("tab-selector").parentElement;
     expect(container).toHaveClass(
-      "hidden sm:block border-gray-200 border-2 border-solid w-full"
+        "hidden sm:block border-gray-200 border-2 border-solid w-full"
     );
   });
 
   test("passes the correct jobExperience prop to TabSelector", () => {
     render(<ExperienceStandardView jobExperience={mockJobExperience} />);
 
-    // Assert that the TabSelector was called with the correct props
     expect(TabSelector).toHaveBeenCalledWith(
-      expect.objectContaining({ jobExperience: mockJobExperience }),
-      {}
+        expect.objectContaining({ jobExperience: mockJobExperience }),
+        undefined
     );
   });
 });

@@ -9,7 +9,7 @@ interface IProfileLinkMenuItemProps {
   handleCloseUserMenu: () => void;
 }
 
-export const ProfileLinkMenuItem: React.FC<IProfileLinkMenuItemProps> = ({
+export const  ProfileLinkMenuItem: React.FC<IProfileLinkMenuItemProps> = ({
   url,
   text,
   handleCloseUserMenu,

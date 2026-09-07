@@ -3,9 +3,7 @@ import { render, screen } from "@testing-library/react";
 import ExperienceMobileView from "./ExperienceMobileView";
 import ExperienceTimeline from "./Mobile/ExperienceTimeline";
 import { IJobInfo } from "@/app/_models/user";
-import { IStyles } from "@/app/_models/styles";
 
-// Mock the ExperienceTimeline component
 jest.mock("./Mobile/ExperienceTimeline", () => ({
   __esModule: true,
   default: jest.fn(() => <div data-testid="experience-timeline" />),
@@ -31,6 +29,10 @@ describe("ExperienceMobileView", () => {
     },
   ];
 
+  beforeEach(() => {
+    jest.clearAllMocks();
+  });
+
   test("renders without crashing", () => {
     render(<ExperienceMobileView jobExperience={mockJobExperience} />);
     expect(screen.getByTestId("experience-timeline")).toBeInTheDocument();
@@ -45,10 +47,9 @@ describe("ExperienceMobileView", () => {
   test("passes the correct jobExperience prop to ExperienceTimeline", () => {
     render(<ExperienceMobileView jobExperience={mockJobExperience} />);
 
-    // Assert that the ExperienceTimeline was called with the correct props
     expect(ExperienceTimeline).toHaveBeenCalledWith(
-      expect.objectContaining({ jobExperience: mockJobExperience }),
-      {}
+        expect.objectContaining({ jobExperience: mockJobExperience }),
+        undefined
     );
   });
 });

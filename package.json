@@ -1,6 +1,6 @@
 {
   "name": "pro-portfolio",
-  "version": "2.2.0",
+  "version": "3.0.1",
   "engines": {
     "node": "24.x"
   },
@@ -35,8 +35,7 @@
     "npm": "^12.0.2",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
-    "sharp": "^0.35.4",
-    "typescript": "7.0.2"
+    "sharp": "^0.35.4"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4.3.3",
@@ -45,10 +44,12 @@
     "@testing-library/react": "^16.3.3",
     "@testing-library/user-event": "^14.6.7",
     "@types/jest": "^30.0.0",
+    "@typescript/native": "npm:typescript@^7.0.2",
     "babel-jest": "^30.5.1",
     "jest": "^30.5.1",
     "postcss": "^8.5.28",
     "tailwindcss": "^4.3.3",
-    "ts-jest": "^29.4.12"
+    "ts-jest": "^29.4.12",
+    "typescript": "npm:@typescript/typescript6@^6.0.2"
   }
 }
