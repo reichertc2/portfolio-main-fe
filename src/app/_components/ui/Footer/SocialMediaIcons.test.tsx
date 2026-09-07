@@ -1,6 +1,5 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom/extend-expect";
 import { SocialMediaIcons } from "./SocialMediaIcons"; // Adjust the import path as necessary
 import { ISocialInfo } from "@/app/_models/user";
 import { library } from "@fortawesome/fontawesome-svg-core";

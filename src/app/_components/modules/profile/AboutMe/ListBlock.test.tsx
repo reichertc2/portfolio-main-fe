@@ -1,9 +1,7 @@
 import React from "react";
-import "@testing-library/jest-dom/extend-expect";
 import { render, screen } from "@testing-library/react";
 import ListBlock from "./ListBlock";
 import { IStyles } from "@/app/_models/styles";
-import "@testing-library/jest-dom/extend-expect";
 
 describe("ListBlock", () => {
   const mockTheme: IStyles = {

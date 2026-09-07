@@ -1,6 +1,5 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom/extend-expect";
 import { SummaryBio } from "./SummaryBio"; // Adjust the import path as necessary
 import { IStyles } from "@/app/_models/styles";
 

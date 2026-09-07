@@ -1,6 +1,5 @@
 import React from "react";
 import { render } from "@testing-library/react";
-import "@testing-library/jest-dom/extend-expect";
 import { ProjectInfoLinks } from "./ProjectInfoLinks";
 import { IUrl } from "@/app/_models/user";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";

@@ -17,7 +17,7 @@ export const ProfileLinkMenuItem: React.FC<IProfileLinkMenuItemProps> = ({
   return (
     <MenuItem onClick={handleCloseUserMenu}>
       <Link href={url}>
-        <Typography textAlign="center">{text}</Typography>
+        <Typography align="center">{text}</Typography>
       </Link>
     </MenuItem>
   );

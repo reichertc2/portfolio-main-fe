@@ -1,6 +1,5 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom/extend-expect";
 import ExperienceStandardView from "./ExperienceStandardView";
 import TabSelector from "./Standard/TabSelector";
 import { IJobInfo } from "@/app/_models/user";

@@ -1,6 +1,5 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom/extend-expect";
 import { TabSelectorBody } from "./TabSelectorBody"; // Adjust the import path as necessary
 import { IJobInfo } from "@/app/_models/user";
 import { IStyles } from "@/app/_models/styles";

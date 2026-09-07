@@ -1,6 +1,5 @@
 import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
-import "@testing-library/jest-dom/extend-expect";
 import { TabSelectorButtons } from "./TabSelectorButtons"; // Adjust the import path as necessary
 import { IJobInfo } from "@/app/_models/user";
 

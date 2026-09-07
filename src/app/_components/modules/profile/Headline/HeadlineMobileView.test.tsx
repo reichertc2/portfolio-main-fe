@@ -1,6 +1,5 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom/extend-expect";
 import HeadlineMobileView from "./HeadlineMobileView";
 import { IProfile } from "@/app/_models/user";
 import { IStyles } from "@/app/_models/styles";

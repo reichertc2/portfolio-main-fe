@@ -1,5 +1,4 @@
 import React from "react";
-import "@testing-library/jest-dom/extend-expect";
 import { render } from "@testing-library/react";
 import ParagraphText from "./ParagraphText";
 import { IStyles } from "@/app/_models/styles";

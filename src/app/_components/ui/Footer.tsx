@@ -13,7 +13,7 @@ interface IFooterProps {
 export const Footer: React.FC<IFooterProps> = ({ profileMain, theme }) => {
   const styles = {
     footer: `p-3 text-center content-center`,
-    copyright: `dark:${theme.texts.dark} italic py-4`,
+    copyright: `text-text dark:${theme.texts.dark} italic py-4`,
   };
 
   return (

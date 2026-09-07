@@ -1,5 +1,4 @@
 import React from "react";
-import MarkdownComponent from "../../common/markdown/MarkdownComponent";
 import HeaderLinkText from "../../common/links/HeaderLinkText";
 import SubHeaderGenericText from "../../common/headers/SubHeaderGenericText";
 
@@ -10,7 +9,6 @@ export const ArticleCard: React.FC<IArticleCardProps> = () => {
     <>
       <HeaderLinkText url={""} urlText={"Test Title"} />
       {/* <SubHeaderGenericText text={"Date here"}/> */}
-      <MarkdownComponent markdown={"# Test \n\n ## Test 2"} />
     </>
   );
 };

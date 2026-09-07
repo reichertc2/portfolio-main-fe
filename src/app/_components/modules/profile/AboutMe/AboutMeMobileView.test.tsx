@@ -1,5 +1,4 @@
 import React from "react";
-import "@testing-library/jest-dom/extend-expect";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { IAboutMe } from "@/app/_models/user";
 import { IStyles } from "@/app/_models/styles";

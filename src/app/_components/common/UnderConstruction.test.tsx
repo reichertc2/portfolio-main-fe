@@ -1,5 +1,4 @@
 import React from "react";
-import "@testing-library/jest-dom/extend-expect";
 import { getByTestId, render } from "@testing-library/react";
 import { IStyles } from "@/app/_models/styles";
 import ProfileSection from "./ProfileSection";
