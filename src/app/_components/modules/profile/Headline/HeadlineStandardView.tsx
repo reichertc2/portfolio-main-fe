@@ -1,6 +1,5 @@
 import React from "react";
 import { IProfile } from "@/app/_models/user";
-import { IStyles } from "@/app/_models/styles";
 
 interface IHeadlineStandardViewProps {
   headLine: IProfile;

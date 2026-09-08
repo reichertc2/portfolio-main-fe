@@ -1,5 +1,4 @@
 import React from "react";
-import { IStyles } from "@/app/_models/styles";
 
 interface IParagraphTextMobileProps {
   text: string;

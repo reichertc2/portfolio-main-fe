@@ -1,7 +1,6 @@
 import React from "react";
 import { IJobInfo } from "@/app/_models/user";
 import ProfileSection from "@/app/_components/common/ProfileSection";
-import { IStyles } from "@/app/_models/styles";
 import ExperienceMobileView from "./Experience/ExperienceMobileView";
 import ExperienceStandardView from "./Experience/ExperienceStandardView";
 

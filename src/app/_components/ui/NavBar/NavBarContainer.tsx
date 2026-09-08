@@ -1,5 +1,4 @@
 import React from "react";
-import { IStyles } from "@/app/_models/styles";
 import Image from "next/image";
 
 interface INavBarContainerProps {

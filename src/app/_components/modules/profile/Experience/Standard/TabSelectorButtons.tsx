@@ -1,17 +1,14 @@
 import React from "react";
 import { IJobInfo } from "@/app/_models/user";
-import { IStyles } from "@/app/_models/styles";
 
 interface ITabSelectorButtonsProps {
   jobExperience: IJobInfo[];
-  styling?: IStyles;
   companyInBodyId: string;
   openExperience: (item: string) => void;
 }
 
 export const TabSelectorButtons: React.FC<ITabSelectorButtonsProps> = ({
   jobExperience,
-  styling,
   openExperience,
   companyInBodyId,
 }) => {

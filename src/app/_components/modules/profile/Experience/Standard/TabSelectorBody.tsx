@@ -1,16 +1,13 @@
 import Link from "next/link";
 import React from "react";
 import { IJobInfo } from "@/app/_models/user";
-import { IStyles } from "@/app/_models/styles";
 
 interface ITabSelectorBodyProps {
   displayedCompany: IJobInfo;
-  styling?: IStyles;
 }
 
 export const TabSelectorBody: React.FC<ITabSelectorBodyProps> = ({
   displayedCompany,
-  styling,
 }) => {
   const styles = {
     container: `px-4 dark:text-stone-100 inline-block w-4/5 align-top border border-slate-600 rounded-r-md mt-1 h-80`,

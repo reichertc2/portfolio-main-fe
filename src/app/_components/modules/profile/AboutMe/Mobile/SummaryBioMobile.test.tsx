@@ -1,22 +1,8 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import SummaryBioMobile from "./SummaryBioMobile"; // Adjust the import path as necessary
-import { IStyles } from "@/app/_models/styles";
 
-// Mock data for testing
-const mockTheme: IStyles = {
-  backgrounds: {
-    light: "bg-white",
-    dark: "bg-black",
-  },
-  texts: {
-    light: "text-primary",
-    dark: "text-secondary",
-    headerLight: "",
-    headerDark: "",
-  },
-  // Add other properties as needed
-};
+
 
 describe("SummaryBioMobile component", () => {
   const mockElevator = [
@@ -26,14 +12,14 @@ describe("SummaryBioMobile component", () => {
   ];
 
   //   test("renders the correct number of ParagraphTextMobile components", () => {
-  //     render(<SummaryBioMobile elevator={mockElevator} theme={mockTheme} />);
+  //     render(<SummaryBioMobile elevator={mockElevator}  />);
 
   //     const paragraphElements = screen.getAllByRole("paragraph");
   //     expect(paragraphElements).toHaveLength(mockElevator.length);
   //   });
 
   test("displays each elevator pitch text correctly", () => {
-    render(<SummaryBioMobile elevator={mockElevator} theme={mockTheme} moreButton={false} setMoreButton={function (click: boolean): void {
+    render(<SummaryBioMobile elevator={mockElevator}  moreButton={false} setMoreButton={function (click: boolean): void {
       throw new Error("Function not implemented.");
     } } />);
 
@@ -43,14 +29,14 @@ describe("SummaryBioMobile component", () => {
   });
 
   //   test("applies the correct styles to the container", () => {
-  //     render(<SummaryBioMobile elevator={mockElevator} theme={mockTheme} />);
+  //     render(<SummaryBioMobile elevator={mockElevator}  />);
 
   //     const containerElement = screen.getByRole("presentation").firstChild;
   //     expect(containerElement).toHaveClass("w-50 sm:hidden");
   //   });
 
   test("renders correctly with an empty elevator array", () => {
-    render(<SummaryBioMobile elevator={[]} theme={mockTheme} moreButton={false} setMoreButton={function (click: boolean): void {
+    render(<SummaryBioMobile elevator={[]}  moreButton={false} setMoreButton={function (click: boolean): void {
       throw new Error("Function not implemented.");
     } } />);
 
@@ -62,7 +48,7 @@ describe("SummaryBioMobile component", () => {
   //     const longText =
   //       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
   //     const longElevator = Array(5).fill(longText);
-  //     render(<SummaryBioMobile elevator={longElevator} theme={mockTheme} />);
+  //     render(<SummaryBioMobile elevator={longElevator}  />);
 
   //     longElevator.forEach((text) => {
   //       expect(screen.getByText(text)).toBeInTheDocument();
@@ -70,14 +56,8 @@ describe("SummaryBioMobile component", () => {
   //   });
 
   //   test("renders correctly with different theme properties", () => {
-  //     const customTheme: IStyles = {
-  //       ...mockTheme,
-  //       textColors: {
-  //         primary: "text-custom-primary",
-  //         secondary: "text-custom-secondary",
-  //       },
-  //     };
-  //     render(<SummaryBioMobile elevator={mockElevator} theme={customTheme} />);
+
+  //     render(<SummaryBioMobile elevator={mockElevator}  />);
 
   //     mockElevator.forEach((text) => {
   //       const paragraphElement = screen.getByText(text);

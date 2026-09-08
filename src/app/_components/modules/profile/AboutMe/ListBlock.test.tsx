@@ -1,27 +1,14 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
 import ListBlock from "./ListBlock";
-import { IStyles } from "@/app/_models/styles";
 
 describe("ListBlock", () => {
-  const mockTheme: IStyles = {
-    backgrounds: {
-      light: "bg-white",
-      dark: "bg-black",
-    },
-    texts: {
-      light: "",
-      dark: "",
-      headerLight: "",
-      headerDark: "",
-    },
-  };
+
 
   const defaultProps = {
     title: "Skills",
     listProps: ["JavaScript", "React", "CSS"],
     orientation: "vertical",
-    theme: mockTheme,
   };
 
   test("renders the ListBlock component with default vertical orientation", () => {

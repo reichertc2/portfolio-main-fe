@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import ParagraphTextMobile from "../../../../common/Mobile/ParagraphTextMobile";
-import { IStyles } from "@/app/_models/styles";
 import MoreButton from "./MoreButton";
 
 interface ISummaryBioMobileProps {

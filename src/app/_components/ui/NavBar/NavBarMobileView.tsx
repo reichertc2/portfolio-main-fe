@@ -6,7 +6,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { INavigation } from "@/app/_models/navigation";
-import { IStyles } from "@/app/_models/styles";
 
 interface INavBarMobileViewProps {
   navigations: INavigation[];

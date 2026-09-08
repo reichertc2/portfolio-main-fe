@@ -1,5 +1,4 @@
 import React from "react";
-import { IStyles } from "@/app/_models/styles";
 import { IUserData } from "@/app/_models/user";
 import ThreeQuarterView from "./SubViews/ThreeQuarterView";
 import CopyrightText from "./Footer/CopyrightText";

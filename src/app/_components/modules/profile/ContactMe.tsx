@@ -1,6 +1,5 @@
 import React from "react";
 import { IContactInfo } from "@/app/_models/user";
-import { IStyles } from "@/app/_models/styles";
 import ProfileSection from "@/app/_components/common/ProfileSection";
 import ContactMeMobileView from "./ContactMe/ContactMeMobileView";
 import ContactMeStandardView from "./ContactMe/ContactMeStandardView";

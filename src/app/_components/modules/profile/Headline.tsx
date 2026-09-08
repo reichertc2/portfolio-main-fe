@@ -1,9 +1,7 @@
 import React from "react";
 import { IProfile } from "@/app/_models/user";
-import { INavigation } from "@/app/_models/navigation";
 import HeadlineMobileView from "./Headline/HeadlineMobileView";
 import HeadlineStandardView from "./Headline/HeadlineStandardView";
-import { IStyles } from "@/app/_models/styles";
 import ProfileSection from "@/app/_components/common/ProfileSection";
 
 interface IHeadlineProps {

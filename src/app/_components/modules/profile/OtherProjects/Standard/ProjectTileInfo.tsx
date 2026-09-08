@@ -2,16 +2,13 @@ import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Link from "next/link";
 import { IProjectInfo } from "@/app/_models/user";
-import { IStyles } from "@/app/_models/styles";
 
 interface IProjectTileInfoProps {
   project: IProjectInfo;
-  styling?: IStyles;
 }
 
 export const ProjectTileInfo: React.FC<IProjectTileInfoProps> = ({
   project,
-  styling,
 }) => {
   const styles = {
     container: "pb-4 pl-1",

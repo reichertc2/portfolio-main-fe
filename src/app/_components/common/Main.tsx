@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { IStyles } from "@/app/_models/styles";
 import { IUserData } from "@/app/_models/user";
 import Head from "next/head";
 import Headline from "../modules/profile/Headline";

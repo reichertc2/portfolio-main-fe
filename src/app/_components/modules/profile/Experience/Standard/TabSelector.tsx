@@ -2,18 +2,15 @@
 
 import React, { useState } from "react";
 import { IJobInfo } from "@/app/_models/user";
-import { IStyles } from "@/app/_models/styles";
 import TabSelectorButtons from "./TabSelectorButtons";
 import TabSelectorBody from "./TabSelectorBody";
 
 interface ITabSelectorProps {
   jobExperience: IJobInfo[];
-  styling?: IStyles;
 }
 
 export const TabSelector: React.FC<ITabSelectorProps> = ({
   jobExperience,
-  styling,
 }) => {
   const [displayedCompany, setDisplayedCompany] = useState<IJobInfo>(
     jobExperience[0]

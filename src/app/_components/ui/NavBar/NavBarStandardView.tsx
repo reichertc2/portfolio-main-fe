@@ -1,7 +1,6 @@
 import React from "react";
 import Link from "next/link";
 import { INavigation } from "@/app/_models/navigation";
-import { IStyles } from "@/app/_models/styles";
 
 interface INavBarStandardViewProps {
   navigations: INavigation[];

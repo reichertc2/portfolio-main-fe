@@ -1,6 +1,5 @@
 import React from "react";
 import { IProjectInfo } from "@/app/_models/user";
-import { IStyles } from "@/app/_models/styles";
 import ProfileSection from "@/app/_components/common/ProfileSection";
 import OtherProjectsMobileView from "./OtherProjects/OtherProjectsMobileView";
 import OtherProjectsStandardView from "./OtherProjects/OtherProjectsStandardView";

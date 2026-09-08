@@ -1,17 +1,14 @@
 import React from "react";
 import Image from "next/image";
 import { IProjectInfo } from "@/app/_models/user";
-import { IStyles } from "@/app/_models/styles";
 import ProjectTileInfo from "./ProjectTileInfo";
 
 interface IProjectTileProps {
   project: IProjectInfo;
-  styling?: IStyles;
 }
 
 export const ProjectTile: React.FC<IProjectTileProps> = ({
   project,
-  styling,
 }) => {
   const styles = {
     container: "py-0 min-w-[25%] min-h-[30%] py-8 col-span-1 ",

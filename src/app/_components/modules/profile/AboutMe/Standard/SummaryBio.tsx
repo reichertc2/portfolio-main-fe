@@ -1,5 +1,4 @@
 import React from "react";
-import { IStyles } from "@/app/_models/styles";
 import ParagraphText from "../../../../common/Standard/ParagraphText";
 
 interface ISummaryBio {

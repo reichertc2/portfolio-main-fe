@@ -5,7 +5,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { useTheme } from "next-themes";
 import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
 import { INavigation } from "@/app/_models/navigation";
-import { IStyles } from "@/app/_models/styles";
 import NavBarContainer from "./NavBar/NavBarContainer";
 import NavBarStandardView from "./NavBar/NavBarStandardView";
 import NavBarMobileView from "./NavBar/NavBarMobileView";

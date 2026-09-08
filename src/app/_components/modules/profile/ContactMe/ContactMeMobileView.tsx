@@ -2,16 +2,13 @@ import React from "react";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IContactInfo } from "@/app/_models/user";
-import { IStyles } from "@/app/_models/styles";
 
 interface IContactMeMobileViewProps {
   contactInfo: IContactInfo;
-  styling?: IStyles;
 }
 
 export const ContactMeMobileView: React.FC<IContactMeMobileViewProps> = ({
   contactInfo,
-  styling,
 }) => {
   const styles = {
     container: `sm:hidden flex flex-col`,

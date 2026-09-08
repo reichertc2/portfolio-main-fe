@@ -1,7 +1,6 @@
 import React from "react";
 import { IAboutMe } from "@/app/_models/user";
 import ProfileSection from "@/app/_components/common/ProfileSection";
-import { IStyles } from "@/app/_models/styles";
 import AboutMeStandardView from "./AboutMe/AboutMeStandardView";
 import AboutMeMobileView from "./AboutMe/AboutMeMobileView";
 

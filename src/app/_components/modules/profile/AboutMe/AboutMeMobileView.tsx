@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import Image from "next/image";
 import { IAboutMe } from "@/app/_models/user";
-import { IStyles } from "@/app/_models/styles";
 import ListBlock from "./ListBlock";
 import { SummaryBioMobile } from "./Mobile/SummaryBioMobile";
 

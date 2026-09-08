@@ -2,7 +2,6 @@ import React from "react";
 import { INavigation } from "@/app/_models/navigation";
 import { IUserData } from "@/app/_models/user";
 import NavBar from "./NavBar";
-import { IStyles } from "@/app/_models/styles";
 
 interface IHeaderProps {
   profileMain: IUserData;

@@ -1,5 +1,4 @@
 import React from "react";
-import { IStyles } from "@/app/_models/styles";
 import { IProfile } from "@/app/_models/user";
 import Image from "next/image";
 

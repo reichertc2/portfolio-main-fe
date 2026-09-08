@@ -2,7 +2,6 @@ import React from "react";
 import { render, screen } from "@testing-library/react";
 import { Skills } from "./Skills"; // Adjust the import path as necessary
 import { IAboutMe } from "@/app/_models/user";
-import { IStyles } from "@/app/_models/styles";
 import ListBlock from "../ListBlock";
 
 // Mock the ListBlock component
@@ -28,22 +27,9 @@ const mockAboutMe: IAboutMe = {
   profileImage: undefined,
 };
 
-const mockTheme: IStyles = {
-  backgrounds: {
-    light: "bg-white",
-    dark: "bg-black",
-  },
-  texts: {
-    light: "",
-    dark: "",
-    headerLight: "",
-    headerDark: "",
-  },
-};
-
 describe("Skills component", () => {
   test("renders the Languages ListBlock with correct props", () => {
-    render(<Skills aboutMe={mockAboutMe} theme={mockTheme} />);
+    render(<Skills aboutMe={mockAboutMe} />);
 
     expect(screen.getByText("Languages")).toBeInTheDocument();
     mockAboutMe.languages.forEach((language) => {
@@ -52,7 +38,7 @@ describe("Skills component", () => {
   });
 
   test("renders the Tools ListBlock with correct props", () => {
-    render(<Skills aboutMe={mockAboutMe} theme={mockTheme} />);
+    render(<Skills aboutMe={mockAboutMe}  />);
 
     expect(screen.getByText("Tools")).toBeInTheDocument();
     mockAboutMe.tools.forEach((tool) => {
@@ -61,7 +47,7 @@ describe("Skills component", () => {
   });
 
   //   test("applies the correct styles to the skillsContainer", () => {
-  //     render(<Skills aboutMe={mockAboutMe} theme={mockTheme} />);
+  //     render(<Skills aboutMe={mockAboutMe}  />);
 
   //     const skillsContainer =
   //       screen.getByRole("list").parentElement?.parentElement;
@@ -70,7 +56,7 @@ describe("Skills component", () => {
 
   test("renders correctly with an empty languages array", () => {
     const aboutMeWithoutLanguages = { ...mockAboutMe, languages: [] };
-    render(<Skills aboutMe={aboutMeWithoutLanguages} theme={mockTheme} />);
+    render(<Skills aboutMe={aboutMeWithoutLanguages}  />);
 
     expect(screen.getByText("Languages")).toBeInTheDocument();
     const languagesList = screen.queryByText("JavaScript");
@@ -79,7 +65,7 @@ describe("Skills component", () => {
 
   test("renders correctly with an empty tools array", () => {
     const aboutMeWithoutTools = { ...mockAboutMe, tools: [] };
-    render(<Skills aboutMe={aboutMeWithoutTools} theme={mockTheme} />);
+    render(<Skills aboutMe={aboutMeWithoutTools}  />);
 
     expect(screen.getByText("Tools")).toBeInTheDocument();
     const toolsList = screen.queryByText("VSCode");

@@ -1,25 +1,13 @@
 import React from "react";
 import { getByTestId, render } from "@testing-library/react";
-import { IStyles } from "@/app/_models/styles";
 import ProfileSection from "./ProfileSection";
 
 describe("ProfileSection Tests", () => {
   test("renders Title", () => {
-    const MockTheme: IStyles = {
-      texts: {
-        light: "",
-        dark: "",
-        headerLight: "",
-        headerDark: "",
-      },
-      backgrounds: {
-        light: "",
-        dark: "",
-      },
-    };
+
 
     const { getByText } = render(
-      <ProfileSection title="Help" theme={MockTheme} id={"Test_id"}>
+      <ProfileSection title="Help" id={"Test_id"}>
         <p>Test</p>
       </ProfileSection>
     );
@@ -29,21 +17,10 @@ describe("ProfileSection Tests", () => {
   });
 
   // test("renders without title", () => {
-  //   const MockTheme: IStyles = {
-  //     texts: {
-  //       light: "",
-  //       dark: "",
-  //       headerLight: "",
-  //       headerDark: "",
-  //     },
-  //     backgrounds: {
-  //       light: "",
-  //       dark: "",
-  //     },
-  //   };
+
 
   //   const { getByTestId } = render(
-  //     <ProfileSection theme={MockTheme} id={"Test_id"} children={undefined} />
+  //     <ProfileSection id={"Test_id"} children={undefined} />
   //   );
 
   //   const paragraphElement = getByTestId("Test_id");

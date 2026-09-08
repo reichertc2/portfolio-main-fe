@@ -2,9 +2,6 @@ import React from "react";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { TabSelector } from "./TabSelector"; // Adjust the import path as necessary
 import { IJobInfo } from "@/app/_models/user";
-import { IStyles } from "@/app/_models/styles";
-import TabSelectorButtons from "./TabSelectorButtons";
-import TabSelectorBody from "./TabSelectorBody";
 
 // Mock the TabSelectorButtons and TabSelectorBody components
 jest.mock("./TabSelectorButtons", () => ({
@@ -73,19 +70,6 @@ const mockJobExperience: IJobInfo[] = [
   },
 ];
 
-const mockStyles: IStyles = {
-  backgrounds: {
-    light: "bg-white",
-    dark: "bg-black",
-  },
-  texts: {
-    light: "",
-    dark: "",
-    headerLight: "",
-    headerDark: "",
-  },
-};
-
 describe("TabSelector component", () => {
 //   test("renders the initial displayed company", () => {
 //     render(
@@ -124,7 +108,7 @@ describe("TabSelector component", () => {
 
   test("renders TabSelectorButtons with correct props", () => {
     render(
-      <TabSelector jobExperience={mockJobExperience} styling={mockStyles} />
+      <TabSelector jobExperience={mockJobExperience}  />
     );
 
     // Check if TabSelectorButtons is rendered with the correct jobExperience

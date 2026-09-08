@@ -1,16 +1,14 @@
 import React from "react";
 import { IProjectInfo } from "@/app/_models/user";
-import { IStyles } from "@/app/_models/styles";
 import ProjectBasic from "./ProjectBasic";
 
 interface IFeaturedProjectStandardViewProps {
   projectWorks: IProjectInfo[];
-  styling?: IStyles;
 }
 
 export const FeaturedProjectStandardView: React.FC<
   IFeaturedProjectStandardViewProps
-> = ({ projectWorks, styling }) => {
+> = ({ projectWorks}) => {
   const styles = {
     container: `hidden sm:block border-gray-200 border-2 border-solid p-4`,
   };

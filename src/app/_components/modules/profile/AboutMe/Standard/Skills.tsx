@@ -1,6 +1,5 @@
 import React from "react";
 import { IAboutMe } from "@/app/_models/user";
-import { IStyles } from "@/app/_models/styles";
 import ListBlock from "../ListBlock";
 
 interface ISkills {

@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { IStyles } from "@/app/_models/styles";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCode } from "@fortawesome/free-solid-svg-icons";
 import { useEffect, useState } from "react";

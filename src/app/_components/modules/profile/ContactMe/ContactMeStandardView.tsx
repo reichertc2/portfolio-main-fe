@@ -2,16 +2,13 @@ import React from "react";
 import Link from "next/link";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { IContactInfo } from "@/app/_models/user";
-import { IStyles } from "@/app/_models/styles";
 
 interface IContactMeStandardViewProps {
   contactInfo: IContactInfo;
-  styling?: IStyles;
 }
 
 export const ContactMeStandardView: React.FC<IContactMeStandardViewProps> = ({
   contactInfo,
-  styling,
 }) => {
   const styles = {
     container: "hidden sm:block inline-block w-full text-center",
