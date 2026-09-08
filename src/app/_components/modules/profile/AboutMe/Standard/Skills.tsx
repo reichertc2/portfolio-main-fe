@@ -8,7 +8,7 @@ interface ISkills {
 
 export const Skills: React.FC<ISkills> = ({ aboutMe }) => {
   const styles = {
-    skillsContainer: `hidden sm:flex pl-4 border-gray-200 border-2 order-solid rounded-l-md dark:bg-gray-800 bg-gray-200 z-15`,
+    skillsContainer: `hidden sm:flex pl-4 border-2 order-solid rounded-l-md z-15`,
   };
 
   return (

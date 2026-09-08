@@ -12,9 +12,9 @@ export const ProjectTileInfo: React.FC<IProjectTileInfoProps> = ({
 }) => {
   const styles = {
     container: "pb-4 pl-1",
-    tileHeader: `pb-0 text-lg dark:text-sky-200 py-1 font-semibold`,
-    tileDescription: `px-1 text-xs dark:text-sky-100 py-1 font-semibold`,
-    urlContainer: `inline-block px-2 dark:text-sky-200`,
+    tileHeader: `pb-0 text-lg dark:text-text-dark py-1 font-semibold`,
+    tileDescription: `px-1 text-xs dark:text-text-dark py-1 font-semibold`,
+    urlContainer: `inline-block px-2 dark:text-text-dark`,
     urlIcon: "text-md",
   };
   return (

@@ -10,8 +10,8 @@ export const HeadlineMobileView: React.FC<IHeadlineMobileViewProps> = ({
 }) => {
   const styles = {
     container: `sm:hidden block`,
-    mainHeadline: `dark:text-stone-100 text-xl font-semibold py-1`,
-    subHeadline: `dark:text-sky-200 text-sm font-semibold italic pb-3 opacity-70`,
+    mainHeadline: `dark:text-text text-xl font-semibold py-1`,
+    subHeadline: `dark:text-text text-sm font-semibold italic pb-3 opacity-70`,
   };
 
   return (

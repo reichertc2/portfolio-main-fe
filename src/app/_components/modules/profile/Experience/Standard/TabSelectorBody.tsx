@@ -10,11 +10,11 @@ export const TabSelectorBody: React.FC<ITabSelectorBodyProps> = ({
   displayedCompany,
 }) => {
   const styles = {
-    container: `px-4 dark:text-stone-100 inline-block w-4/5 align-top border border-slate-600 rounded-r-md mt-1 h-80`,
+    container: `px-4 dark:text-text inline-block w-4/5 align-top border rounded-r-md mt-1 h-80`,
     bodyHeader: "text-lg inline-block",
     link: "inline-block",
     hoverAnimation: "hover-underline-animation",
-    tenureText: `text-xs dark:text-stone-100 font-semibold`,
+    tenureText: `text-xs dark:text-text font-semibold`,
     experienceBullets: "p-4 text-sm w-full",
     bulletPoint: "img-li pl-6 pt-2",
   };

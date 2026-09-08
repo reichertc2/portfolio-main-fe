@@ -10,8 +10,8 @@ export const HeadlineStandardView: React.FC<IHeadlineStandardViewProps> = ({
 }) => {
   const styles = {
     container: `hidden md:block`,
-    mainHeadline: `dark:text-stone-100 text-7xl font-semibold py-1`,
-    subHeadline: `dark:text-sky-200 text-5xl font-semibold italic pt-1 pb-3 opacity-70`,
+    mainHeadline: `dark:text-text-dark text-7xl font-semibold py-1`,
+    subHeadline: `dark:text-text-dark text-5xl font-semibold italic pt-1 pb-3 opacity-70`,
   };
 
   return (

@@ -12,7 +12,7 @@ export const ProjectInfoLinks: React.FC<IProjectInfoLinksProps> = ({
 }) => {
   const styles = {
     urlContainer: "text-right py-4 pr-4",
-    url: `inline-block px-2 dark:text-slate-200`,
+    url: `inline-block px-2 dark:text-text`,
     urlIcon: "text-2xl",
   };
 

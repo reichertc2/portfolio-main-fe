@@ -23,7 +23,7 @@ export const ListBlock: React.FC<IListBlockProps> = ({
   orientation,
 }) => {
   const defaultOrientation: IListBlockStyling = {
-    ul: `dark:text-slate-200 inline-block pr-3 text-sm md:w-3/5`,
+    ul: `dark:text-text-dark inline-block pr-3 text-sm md:w-3/5`,
     liTitle: "text-semibold pb-1",
     li: ``,
   };

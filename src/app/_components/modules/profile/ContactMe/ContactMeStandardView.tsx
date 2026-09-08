@@ -12,10 +12,10 @@ export const ContactMeStandardView: React.FC<IContactMeStandardViewProps> = ({
 }) => {
   const styles = {
     container: "hidden sm:block inline-block w-full text-center",
-    header: `text-7xl font-semibold italic dark:text-sky-200 pt-1 pb-3 opacity-70`,
-    info: `text-sky-100 dark:text-sky-100 p-6 rounded-md m-auto w-2/5`,
-    buttonText: `dark:text-sky-200 p-2 inline-block border-2 border-solid dark:border-sky-200 rounded-md opacity-70 hover:opacity-100`,
-    socialContainer: `text-3xl dark:text-sky-200 p-3 content-center`,
+    header: `text-7xl font-semibold italic dark:text-text pt-1 pb-3 opacity-70`,
+    info: `text-text-dark dark:text-text-dark p-6 rounded-md m-auto w-2/5`,
+    buttonText: `dark:text-text p-2 inline-block border-2 border-solid rounded-md opacity-70 hover:opacity-100`,
+    socialContainer: `text-3xl dark:text-text p-3 content-center`,
     url: "inline-block px-2 w-1/12",
   };
 

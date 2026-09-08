@@ -12,9 +12,9 @@ export const ContactMeMobileView: React.FC<IContactMeMobileViewProps> = ({
 }) => {
   const styles = {
     container: `sm:hidden flex flex-col`,
-    info: `text-sky-100 dark:text-sky-100 p-6 rounded-md m-auto w-2/5`,
-    buttonText: `dark:text-sky-200 p-2 inline-block border-2 border-solid dark:border-sky-200 rounded-md opacity-70 hover:opacity-100`,
-    socialContainer: `flex text-3xl dark:text-sky-200 p-3 justify-between content-center`,
+    info: `text-text p-6 rounded-md m-auto w-2/5`,
+    buttonText: `dark:text-text p-2 inline-block border-2 border-solid dark:border-sky-200 rounded-md opacity-70 hover:opacity-100`,
+    socialContainer: `flex text-3xl dark:text-text p-3 justify-between content-center`,
     url: "inline-block px-2 w-50",
   };
 

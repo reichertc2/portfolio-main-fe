@@ -14,6 +14,8 @@ export const TabSelectorButtons: React.FC<ITabSelectorButtonsProps> = ({
 }) => {
   const styles = {
     tabContainer: "w-1/5 inline-block pl-4",
+    genericTab:`my-1 block pl-4 py-3 border  rounded-l-md dark:text-text text-xs text-left w-full`,
+    selectedTab:`text-text`
   };
 
   const isSelectedButton = (companyId: string) => {
@@ -27,8 +29,8 @@ export const TabSelectorButtons: React.FC<ITabSelectorButtonsProps> = ({
         <button
           key={comp["id"]}
           onClick={() => openExperience(comp.id)}
-          className={`my-1 block pl-4 py-3 border border-slate-600 rounded-l-md dark:text-stone-100 text-xs text-left w-full ${
-            isSelectedButton(comp["id"]) && `text-slate-200 bg-stone-800 dark:text-stone-800 dark:bg-slate-200`
+          className={`${styles.genericTab} ${
+            isSelectedButton(comp["id"]) && styles.selectedTab
           }`}
         >
           {comp["CompanyName"]}

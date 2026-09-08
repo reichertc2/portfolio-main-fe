@@ -12,7 +12,7 @@ export const Header: React.FC<IHeaderProps> = ({ profileMain }) => {
     { label: "About", path: "/AboutMe" },
     { label: "Experience", path: "/Experience" },
     { label: "Projects", path: "/Projects" },
-    { label: "Contact", path: "/ContactMe" },
+    { label: "Contact", path: "/Contact" },
   ];
 
   return (

@@ -10,7 +10,7 @@ export const OtherProjectsStandardView: React.FC<
   IOtherProjectsStandardViewProps
 > = ({ projectWorks}) => {
   const styles = {
-    container: "hidden sm:grid inline-grid grid-cols-3 gap-3 border-gray-200 border-2 border-solid",
+    container: "hidden sm:grid inline-grid grid-cols-3 gap-3 border-2 border-solid",
   };
 
   return (

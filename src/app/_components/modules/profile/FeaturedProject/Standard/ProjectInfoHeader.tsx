@@ -8,8 +8,8 @@ export const ProjectInfoHeader: React.FC<IProjectInfoHeaderProps> = ({
   title,
 }) => {
   const styles = {
-    container:`flex w-full bg-gray-200 dark:bg-slate-500 rounded-l-md`,
-    header: `flex-end pl-4 text-xl dark:text-stone-800 py-1 font-semibold text-left`,
+    container:`flex w-full rounded-l-md`,
+    header: `flex-end pl-4 text-xl dark:text-text-dark py-1 font-semibold text-left`,
   };
 
   return (

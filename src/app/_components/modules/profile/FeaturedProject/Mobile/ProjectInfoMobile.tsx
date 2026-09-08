@@ -12,7 +12,7 @@ interface IProjectInfoProps {
 export const ProjectInfoMobile: React.FC<IProjectInfoProps> = ({ project }) => {
   const styles = {
     container:
-      "inline-block w-3/5 align-top border-slate-500 border-solid border-r-4",
+      "inline-block w-3/5 align-top border-solid border-r-4",
   };
 
   return (

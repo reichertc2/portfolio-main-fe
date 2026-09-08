@@ -12,7 +12,7 @@ export const AboutMeStandardView: React.FC<IAboutMeStandardViewProps> = ({
   aboutMe,
 }) => {
   const styles = {
-    bioContainer: `hidden sm:flex justify-start w-full border-gray-200 border-2 border-solid`,
+    bioContainer: `hidden sm:flex justify-start w-full  border-2 border-solid`,
     summaryContainer: `w-1/2`,
     innerContainer: `flex items-center flex-col justify-center w-1/2`,
     skillsContainer: `ml-auto w-3/4 pb-1`,

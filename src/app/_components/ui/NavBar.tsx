@@ -23,8 +23,8 @@ export const NavBar: React.FC<INavBarProps> = ({
   const { systemTheme, theme, setTheme } = useTheme();
 
   const styles = {
-    lightText: `text-sky-200`,
-    darkText: `text-stone-900`,
+    lightText: `text-text-dark`,
+    darkText: `text-text`,
   };
 
   const renderThemeChanger = () => {

@@ -17,7 +17,7 @@ export const ExperienceTimelineItem: React.FC<IExperienceTimelineItemProps> = ({
     tenure: `text-xs`,
     position: `text-xs`,
     summary: `pt-2 text-xs`,
-    arrow: `absolute top-[10px] left-[-12px] z-[1] h-0 w-0 border-t-[10px] border-b-[10px] border-r-[10px] border-t-transparent border-b-transparent border-l-red-500`,
+    arrow: `absolute top-[10px] left-[-12px] z-[1] h-0 w-0 border-t-[10px] border-b-[10px] border-r-[10px] border-t-transparent border-b-transparent`,
   };
 
   return (

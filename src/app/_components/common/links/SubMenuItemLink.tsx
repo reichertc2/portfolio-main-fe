@@ -13,7 +13,7 @@ export const TextWithLink: React.FC<ISubMenuItemLinkProps> = ({
   urlText,
 }) => {
   return (
-    <p className={`text-right text-black text-lg`}>
+    <p className={`text-right dark:text-text-dark text-lg`}>
       {text}
       <LinkText url={url} urlText={urlText} />.
     </p>

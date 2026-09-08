@@ -10,7 +10,7 @@ export const ExperienceStandardView: React.FC<IExperienceStandardViewProps> = ({
   jobExperience,
 }) => {
   const styles = {
-    container: `hidden sm:block border-gray-200 border-2 border-solid w-full`,
+    container: `hidden sm:block border-2 border-solid w-full`,
   };
 
   return (

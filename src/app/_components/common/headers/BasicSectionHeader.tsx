@@ -8,7 +8,7 @@ export const BasicSectionHeader: React.FC<IBasicSectionHeader> = ({
 }) => {
   const styles = {
     container: `flex justify-self-start text-xl dark:text-text-dark font-semibold w-full`,
-    title: `border-gray-200 md:border-2 md:order-solid md:w-1/4 rounded-t-md px-2  py-1 `,
+    title: `md:border-2 md:order-solid md:w-1/4 rounded-t-md px-2  py-1 `,
   };
   return (
     <h3 className={styles.container}>

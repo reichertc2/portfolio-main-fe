@@ -20,8 +20,8 @@ export const NavBarMobileView: React.FC<INavBarMobileViewProps> = ({
     menuButtonOpen: `sm:hidden block dark:text-text-dark z-10 p-4`,
     menuButtonClosed: `sm:hidden block dark:text-text-dark z-10 p-4`,
     menuContainerOpen: `sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-stone-200 text-center ease-in duration-300`,
-    menuContainerClosed: `sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-stone-200 text-center ease-in duration-300`,
-    navLi: `p-4 text-4xl dark:text-stone-900 hover:text-sky-600`,
+    menuContainerClosed: `sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen text-center ease-in duration-300`,
+    navLi: `p-4 text-4xl dark:text-text hover:text-text`,
     hoverAnimation: `hover-underline-animation`,
   };
 
