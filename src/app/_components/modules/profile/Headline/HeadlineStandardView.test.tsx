@@ -44,6 +44,6 @@ describe("HeadlineStandardView", () => {
     test("applies the correct default styles to the container", () => {
         render(<HeadlineStandardView headLine={mockProfile} featuredProject={mockProject}/>);
         const container = screen.getByText(mockProfile.name).parentElement;
-        expect(container).toHaveClass("hidden md:block");
+        expect(container).toHaveClass("block w-full");
     });
 });
