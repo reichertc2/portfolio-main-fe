@@ -3,7 +3,6 @@ import {render, screen} from "@testing-library/react";
 import HeadlineStandardView from "./HeadlineStandardView";
 import {IProfile, IProjectInfo} from "@/app/_models/user";
 import {faGithub} from "@fortawesome/free-brands-svg-icons";
-import confinPic01 from "../../../../../../public/consapp.jpg";
 
 describe("HeadlineStandardView", () => {
     const mockProfile: IProfile = {

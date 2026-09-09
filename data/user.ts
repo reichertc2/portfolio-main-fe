@@ -12,12 +12,12 @@ import {IUserData} from "@/app/_models/user";
 
 export const user: IUserData = {
     profile: {
-        name: "Chris Reichert",
+        name: "Christopher Reichert",
         headline: "Software Engineer | Veteran | PMP",
         quickDescription: "Full Stack Engineer (C#, TypeScript, Azure) who turns messy business processes into working software.",
         workStatus: {
-            contract: false,
-            fullTime: true,
+            contract: true,
+            fullTime: false,
             notOpen: false
         },
         profileURL: "https://github.com/reichertc2/portfolio-main-fe",
@@ -115,6 +115,14 @@ export const user: IUserData = {
                 },
             ],
             images: [
+                {
+                    image: confinPic01,
+                    alt: "Personal Fintech App Pic",
+                },
+                {
+                    image: confinPic01,
+                    alt: "Personal Fintech App Pic",
+                },
                 {
                     image: confinPic01,
                     alt: "Personal Fintech App Pic",
