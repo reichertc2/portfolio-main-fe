@@ -3,7 +3,6 @@ import {IProfile, IProjectInfo} from "@/app/_models/user";
 import PersonaContainer from "@/app/_components/modules/profile/Headline/Standard/PersonaContainer";
 import AvailabilityStatusContainer
     from "@/app/_components/modules/profile/Headline/Standard/AvailabilityStatusContainer";
-import FeaturedProject from "@/app/_components/modules/profile/FeaturedProject";
 import FeaturedProjectStandardView from "@/app/_components/modules/profile/FeaturedProject/FeaturedProjectStandardView";
 
 interface IHeadlineStandardViewProps {

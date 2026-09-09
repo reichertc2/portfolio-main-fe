@@ -10,7 +10,7 @@ interface IMainPageProps {
     user: IUserData;
 }
 
-export const MainPage: React.FC<IMainPageProps> = ({user}) => {
+export const MainPageView: React.FC<IMainPageProps> = ({user}) => {
     return (
         <div className="m-auto min-h-screen">
             <Header profileMain={user}/>
@@ -20,4 +20,4 @@ export const MainPage: React.FC<IMainPageProps> = ({user}) => {
     );
 };
 
-export default MainPage;
+export default MainPageView;

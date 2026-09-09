@@ -5,11 +5,11 @@ import {IUserData} from "@/app/_models/user";
 import Head from "next/head";
 import Headline from "../modules/profile/Headline";
 
-interface IMainProps {
+interface IMainPageProps {
     profileMain: IUserData;
 }
 
-export const MainPage: React.FC<IMainProps> = ({profileMain}) => {
+export const MainPage: React.FC<IMainPageProps> = ({profileMain}) => {
 
     const styles = {
         mainContainer: `m-auto w-2/3 mt-24`
@@ -23,7 +23,7 @@ export const MainPage: React.FC<IMainProps> = ({profileMain}) => {
             </Head>
             <main className={styles.mainContainer}>
                 <article id="mainContainer" className={``}>
-                    <Headline headLine={profileMain["profile"]}/>
+                    <Headline headLine={profileMain.profile} featuredProject={profileMain.projects}/>
                 </article>
             </main>
         </>
