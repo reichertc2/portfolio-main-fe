@@ -1,17 +1,17 @@
 import React from "react";
 
 interface IProjectInfoDescriptionProps {
-  description: string;
+    description: string;
 }
 
 export const ProjectInfoDescription: React.FC<IProjectInfoDescriptionProps> = ({
-  description,
-}) => {
-  const styles = {
-    projectDescription: `dark:text-text p-1 m-3 text-right pr-4`,
-  };
+                                                                                   description,
+                                                                               }) => {
+    const styles = {
+        projectDescription: `text-text dark:text-text-dark p-1 m-3 text-right pr-4`,
+    };
 
-  return <p className={styles.projectDescription}>{description}</p>;
+    return <p className={styles.projectDescription}>{description}</p>;
 };
 
 export default ProjectInfoDescription;

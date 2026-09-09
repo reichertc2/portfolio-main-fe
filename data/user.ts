@@ -17,8 +17,8 @@ export const user: IUserData = {
         quickDescription: "Full Stack Engineer (C#, TypeScript, Azure) who turns messy business processes into working software.",
         workStatus: {
             contract: false,
-            fullTime: false,
-            notOpen: true
+            fullTime: true,
+            notOpen: false
         },
         profileURL: "https://github.com/reichertc2/portfolio-main-fe",
         logo: {
