@@ -16,16 +16,19 @@ export const HeadlineStandardView: React.FC<IHeadlineStandardViewProps> = ({
                                                                                headLine,
                                                                                featuredProject
                                                                            }) => {
+    const styles = {
+        container: ``,
+    }
 
     return (
-        <>
+        <div className={styles.container}>
             <PersonaContainer persona={headLine}/>
             <AvailabilityStatusContainer availability={headLine.workStatus}/>
             <ActionButtonContainer/>
             <FeaturedProjectStandardView
                 projectWorks={featuredProject}
             />
-        </>
+        </div>
     );
 };
 

@@ -13,11 +13,14 @@ export const Headline: React.FC<IHeadlineProps> = ({headLine, featuredProject}) 
     return (
         <>
             <ContentContainer id={"Headline"}>
-                <HeadlineStandardView headLine={headLine} featuredProject={featuredProject}/>
-
-                {/* Mobile Version */}
-
-                <HeadlineMobileView headLine={headLine}/>
+                <HeadlineStandardView
+                    headLine={headLine}
+                    featuredProject={featuredProject}
+                />
+                <HeadlineMobileView
+                    headLine={headLine}
+                    featuredProject={featuredProject}
+                />
             </ContentContainer>
         </>
     );

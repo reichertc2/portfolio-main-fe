@@ -17,26 +17,28 @@ export const ButtonGeneric: React.FC<IButtonGenericProps> = ({
                                                                  download = false,
                                                              }) => {
     const styles = {
-        button: `mx-2 mb-4 mt-8 px-4 py-2 dark:text-text-dark text-lg border-1 border-solid rounded-md`,
-        primary: `bg-primary-dark border-secondary text-text-dark`,
-        secondary: ``
-    }
+        button: `inline-flex items-center justify-center w-full sm:w-auto mx-0 sm:mx-2 mb-2 sm:mb-2 mt-4 sm:mt-2 px-4 py-2 text-base sm:text-lg border border-solid rounded-md dark:text-text-dark`,
+        primary: `bg-primary-dark border-primary text-text-dark`,
+        secondary: `border-secondary`,
+    };
+
+    const className = `${styles.button} ${
+        isPrimary ? styles.primary : styles.secondary
+    }`;
 
     if (download) {
         const filename = typeof download === "string" ? download : undefined;
 
         return (
-            <a href={url} download={filename}
-               className={`${styles.button} ${isPrimary ? styles.primary : styles.secondary} py-3`}>
+            <a href={url} download={filename} className={`${className} py-3`}>
                 {text}
             </a>
         );
     }
+
     return (
-        <Link href={url}>
-            <button className={`${styles.button} ${isPrimary ? styles.primary : styles.secondary}`}>
-                {text}
-            </button>
+        <Link href={url} className={className}>
+            {text}
         </Link>
     );
 };

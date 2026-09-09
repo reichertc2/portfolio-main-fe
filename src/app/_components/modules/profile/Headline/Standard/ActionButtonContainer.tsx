@@ -6,7 +6,7 @@ interface IActionButtonContainerProps {
 
 export const ActionButtonContainer: React.FC<IActionButtonContainerProps> = ({}) => {
     const styles = {
-        container: `hidden md:block`,
+        container: `flex flex-col sm:flex-row gap-2 sm:gap-3 w-full sm:w-auto`,
 
     };
 

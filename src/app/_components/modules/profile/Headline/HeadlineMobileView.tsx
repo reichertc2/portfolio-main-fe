@@ -1,25 +1,31 @@
 import React from "react";
-import { IProfile } from "@/app/_models/user";
+import {IProfile, IProjectInfo} from "@/app/_models/user";
+import PersonaContainer from "@/app/_components/modules/profile/Headline/Standard/PersonaContainer";
+import AvailabilityStatusContainer
+    from "@/app/_components/modules/profile/Headline/Standard/AvailabilityStatusContainer";
+import ActionButtonContainer from "@/app/_components/modules/profile/Headline/Standard/ActionButtonContainer";
+import FeaturedProjectStandardView from "@/app/_components/modules/profile/FeaturedProject/FeaturedProjectStandardView";
+import FeaturedProjectMobileView from "@/app/_components/modules/profile/FeaturedProject/FeaturedProjectMobileView";
 
 interface IHeadlineMobileViewProps {
-  headLine: IProfile;
+    headLine: IProfile;
+    featuredProject: IProjectInfo[];
 }
 
 export const HeadlineMobileView: React.FC<IHeadlineMobileViewProps> = ({
-  headLine,
-}) => {
-  const styles = {
-    container: `sm:hidden block`,
-    mainHeadline: `dark:text-text text-xl font-semibold py-1`,
-    subHeadline: `dark:text-text text-sm font-semibold italic pb-3 opacity-70`,
-  };
+                                                                           headLine,
+                                                                           featuredProject
+                                                                       }) => {
+    const styles = {
+        container: `sm:hidden flex`,
 
-  return (
-    <div className={styles.container}>
-      <p className={styles.mainHeadline}>{headLine["name"]}</p>
-      <p className={styles.subHeadline}>{headLine["headline"]}</p>
-    </div>
-  );
+    };
+
+    return (
+        <div className={styles.container}>
+            {/*<FeaturedProjectMobileView projectWorks={featuredProject}/>*/}
+        </div>
+    );
 };
 
 export default HeadlineMobileView;
