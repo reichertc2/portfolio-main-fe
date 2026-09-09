@@ -1,15 +1,15 @@
 import React from "react";
-import { getByTestId, render } from "@testing-library/react";
-import ProfileSection from "./ProfileSection";
+import {getByTestId, render} from "@testing-library/react";
+import ContentContainer from "./ContentContainer";
 import UnderConstruction from "./UnderConstruction";
 
 describe("UnderConstruction Tests", () => {
-  test("renders element", () => {
+    test("renders element", () => {
 
 
-    const { getByText } = render(<UnderConstruction />);
+        const {getByText} = render(<UnderConstruction/>);
 
-    const element = getByText("Under Construction. Come Back Soon!!");
-    expect(element).toBeInTheDocument();
-  });
+        const element = getByText("Under Construction. Come Back Soon!!");
+        expect(element).toBeInTheDocument();
+    });
 });

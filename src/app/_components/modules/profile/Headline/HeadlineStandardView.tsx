@@ -1,25 +1,27 @@
 import React from "react";
-import { IProfile } from "@/app/_models/user";
+import {IProfile} from "@/app/_models/user";
+import PersonaContainer from "@/app/_components/modules/profile/Headline/Standard/PersonaContainer";
+import AvailabilityStatusContainer
+    from "@/app/_components/modules/profile/Headline/Standard/AvailabilityStatusContainer";
 
 interface IHeadlineStandardViewProps {
-  headLine: IProfile;
+    headLine: IProfile;
 }
 
 export const HeadlineStandardView: React.FC<IHeadlineStandardViewProps> = ({
-  headLine,
-}) => {
-  const styles = {
-    container: `hidden md:block`,
-    mainHeadline: `dark:text-text-dark text-7xl font-semibold py-1`,
-    subHeadline: `dark:text-text-dark text-5xl font-semibold italic pt-1 pb-3 opacity-70`,
-  };
+                                                                               headLine,
+                                                                           }) => {
+    const styles = {
+        container: `hidden md:block`,
 
-  return (
-    <div className={styles.container}>
-      <p className={styles.mainHeadline}>{headLine["name"]}</p>
-      <p className={styles.subHeadline}>{headLine["headline"]}</p>
-    </div>
-  );
+    };
+
+    return (
+        <>
+            <PersonaContainer persona={headLine}/>
+            <AvailabilityStatusContainer availability={headLine.workStatus}/>
+        </>
+    );
 };
 
 export default HeadlineStandardView;

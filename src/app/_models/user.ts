@@ -10,8 +10,16 @@ export interface IUserData {
 export interface IProfile {
     name: string;
     headline: string;
+    quickDescription: string;
+    workStatus: IWorkStatus;
     profileURL: string;
     logo?: IImageData;
+}
+
+export interface IWorkStatus {
+    contract: boolean,
+    fullTime: boolean,
+    notOpen: boolean
 }
 
 export interface IAboutMe {
