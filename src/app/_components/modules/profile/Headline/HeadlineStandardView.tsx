@@ -4,7 +4,6 @@ import PersonaContainer from "@/app/_components/modules/profile/Headline/Standar
 import AvailabilityStatusContainer
     from "@/app/_components/modules/profile/Headline/Standard/AvailabilityStatusContainer";
 import FeaturedProjectStandardView from "@/app/_components/modules/profile/FeaturedProject/FeaturedProjectStandardView";
-import ButtonGeneric from "@/app/_components/common/buttons/ButtonGeneric";
 import ActionButtonContainer from "@/app/_components/modules/profile/Headline/Standard/ActionButtonContainer";
 
 interface IHeadlineStandardViewProps {

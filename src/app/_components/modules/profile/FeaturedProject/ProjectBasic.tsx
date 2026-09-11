@@ -1,6 +1,5 @@
 import React from "react";
 import {IProjectInfo} from "@/app/_models/user";
-import ProjectImage from "./Standard/ProjectImage";
 import ProjectInfo from "./Standard/ProjectInfo";
 import ProjectImageCarousel from "@/app/_components/modules/profile/FeaturedProject/Standard/ProjectImageCarousel";
 

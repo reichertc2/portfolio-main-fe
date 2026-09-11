@@ -4,7 +4,6 @@ import Link from "next/link";
 interface IButtonGenericProps {
     text: string;
     url: string;
-    urlText: string;
     isPrimary?: boolean;
     download?: boolean | string;
 }
@@ -12,7 +11,6 @@ interface IButtonGenericProps {
 export const ButtonGeneric: React.FC<IButtonGenericProps> = ({
                                                                  text,
                                                                  url,
-                                                                 urlText,
                                                                  isPrimary = true,
                                                                  download = false,
                                                              }) => {

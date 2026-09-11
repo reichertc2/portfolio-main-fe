@@ -10,7 +10,7 @@ interface IAboutMeProps {
 
 export const AboutMe: React.FC<IAboutMeProps> = ({aboutMe}) => {
     return (
-        <ContentContainer id={"AboutMeSection"} title={"About Me"}>
+        <ContentContainer id={"AboutMeSection"}>
             <AboutMeStandardView aboutMe={aboutMe}/>
 
             <AboutMeMobileView aboutMe={aboutMe}/>

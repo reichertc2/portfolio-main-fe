@@ -7,7 +7,7 @@ interface IHeadlineMobileViewProps {
 }
 
 export const HeadlineMobileView: React.FC<IHeadlineMobileViewProps> = ({
-                                                                           headLine,
+                                                                           // headLine,
                                                                            // featuredProject
                                                                        }) => {
     const styles = {
