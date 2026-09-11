@@ -1,46 +1,27 @@
-import Link from "next/link";
 import React from "react";
-import { IJobInfo } from "@/app/_models/user";
+import {IJobInfo} from "@/app/_models/user";
+import TabSelectorBodyHeader from "@/app/_components/modules/profile/Experience/Standard/TabSelectorBodyHeader";
+import TabSelectorBodySummary from "@/app/_components/modules/profile/Experience/Standard/TabSelectorBodySummary";
 
 interface ITabSelectorBodyProps {
-  displayedCompany: IJobInfo;
+    displayedCompany: IJobInfo;
 }
 
 export const TabSelectorBody: React.FC<ITabSelectorBodyProps> = ({
-  displayedCompany,
-}) => {
-  const styles = {
-    container: `px-4 dark:text-text inline-block w-4/5 align-top border rounded-r-md mt-1 h-80`,
-    bodyHeader: "text-lg inline-block",
-    link: "inline-block",
-    hoverAnimation: "hover-underline-animation",
-    tenureText: `text-xs dark:text-text font-semibold`,
-    experienceBullets: "p-4 text-sm w-full",
-    bulletPoint: "img-li pl-6 pt-2",
-  };
+                                                                     displayedCompany,
+                                                                 }) => {
+    const styles = {
+        container: `px-4 text-text dark:text-text-dark inline-block w-3/5 align-top border-l-2 border-secondary rounded-r-md mt-1 h-80`,
+        experienceBullets: "mt-4 p-4 text-sm w-full border-t border-secondary",
+        bulletPoint: "pl-6 pt-2",
+    };
 
-  return (
-    <div className={styles.container}>
-      <h3 className={styles.bodyHeader}>{displayedCompany?.Position} </h3>
-      <Link className={styles.link} href={displayedCompany?.CompanyURL}>
-        <span>
-          {" "}
-          --&gt;{" "}
-          <span className={styles.hoverAnimation}>
-            {displayedCompany?.CompanyName}
-          </span>
-        </span>
-      </Link>
-      <p className={styles.tenureText}>{displayedCompany?.Tenure}</p>
-      <ul className={styles.experienceBullets}>
-        {displayedCompany.BulletPoints.map((item, idx) => (
-          <li key={idx} className={styles.bulletPoint}>
-            {item}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
+    return (
+        <div className={styles.container}>
+            <TabSelectorBodyHeader displayedCompany={displayedCompany}/>
+            <TabSelectorBodySummary displayedCompany={displayedCompany}/>
+        </div>
+    );
 };
 
 export default TabSelectorBody;
