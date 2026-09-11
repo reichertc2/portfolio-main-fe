@@ -225,20 +225,23 @@ export const user: IUserData = {
     contactInfo: {
         email: "chris.a.reichert@gmail.com",
         contactBrief:
-            "Not currently looking, but will entertain inquiries. Please say hello or send me comments. Have a great day.",
+            "For collaborators, recruiters, and for anyone with a serious project or question.",
         socials: [
             {
                 id: "ci-01",
+                name: "GitHub",
                 url: "https://github.com/reichertc2",
                 icon: faGithub,
             },
             {
                 id: "ci-02",
+                name: "LinkedIn",
                 url: "https://www.linkedin.com/in/christopher-reichert/",
                 icon: faLinkedin,
             },
             {
-                id: "ci-03  ",
+                id: "ci-03",
+                name: "X",
                 url: "https://twitter.com/_chrisreichert_",
                 icon: faXTwitter,
             }
