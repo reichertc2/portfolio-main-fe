@@ -1,7 +1,7 @@
 import React from "react";
 import {IJobInfo} from "@/app/_models/user";
-import TabSelectorBodyHeader from "@/app/_components/modules/profile/Experience/Standard/TabSelectorBodyHeader";
-import TabSelectorBodySummary from "@/app/_components/modules/profile/Experience/Standard/TabSelectorBodySummary";
+import TabSelectorBodyHeader from "@/app/_features/profile/Experience/Standard/TabSelectorBodyHeader";
+import TabSelectorBodySummary from "@/app/_features/profile/Experience/Standard/TabSelectorBodySummary";
 
 interface ITabSelectorBodyProps {
     displayedCompany: IJobInfo;

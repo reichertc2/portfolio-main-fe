@@ -1,7 +1,7 @@
 import React from "react";
 import {IProjectInfo} from "@/app/_models/user";
 import ProjectInfo from "./Standard/ProjectInfo";
-import ProjectImageCarousel from "@/app/_components/modules/profile/FeaturedProject/Standard/ProjectImageCarousel";
+import ProjectImageCarousel from "@/app/_features/profile/FeaturedProject/Standard/ProjectImageCarousel";
 
 interface IProjectBasicProps {
     project: IProjectInfo;

@@ -1,4 +1,4 @@
-import AboutMe from "@/app/_components/modules/profile/AboutMe";
+import AboutMe from "@/app/_features/profile/AboutMe";
 import {user} from "../../../../data/user";
 import MainContainer from "@/app/_components/common/MainContainer";
 import React from "react";

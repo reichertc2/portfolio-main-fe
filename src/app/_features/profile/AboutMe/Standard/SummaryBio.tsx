@@ -1,5 +1,5 @@
 import React from "react";
-import ParagraphText from "../../../../common/Standard/ParagraphText";
+import ParagraphText from "../../../../_components/common/Standard/ParagraphText";
 
 interface ISummaryBio {
     elevator: string[];

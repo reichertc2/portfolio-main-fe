@@ -3,8 +3,8 @@ import {IUserData} from "@/app/_models/user";
 import ContentContainer from "@/app/_components/common/ContentContainer";
 import FeaturedProjectMobileView from "./FeaturedProject/FeaturedProjectMobileView";
 import FeaturedProjectStandardView from "./FeaturedProject/FeaturedProjectStandardView";
-import OtherProjectsStandardView from "@/app/_components/modules/profile/OtherProjects/OtherProjectsStandardView";
-import OtherProjectsMobileView from "@/app/_components/modules/profile/OtherProjects/OtherProjectsMobileView";
+import OtherProjectsStandardView from "@/app/_features/profile/OtherProjects/OtherProjectsStandardView";
+import OtherProjectsMobileView from "@/app/_features/profile/OtherProjects/OtherProjectsMobileView";
 
 interface IFeaturedProjectProps {
     userData: IUserData;

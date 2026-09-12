@@ -1,7 +1,7 @@
 import React from "react";
 import {IContactInfo} from "@/app/_models/user";
-import CallToActionHeader from "@/app/_components/modules/profile/ContactMe/Standard/CallToActionHeader";
-import CallToActionSocials from "@/app/_components/modules/profile/ContactMe/Standard/CallToActionSocials";
+import CallToActionHeader from "@/app/_features/profile/ContactMe/Standard/CallToActionHeader";
+import CallToActionSocials from "@/app/_features/profile/ContactMe/Standard/CallToActionSocials";
 import ButtonGeneric from "@/app/_components/common/buttons/ButtonGeneric";
 
 interface ICallToActionContainerProps {

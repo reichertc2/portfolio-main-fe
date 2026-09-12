@@ -3,7 +3,7 @@
 import React from "react";
 import {IUserData} from "@/app/_models/user";
 import Head from "next/head";
-import Headline from "../modules/profile/Headline";
+import Headline from "@/app/_features/profile/Headline";
 
 interface IMainPageProps {
     profileMain: IUserData;

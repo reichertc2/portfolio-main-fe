@@ -1,6 +1,6 @@
 import {user} from "../../../../data/user";
 import MainContainer from "@/app/_components/common/MainContainer";
-import ContactMe from "@/app/_components/modules/profile/ContactMe";
+import ContactMe from "@/app/_features/profile/ContactMe";
 import React from "react";
 
 interface IContactMePageProps {

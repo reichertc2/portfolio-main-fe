@@ -1,7 +1,7 @@
 import React from "react";
 import {IContactInfo} from "@/app/_models/user";
-import CallToActionContainer from "@/app/_components/modules/profile/ContactMe/Standard/CallToActionContainer";
-import ContactForm from "@/app/_components/modules/profile/ContactMe/Standard/ContactForm";
+import CallToActionContainer from "@/app/_features/profile/ContactMe/Standard/CallToActionContainer";
+import ContactForm from "@/app/_features/profile/ContactMe/Standard/ContactForm";
 
 interface IContactMeStandardViewProps {
     contactInfo: IContactInfo;

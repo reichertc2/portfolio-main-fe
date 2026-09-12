@@ -4,7 +4,7 @@ import ProjectInfoDescription from "../Standard/ProjectInfoDescription";
 import ProjectInfoHeader from "../Standard/ProjectInfoHeader";
 import ProjectInfoLinks from "../Standard/ProjectInfoLinks";
 import ProjectInfoToolList from "../Standard/ProjectInfoToolList";
-import ProjectImageCarousel from "@/app/_components/modules/profile/FeaturedProject/Standard/ProjectImageCarousel";
+import ProjectImageCarousel from "@/app/_features/profile/FeaturedProject/Standard/ProjectImageCarousel";
 
 interface IProjectInfoProps {
     project: IProjectInfo;

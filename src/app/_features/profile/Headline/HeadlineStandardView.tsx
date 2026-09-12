@@ -1,10 +1,10 @@
 import React from "react";
 import {IProfile, IProjectInfo} from "@/app/_models/user";
-import PersonaContainer from "@/app/_components/modules/profile/Headline/Standard/PersonaContainer";
+import PersonaContainer from "@/app/_features/profile/Headline/Standard/PersonaContainer";
 import AvailabilityStatusContainer
-    from "@/app/_components/modules/profile/Headline/Standard/AvailabilityStatusContainer";
-import FeaturedProjectStandardView from "@/app/_components/modules/profile/FeaturedProject/FeaturedProjectStandardView";
-import ActionButtonContainer from "@/app/_components/modules/profile/Headline/Standard/ActionButtonContainer";
+    from "@/app/_features/profile/Headline/Standard/AvailabilityStatusContainer";
+import FeaturedProjectStandardView from "@/app/_features/profile/FeaturedProject/FeaturedProjectStandardView";
+import ActionButtonContainer from "@/app/_features/profile/Headline/Standard/ActionButtonContainer";
 
 interface IHeadlineStandardViewProps {
     headLine: IProfile;
