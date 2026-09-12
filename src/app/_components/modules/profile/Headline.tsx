@@ -1,35 +1,29 @@
 import React from "react";
-import { IProfile } from "@/app/_models/user";
-import { INavigation } from "@/app/_models/navigation";
+import {IProfile, IProjectInfo} from "@/app/_models/user";
 import HeadlineMobileView from "./Headline/HeadlineMobileView";
 import HeadlineStandardView from "./Headline/HeadlineStandardView";
-import { IStyles } from "@/app/_models/styles";
-import ProfileSection from "@/app/_components/common/ProfileSection";
+import ContentContainer from "@/app/_components/common/ContentContainer";
 
 interface IHeadlineProps {
-  headLine: IProfile;
-  theme: IStyles;
+    headLine: IProfile;
+    featuredProject: IProjectInfo[];
 }
 
-export const Headline: React.FC<IHeadlineProps> = ({ headLine, theme }) => {
-  const navigations: INavigation[] = [
-    { label: "About", path: "#AboutMeSection" },
-    { label: "Experience", path: "#ExperienceSection" },
-    { label: "Work", path: "#WorkSection" },
-    { label: "Contact", path: "#ContactSection" },
-  ];
-
-  return (
-    <>
-      <ProfileSection id={"Headline"} theme={theme}>
-        <HeadlineStandardView headLine={headLine} theme={theme} />
-
-        {/* Mobile Version */}
-
-        <HeadlineMobileView headLine={headLine} theme={theme} />
-      </ProfileSection>
-    </>
-  );
+export const Headline: React.FC<IHeadlineProps> = ({headLine, featuredProject}) => {
+    return (
+        <>
+            <ContentContainer id={"Headline"}>
+                <HeadlineStandardView
+                    headLine={headLine}
+                    featuredProject={featuredProject}
+                />
+                <HeadlineMobileView
+                    headLine={headLine}
+                    featuredProject={featuredProject}
+                />
+            </ContentContainer>
+        </>
+    );
 };
 
 export default Headline;

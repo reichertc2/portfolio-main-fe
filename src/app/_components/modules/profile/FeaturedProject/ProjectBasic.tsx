@@ -1,24 +1,24 @@
 import React from "react";
-import { IProjectInfo } from "@/app/_models/user";
-import ProjectImage from "./Standard/ProjectImage";
+import {IProjectInfo} from "@/app/_models/user";
 import ProjectInfo from "./Standard/ProjectInfo";
+import ProjectImageCarousel from "@/app/_components/modules/profile/FeaturedProject/Standard/ProjectImageCarousel";
 
 interface IProjectBasicProps {
-  project: IProjectInfo;
+    project: IProjectInfo;
 }
 
-export const ProjectBasic: React.FC<IProjectBasicProps> = ({ project }) => {
-  const styles = {
-    container: "py-8",
-  };
+export const ProjectBasic: React.FC<IProjectBasicProps> = ({project}) => {
+    const styles = {
+        container: "py-8",
+    };
 
-  return (
-    <div key={project["id"]} className={styles.container}>
-      <ProjectImage image={project.images[0]} />
+    return (
+        <div key={project["id"]} className={styles.container}>
+            <ProjectImageCarousel images={project.images}/>
 
-      <ProjectInfo project={project} />
-    </div>
-  );
+            <ProjectInfo project={project}/>
+        </div>
+    );
 };
 
 export default ProjectBasic;

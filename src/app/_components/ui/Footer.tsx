@@ -1,5 +1,4 @@
 import React from "react";
-import { IStyles } from "@/app/_models/styles";
 import { IUserData } from "@/app/_models/user";
 import ThreeQuarterView from "./SubViews/ThreeQuarterView";
 import CopyrightText from "./Footer/CopyrightText";
@@ -7,13 +6,12 @@ import SocialMediaIcons from "./Footer/SocialMediaIcons";
 
 interface IFooterProps {
   profileMain: IUserData;
-  theme: IStyles;
 }
 
-export const Footer: React.FC<IFooterProps> = ({ profileMain, theme }) => {
+export const Footer: React.FC<IFooterProps> = ({ profileMain}) => {
   const styles = {
     footer: `p-3 text-center content-center`,
-    copyright: `dark:${theme.texts.dark} italic py-4`,
+    copyright: `text-text dark:text-text-dark italic py-4`,
   };
 
   return (

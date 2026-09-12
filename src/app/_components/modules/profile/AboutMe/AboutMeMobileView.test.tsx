@@ -1,8 +1,6 @@
 import React from "react";
-import "@testing-library/jest-dom/extend-expect";
 import { render, screen, fireEvent } from "@testing-library/react";
 import { IAboutMe } from "@/app/_models/user";
-import { IStyles } from "@/app/_models/styles";
 import AboutMeMobileView from "./AboutMeMobileView";
 
 // Mocking the child components used in AboutMeMobileView
@@ -51,28 +49,16 @@ describe("AboutMeMobileView", () => {
     tools: ["VS Code", "Git"],
   };
 
-  const mockTheme: IStyles = {
-    backgrounds: {
-      light: "bg-white",
-      dark: "bg-black",
-    },
-    texts: {
-      light: "",
-      dark: "",
-      headerLight: "",
-      headerDark: "",
-    },
-  };
 
   test("renders the component with the given props", () => {
-    render(<AboutMeMobileView aboutMe={mockAboutMe} theme={mockTheme} />);
+    render(<AboutMeMobileView aboutMe={mockAboutMe}  />);
 
     expect(screen.getByAltText("profileImage")).toBeInTheDocument();
     expect(screen.getByText("A brief introduction")).toBeInTheDocument();
   });
 
   test("toggles the moreButton state and shows/hides the ListBlock components", () => {
-    render(<AboutMeMobileView aboutMe={mockAboutMe} theme={mockTheme} />);
+    render(<AboutMeMobileView aboutMe={mockAboutMe}  />);
 
     const toggleButton = screen.getByText("Toggle");
 

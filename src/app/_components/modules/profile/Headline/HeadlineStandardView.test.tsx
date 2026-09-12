@@ -1,55 +1,49 @@
 import React from "react";
-import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom/extend-expect";
+import {render, screen} from "@testing-library/react";
 import HeadlineStandardView from "./HeadlineStandardView";
-import { IProfile } from "@/app/_models/user";
-import { IStyles } from "@/app/_models/styles";
+import {IProfile, IProjectInfo} from "@/app/_models/user";
+import {faGithub} from "@fortawesome/free-brands-svg-icons";
 
 describe("HeadlineStandardView", () => {
-  const mockProfile: IProfile = {
-    name: "Jane Doe",
-    headline: "Senior Software Engineer",
-    profileURL: "",
-  };
+    const mockProfile: IProfile = {
+        logo: undefined,
+        quickDescription: "",
+        workStatus: {
+            contract: false,
+            fullTime: false,
+            notOpen: false
+        },
+        name: "Jane Doe",
+        headline: "Senior Software Engineer",
+        profileURL: ""
+    };
 
-  const mockTheme: IStyles = {
-    texts: {
-      light: "",
-      dark: "",
-      headerLight: "",
-      headerDark: "",
-    },
-    backgrounds: {
-      light: "",
-      dark: "",
-    },
-  };
+    const mockProject: IProjectInfo[] = [
+        {
+            id: "feat-1",
+            title: "Personal Fintech App",
+            description:
+                "A personal application to help individuals determine portfolio allocations.",
+            toolList: ["Flask", "React TS", "Tailwind"],
+            urlList: [
+                {
+                    name: "github",
+                    url: "https://github.com/reichertc2",
+                    icon: faGithub,
+                },
+            ],
+            images: [
+                {
+                    image: undefined,
+                    alt: "Personal Fintech App Pic",
+                },
+            ],
+        },
+    ]
 
-  test("renders without crashing", () => {
-    render(<HeadlineStandardView headLine={mockProfile} theme={mockTheme} />);
-    expect(screen.getByText(mockProfile.name)).toBeInTheDocument();
-    expect(screen.getByText(mockProfile.headline)).toBeInTheDocument();
-  });
-
-  test("applies the correct default styles to the container", () => {
-    render(<HeadlineStandardView headLine={mockProfile} theme={mockTheme} />);
-    const container = screen.getByText(mockProfile.name).parentElement;
-    expect(container).toHaveClass("hidden md:block");
-  });
-
-  test("applies the correct default styles to the main headline", () => {
-    render(<HeadlineStandardView headLine={mockProfile} theme={mockTheme} />);
-    const mainHeadline = screen.getByText(mockProfile.name);
-    expect(mainHeadline).toHaveClass(
-      "dark:text-stone-100 text-7xl font-semibold py-1"
-    );
-  });
-
-  test("applies the correct default styles to the sub headline", () => {
-    render(<HeadlineStandardView headLine={mockProfile} theme={mockTheme} />);
-    const subHeadline = screen.getByText(mockProfile.headline);
-    expect(subHeadline).toHaveClass(
-      "dark:text-sky-200 text-5xl font-semibold italic pt-1 pb-3 opacity-70"
-    );
-  });
+    test("applies the correct default styles to the container", () => {
+        render(<HeadlineStandardView headLine={mockProfile} featuredProject={mockProject}/>);
+        const container = screen.getByText(mockProfile.name).parentElement;
+        expect(container).toHaveClass("block w-full");
+    });
 });

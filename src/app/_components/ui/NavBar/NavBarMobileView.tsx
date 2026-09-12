@@ -6,25 +6,22 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { useState } from "react";
 import { INavigation } from "@/app/_models/navigation";
-import { IStyles } from "@/app/_models/styles";
 
 interface INavBarMobileViewProps {
-  theme: IStyles;
   navigations: INavigation[];
 }
 
 export const NavBarMobileView: React.FC<INavBarMobileViewProps> = ({
-  theme,
   navigations,
 }) => {
   const [navMenu, setNavMenu] = useState<boolean>(false);
 
   const styles = {
-    menuButtonOpen: `sm:hidden block dark:${theme.texts.dark} z-10 p-4`,
-    menuButtonClosed: `sm:hidden block dark:${theme.texts.dark} z-10 p-4`,
+    menuButtonOpen: `sm:hidden block dark:text-text-dark z-10 p-4`,
+    menuButtonClosed: `sm:hidden block dark:text-text-dark z-10 p-4`,
     menuContainerOpen: `sm:hidden absolute top-0 left-0 right-0 bottom-0 flex justify-center items-center w-full h-screen bg-stone-200 text-center ease-in duration-300`,
-    menuContainerClosed: `sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen bg-stone-200 text-center ease-in duration-300`,
-    navLi: `p-4 text-4xl dark:text-stone-900 hover:text-sky-600`,
+    menuContainerClosed: `sm:hidden absolute top-0 left-[-100%] right-0 bottom-0 flex justify-center items-center w-full h-screen text-center ease-in duration-300`,
+    navLi: `p-4 text-4xl dark:text-text hover:text-text`,
     hoverAnimation: `hover-underline-animation`,
   };
 
@@ -54,9 +51,9 @@ export const NavBarMobileView: React.FC<INavBarMobileViewProps> = ({
           {navigations.map((nav) => (
             <li key={nav.label} className={styles.navLi}>
               <button onClick={handleNavMenu}>
-              <Link href={nav.path}>
-                <span className={styles.hoverAnimation}>{nav.label}</span>
-              </Link>
+                <Link href={nav.path}>
+                  <span className={styles.hoverAnimation}>{nav.label}</span>
+                </Link>
               </button>
             </li>
           ))}

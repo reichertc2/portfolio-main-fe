@@ -1,10 +1,8 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom/extend-expect";
 import { TabSelectorBody } from "./TabSelectorBody"; // Adjust the import path as necessary
 import { IJobInfo } from "@/app/_models/user";
-import { IStyles } from "@/app/_models/styles";
-import Link from "next/link";
+
 
 // Mock the Link component
 jest.mock("next/link", () => ({
@@ -32,23 +30,12 @@ const mockCompany: IJobInfo = {
   ],
 };
 
-const mockStyles: IStyles = {
-  backgrounds: {
-    light: "bg-white",
-    dark: "bg-black",
-  },
-  texts: {
-    light: "",
-    dark: "",
-    headerLight: "",
-    headerDark: "",
-  },
-};
+
 
 describe("TabSelectorBody component", () => {
   test("renders the company position correctly", () => {
     render(
-      <TabSelectorBody displayedCompany={mockCompany} styling={mockStyles} />
+      <TabSelectorBody displayedCompany={mockCompany} />
     );
 
     expect(screen.getByText(mockCompany.Position)).toBeInTheDocument();
@@ -64,7 +51,7 @@ describe("TabSelectorBody component", () => {
 
   test("renders the tenure text correctly", () => {
     render(
-      <TabSelectorBody displayedCompany={mockCompany} styling={mockStyles} />
+      <TabSelectorBody displayedCompany={mockCompany}  />
     );
 
     expect(screen.getByText(mockCompany.Tenure)).toBeInTheDocument();
@@ -72,7 +59,7 @@ describe("TabSelectorBody component", () => {
 
   test("renders all bullet points correctly", () => {
     render(
-      <TabSelectorBody displayedCompany={mockCompany} styling={mockStyles} />
+      <TabSelectorBody displayedCompany={mockCompany}  />
     );
 
     mockCompany.BulletPoints.forEach((bulletPoint) => {
@@ -111,7 +98,7 @@ describe("TabSelectorBody component", () => {
     render(
       <TabSelectorBody
         displayedCompany={{ ...mockCompany, CompanyURL: "Test" }}
-        styling={mockStyles}
+
       />
     );
 

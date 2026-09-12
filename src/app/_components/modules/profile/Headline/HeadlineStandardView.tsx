@@ -1,28 +1,34 @@
 import React from "react";
-import { IProfile } from "@/app/_models/user";
-import { IStyles } from "@/app/_models/styles";
+import {IProfile, IProjectInfo} from "@/app/_models/user";
+import PersonaContainer from "@/app/_components/modules/profile/Headline/Standard/PersonaContainer";
+import AvailabilityStatusContainer
+    from "@/app/_components/modules/profile/Headline/Standard/AvailabilityStatusContainer";
+import FeaturedProjectStandardView from "@/app/_components/modules/profile/FeaturedProject/FeaturedProjectStandardView";
+import ActionButtonContainer from "@/app/_components/modules/profile/Headline/Standard/ActionButtonContainer";
 
 interface IHeadlineStandardViewProps {
-  headLine: IProfile;
-  theme: IStyles;
+    headLine: IProfile;
+    featuredProject: IProjectInfo[];
 }
 
 export const HeadlineStandardView: React.FC<IHeadlineStandardViewProps> = ({
-  headLine,
-  theme,
-}) => {
-  const styles = {
-    container: `hidden md:block`,
-    mainHeadline: `dark:text-stone-100 text-7xl font-semibold py-1`,
-    subHeadline: `dark:text-sky-200 text-5xl font-semibold italic pt-1 pb-3 opacity-70`,
-  };
+                                                                               headLine,
+                                                                               featuredProject
+                                                                           }) => {
+    const styles = {
+        container: ``,
+    }
 
-  return (
-    <div className={styles.container}>
-      <p className={styles.mainHeadline}>{headLine["name"]}</p>
-      <p className={styles.subHeadline}>{headLine["headline"]}</p>
-    </div>
-  );
+    return (
+        <div className={styles.container}>
+            <PersonaContainer persona={headLine}/>
+            <AvailabilityStatusContainer availability={headLine.workStatus}/>
+            <ActionButtonContainer/>
+            <FeaturedProjectStandardView
+                projectWorks={featuredProject}
+            />
+        </div>
+    );
 };
 
 export default HeadlineStandardView;

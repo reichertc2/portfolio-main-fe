@@ -1,26 +1,23 @@
 import React from "react";
-import { IContactInfo } from "@/app/_models/user";
-import { IStyles } from "@/app/_models/styles";
-import ProfileSection from "@/app/_components/common/ProfileSection";
+import {IContactInfo} from "@/app/_models/user";
+import ContentContainer from "@/app/_components/common/ContentContainer";
 import ContactMeMobileView from "./ContactMe/ContactMeMobileView";
 import ContactMeStandardView from "./ContactMe/ContactMeStandardView";
 
 interface IContactMeProps {
-  contactInfo: IContactInfo;
-  theme: IStyles;
+    contactInfo: IContactInfo;
 }
 
 export const ContactMe: React.FC<IContactMeProps> = ({
-  contactInfo,
-  theme,
-}) => {
-  return (
-    <ProfileSection id={"ContactSection"} title={"Contact"} theme={theme}>
-      <ContactMeStandardView contactInfo={contactInfo} />
+                                                         contactInfo,
+                                                     }) => {
+    return (
+        <ContentContainer id={"ContactSection"}>
+            <ContactMeStandardView contactInfo={contactInfo}/>
 
-      <ContactMeMobileView contactInfo={contactInfo} />
-    </ProfileSection>
-  );
+            <ContactMeMobileView contactInfo={contactInfo}/>
+        </ContentContainer>
+    );
 };
 
 export default ContactMe;

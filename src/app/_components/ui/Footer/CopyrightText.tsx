@@ -1,5 +1,5 @@
 import React from "react";
-import { getCurrentYear } from "../../../_utilities/dateUtils";
+import { getCurrentYear } from "@/app/_utilities/dateUtils";
 
 interface ICopyrightTextProps {
   text: string;

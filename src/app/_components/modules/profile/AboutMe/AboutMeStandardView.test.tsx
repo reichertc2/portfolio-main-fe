@@ -1,24 +1,21 @@
 import React from "react";
-import "@testing-library/jest-dom/extend-expect";
-import { render } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import AboutMeStandardView from "./AboutMeStandardView";
 import SummaryBio from "./Standard/SummaryBio";
 import Skills from "./Standard/Skills";
 import { IAboutMe } from "@/app/_models/user";
-import { IStyles } from "@/app/_models/styles";
 
-// Mock the components that are used inside AboutMeStandardView
 jest.mock("./Standard/SummaryBio");
 jest.mock("./Standard/Skills");
 jest.mock("next/image", () => {
   const MockedImage = (props: any) => {
     return (
-      <img
-        {...props}
-        alt={props.alt || "mocked-alt"}
-        width={props.width || "500"}
-        height={props.height || "500"}
-      />
+        <img
+            {...props}
+            alt={props.alt || "mocked-alt"}
+            width={props.width || "500"}
+            height={props.height || "500"}
+        />
     );
   };
   MockedImage.displayName = "MockedImage";
@@ -33,55 +30,52 @@ describe("AboutMeStandardView", () => {
     tools: [],
   };
 
-  const theme: IStyles = {
-    texts: {
-      light: "",
-      dark: "",
-      headerLight: "",
-      headerDark: "",
-    },
-    backgrounds: {
-      light: "",
-      dark: "",
-    },
-  };
-
   beforeEach(() => {
+    jest.clearAllMocks();
     (SummaryBio as jest.Mock).mockImplementation(() => (
-      <div>Mocked SummaryBio</div>
+        <div>Mocked SummaryBio</div>
     ));
     (Skills as jest.Mock).mockImplementation(() => <div>Mocked Skills</div>);
   });
 
   test("renders without crashing", () => {
     const { container } = render(
-      <AboutMeStandardView aboutMe={aboutMe} theme={theme} />
+        <AboutMeStandardView aboutMe={aboutMe} />
     );
     expect(container).toBeInTheDocument();
   });
 
   test("renders the SummaryBio component with correct props", () => {
-    render(<AboutMeStandardView aboutMe={aboutMe} theme={theme} />);
+    render(<AboutMeStandardView aboutMe={aboutMe}  />);
+
     expect(SummaryBio).toHaveBeenCalledWith(
-      { elevator: aboutMe.elevator, theme: theme },
-      {}
+        expect.objectContaining({
+          elevator: aboutMe.elevator,
+
+        }),
+        undefined
     );
   });
 
   test("renders the Image component with the correct src and alt attributes", () => {
-    const { getByAltText } = render(
-      <AboutMeStandardView aboutMe={aboutMe} theme={theme} />
-    );
-    const image = getByAltText("profileImage");
+    render(<AboutMeStandardView aboutMe={aboutMe}  />);
+    const image = screen.getByAltText("profileImage");
     expect(image).toHaveAttribute(
-      "src",
-      expect.stringContaining(aboutMe.profileImage)
+        "src",
+        expect.stringContaining(aboutMe.profileImage)
     );
     expect(image).toHaveAttribute("alt", "profileImage");
   });
 
   test("renders the Skills component with correct props", () => {
-    render(<AboutMeStandardView aboutMe={aboutMe} theme={theme} />);
-    expect(Skills).toHaveBeenCalledWith({ aboutMe: aboutMe, theme: theme }, {});
+    render(<AboutMeStandardView aboutMe={aboutMe}  />);
+
+    expect(Skills).toHaveBeenCalledWith(
+        expect.objectContaining({
+          aboutMe,
+
+        }),
+        undefined
+    );
   });
 });

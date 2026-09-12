@@ -1,6 +1,5 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom/extend-expect";
 import { CopyrightText } from "./CopyrightText"; // Adjust the import path as necessary
 import * as dateUtils from "../../../_utilities/dateUtils"; // Import the utility for mocking
 

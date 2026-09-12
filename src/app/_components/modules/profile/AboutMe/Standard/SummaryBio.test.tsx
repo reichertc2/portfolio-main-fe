@@ -1,28 +1,12 @@
 import React from "react";
 import { render, screen } from "@testing-library/react";
-import "@testing-library/jest-dom/extend-expect";
 import { SummaryBio } from "./SummaryBio"; // Adjust the import path as necessary
-import { IStyles } from "@/app/_models/styles";
 
 // Mock the ParagraphText component
 jest.mock("../../../../common/Standard/ParagraphText", () => ({
   __esModule: true,
   default: ({ text }: { text: string }) => <div>{text}</div>,
 }));
-
-// Mock data for testing
-const mockTheme: IStyles = {
-  backgrounds: {
-    light: "bg-white",
-    dark: "bg-black",
-  },
-  texts: {
-    light: "",
-    dark: "",
-    headerLight: "",
-    headerDark: "",
-  },
-};
 
 const mockElevator = [
   "First summary point",
@@ -32,14 +16,14 @@ const mockElevator = [
 
 describe("SummaryBio component", () => {
   test("renders the correct number of ParagraphText components", () => {
-    render(<SummaryBio elevator={mockElevator} theme={mockTheme} />);
+    render(<SummaryBio elevator={mockElevator} />);
 
     const paragraphs = screen.getAllByText(/summary point/i);
     expect(paragraphs).toHaveLength(mockElevator.length);
   });
 
   test("passes the correct text to each ParagraphText component", () => {
-    render(<SummaryBio elevator={mockElevator} theme={mockTheme} />);
+    render(<SummaryBio elevator={mockElevator} />);
 
     mockElevator.forEach((text) => {
       expect(screen.getByText(text)).toBeInTheDocument();
@@ -61,7 +45,7 @@ describe("SummaryBio component", () => {
   //   });
 
   test("renders correctly with an empty elevator array", () => {
-    render(<SummaryBio elevator={[]} theme={mockTheme} />);
+    render(<SummaryBio elevator={[]}  />);
 
     const paragraphs = screen.queryAllByText(/summary point/i);
     expect(paragraphs).toHaveLength(0);
@@ -72,7 +56,7 @@ describe("SummaryBio component", () => {
       { length: 100 },
       (_, i) => `Summary point ${i}`
     );
-    render(<SummaryBio elevator={largeMockElevator} theme={mockTheme} />);
+    render(<SummaryBio elevator={largeMockElevator}  />);
 
     largeMockElevator.forEach((text) => {
       expect(screen.getByText(text)).toBeInTheDocument();
