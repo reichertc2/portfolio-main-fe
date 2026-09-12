@@ -23,7 +23,7 @@ describe("ThreeQuarterView component", () => {
             "Test Child with Divider"
         ).parentElement;
         expect(innerContainer).toHaveClass(
-            "flex flex-wrap pt-4 pb-8 md:w-3/4 w-full border-solid border-t-2 text-text dark:text-text-dark"
+            "flex flex-wrap py-4 md:w-3/4 w-full border-solid border-t-2 text-text dark:text-text-dark"
         );
     });
 
@@ -37,7 +37,7 @@ describe("ThreeQuarterView component", () => {
         const innerContainer = screen.getByText(
             "Test Child without Divider"
         ).parentElement;
-        expect(innerContainer).toHaveClass("flex flex-wrap py-8 md:w-3/4 w-full");
+        expect(innerContainer).toHaveClass("flex flex-wrap py-4 md:w-3/4 w-full text-text dark:text-text-dark");
     });
 
     test("applies the correct styling when divider is undefined", () => {
@@ -50,7 +50,7 @@ describe("ThreeQuarterView component", () => {
         const innerContainer = screen.getByText(
             "Test Child without Divider (default)"
         ).parentElement;
-        expect(innerContainer).toHaveClass("flex flex-wrap py-8 md:w-3/4 w-full");
+        expect(innerContainer).toHaveClass("flex flex-wrap py-4 md:w-3/4 w-full text-text dark:text-text-dark");
     });
 
     test("outer container has the correct class", () => {

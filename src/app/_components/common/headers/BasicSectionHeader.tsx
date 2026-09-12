@@ -1,20 +1,25 @@
 import React from "react";
 
 interface IBasicSectionHeader {
-  headerTitle: string;
+    headerTitle: string;
+    subHeaderTitle?: string;
 }
+
 export const BasicSectionHeader: React.FC<IBasicSectionHeader> = ({
-  headerTitle,
-}) => {
-  const styles = {
-    container: `flex justify-self-start text-xl dark:text-text-dark font-semibold w-full`,
-    title: `md:border-2 md:order-solid md:w-1/4 rounded-t-md px-2  py-1 `,
-  };
-  return (
-    <h3 className={styles.container}>
-      <div className={styles.title}>{headerTitle}</div>
-    </h3>
-  );
+                                                                      headerTitle,
+                                                                      subHeaderTitle,
+                                                                  }) => {
+    const styles = {
+        container: `flex justify-self-start flex-col mb-6 py-4 text-2xl text-text dark:text-text-dark font-semibold w-full`,
+        title: `text-3xl px-2 py-1`,
+        subPhrase: `text-sm pl-4 font-medium text-text dark:text-text-dark`,
+    };
+    return (
+        <h3 className={styles.container}>
+            <div className={styles.title}>{headerTitle}</div>
+            <div className={styles.subPhrase}>{subHeaderTitle}</div>
+        </h3>
+    );
 };
 
 export default BasicSectionHeader;
