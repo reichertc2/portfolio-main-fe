@@ -12,7 +12,7 @@ export const Experience: React.FC<IExperienceProps> = ({
                                                            jobExperience,
                                                        }) => {
     return (
-        <ContentContainer id={"ExperienceSection"}>
+        <ContentContainer id={"ExperienceSection"} title={"Experience"}>
             <ExperienceStandardView jobExperience={jobExperience}/>
             <ExperienceMobileView jobExperience={jobExperience}/>
         </ContentContainer>

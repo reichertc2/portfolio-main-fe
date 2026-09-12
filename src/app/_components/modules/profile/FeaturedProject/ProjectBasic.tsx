@@ -9,7 +9,7 @@ interface IProjectBasicProps {
 
 export const ProjectBasic: React.FC<IProjectBasicProps> = ({project}) => {
     const styles = {
-        container: "py-8",
+        container: "mt-12 mb-6 py-8",
     };
 
     return (

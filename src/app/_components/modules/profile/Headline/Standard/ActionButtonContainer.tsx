@@ -5,8 +5,11 @@ interface IActionButtonContainerProps {
 }
 
 export const ActionButtonContainer: React.FC<IActionButtonContainerProps> = ({}) => {
+    const styles = {
+        container: `my-6`
+    }
     return (
-        <div>
+        <div className={`${styles.container} `}>
             <ButtonGeneric
                 text={"View Projects ->"}
                 url={"/Projects"}

@@ -12,7 +12,7 @@ export const ContactMe: React.FC<IContactMeProps> = ({
                                                          contactInfo,
                                                      }) => {
     return (
-        <ContentContainer id={"ContactSection"}>
+        <ContentContainer id={"ContactSection"} title={"Contact"}>
             <ContactMeStandardView contactInfo={contactInfo}/>
 
             <ContactMeMobileView contactInfo={contactInfo}/>

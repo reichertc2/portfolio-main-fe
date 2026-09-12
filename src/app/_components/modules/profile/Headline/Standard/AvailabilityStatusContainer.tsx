@@ -12,7 +12,7 @@ export const AvailabilityStatusContainer: React.FC<
         availability.contract || availability.fullTime || !availability.notOpen;
 
     const styles = {
-        container: `block px-2 py-1 text-text dark:text-text-dark rounded-xl w-full sm:w-auto md:w-1/4`,
+        container: `block my-6 px-2 py-1 text-text dark:text-text-dark rounded-xl w-full sm:w-auto md:w-1/4`,
         statusIndicator: "inline-block w-3 h-3 md:w-4 md:h-4 rounded-full align-middle",
         text: "inline-block ml-2 text-sm md:text-base align-middle",
         available: `bg-emerald-600/25 border-emerald-600 border-solid border`,
