@@ -56,7 +56,7 @@ describe("SocialMediaIcons component", () => {
 
         const iconElements = screen.getAllByRole("link");
         iconElements.forEach((iconElement) => {
-            expect(iconElement.parentElement).toHaveClass("p-1 inline");
+            expect(iconElement.parentElement).toHaveClass("pt-1 inline");
         });
     });
 
