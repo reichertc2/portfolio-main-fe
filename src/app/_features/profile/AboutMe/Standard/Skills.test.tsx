@@ -29,7 +29,7 @@ const mockAboutMe: IAboutMe = {
 
 describe("Skills component", () => {
     test("renders the Languages ListBlock with correct props", () => {
-        render(<Skills aboutMe={mockAboutMe}/>);
+        render(<Skills title={""} skills={[]}/>);
 
         expect(screen.getByText("Languages")).toBeInTheDocument();
         mockAboutMe.languages.forEach((language) => {
@@ -47,7 +47,7 @@ describe("Skills component", () => {
 
     test("renders correctly with an empty languages array", () => {
         const aboutMeWithoutLanguages = {...mockAboutMe, languages: []};
-        render(<Skills aboutMe={aboutMeWithoutLanguages}/>);
+        render(<Skills title={""} skills={[]}/>);
 
         expect(screen.getByText("Languages")).toBeInTheDocument();
         const languagesList = screen.queryByText("JavaScript");

@@ -3,60 +3,40 @@
 import React from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faCode} from "@fortawesome/free-solid-svg-icons";
-import {useEffect, useState} from "react";
 
 interface IListBlockProps {
     title: string;
     listProps: string[];
-    orientation?: string;
-}
-
-interface IListBlockStyling {
-    ul: string;
-    liTitle: string;
-    li: string;
+    /** `true` = stacked list, `false`/`undefined` = inline (horizontal) */
+    vertical?: boolean;
 }
 
 export const ListBlock: React.FC<IListBlockProps> = ({
                                                          title,
                                                          listProps,
-                                                         orientation,
+                                                         vertical = false,
                                                      }) => {
-    const defaultOrientation: IListBlockStyling = {
-        ul: `dark:text-text-dark inline-block pr-3 text-sm md:w-3/5`,
-        liTitle: "text-semibold pb-1",
-        li: ``,
-    };
-
-    const [verticalStyle, setVerticalStyle] =
-        useState<IListBlockStyling>(defaultOrientation);
-
-    const checkOrientation = () => {
-        let verticalStyles = verticalStyle;
-        if (orientation === "vertical" || orientation === "v") {
-            setVerticalStyle(defaultOrientation);
-        } else {
-            verticalStyles.ul = `dark:text-slate-200 inline-block text-sm pl-5 w-4/5`;
-            verticalStyles.liTitle = `pb-1 text-semibold col-span-full`;
-            verticalStyles.li = `inline`;
-            setVerticalStyle(verticalStyles);
+    const styles = vertical
+        ? {
+            ul: "dark:text-text-dark inline-block text-sm md:w-3/5",
+            liTitle: "text-semibold pb-4",
+            li: "border-1 border-secondary mx-2 rounded-md",
         }
-    };
-
-    useEffect(() => {
-        checkOrientation();
-    }, []);
+        : {
+            ul: "dark:text-text-dark inline-block text-sm w-4/5",
+            liTitle: "pb-4 text-semibold col-span-full",
+            li: "inline border-1 border-secondary mx-2 py-2 rounded-md",
+        };
 
     return (
-        <ul className={verticalStyle.ul}>
-            <li className={verticalStyle.liTitle}>{title}:</li>
-
+        <ul className={styles.ul}>
+            <li className={styles.liTitle}>{title}:</li>
             {listProps.map((item, idx) => (
                 <li
                     key={idx}
-                    className={`${verticalStyle.li} img-li pl-5 list-inside italic`}
+                    className={`${styles.li}  px-2  italic`}
                 >
-                    <FontAwesomeIcon icon={faCode} data-testid="fa-icon"/> {item}
+                    {item}
                 </li>
             ))}
         </ul>

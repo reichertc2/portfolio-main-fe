@@ -1,21 +1,21 @@
 import React from "react";
-import {IAboutMe} from "@/app/_models/user";
 import ListBlock from "../ListBlock";
 
 interface ISkills {
-    aboutMe: IAboutMe;
+    title: string;
+    skills: string[];
 }
 
-export const Skills: React.FC<ISkills> = ({aboutMe}) => {
+export const Skills: React.FC<ISkills> = ({title, skills}) => {
     const styles = {
-        skillsContainer: `hidden sm:flex pl-4 border-2 order-solid rounded-l-md z-15`,
+        skillsContainer: `my-4 pl-4`,
     };
 
     return (
         <div className={styles.skillsContainer}>
             <ListBlock
-                title="Languages"
-                listProps={aboutMe.languages}
+                title={title}
+                listProps={skills}
             />
 
         </div>
