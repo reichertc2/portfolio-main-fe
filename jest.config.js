@@ -14,6 +14,7 @@ module.exports = {
     collectCoverageFrom: [
         "src/app/_components/**/*.{ts,tsx}",
         "src/app/_utilities/**/*.{ts,tsx}",
+        "src/app/_features/**/*.{ts,tsx}",
         "!**/node_modules/**",
     ],
     moduleFileExtensions: ["ts", "tsx", "js", "jsx", "json", "node"],
@@ -28,10 +29,10 @@ module.exports = {
     },
     coverageThreshold: {
         global: {
-            statements: 45,
-            branches: 30,
-            lines: 45,
-            functions: 45,
+            statements: 55,
+            branches: 40,
+            lines: 55,
+            functions: 55,
         },
     },
 };

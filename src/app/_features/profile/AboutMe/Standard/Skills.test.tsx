@@ -1,65 +1,54 @@
 import React from "react";
 import {render, screen} from "@testing-library/react";
-import {Skills} from "./Skills"; // Adjust the import path as necessary
-import {IAboutMe} from "@/app/_models/user";
-import ListBlock from "../ListBlock";
+import Skills from "./Skills";
 
-// Mock the ListBlock component
 jest.mock("../ListBlock", () => ({
     __esModule: true,
     default: ({title, listProps}: { title: string; listProps: string[] }) => (
-        <div>
-            <h3>{title}</h3>
+        <div data-testid="list-block">
+            <span data-testid="list-block-title">{title}</span>
             <ul>
-                {listProps.map((item, idx) => (
-                    <li key={`${item}-${idx}`}>{item}</li>
+                {listProps.map((item) => (
+                    <li key={item}>{item}</li>
                 ))}
             </ul>
         </div>
     ),
 }));
 
-// Mock data for testing
-const mockAboutMe: IAboutMe = {
-    languages: ["JavaScript", "TypeScript", "Python"],
-    tools: ["VSCode", "Git", "Jest"],
-    elevator: [],
-    profileImage: undefined,
-};
+describe("Skills", () => {
+    const title = "Core Skills";
+    const skills = ["TypeScript", "React", "C#"];
 
-describe("Skills component", () => {
-    test("renders the Languages ListBlock with correct props", () => {
-        render(<Skills title={""} skills={[]}/>);
+    it("wraps content in the skills container", () => {
+        const {container} = render(<Skills title={title} skills={skills}/>);
+        const wrapper = container.firstChild as HTMLElement;
 
-        expect(screen.getByText("Languages")).toBeInTheDocument();
-        mockAboutMe.languages.forEach((language) => {
-            expect(screen.getByText(language)).toBeInTheDocument();
+        expect(wrapper.tagName).toBe("DIV");
+        expect(wrapper).toHaveClass("my-4", "pl-4");
+    });
+
+    it("renders ListBlock", () => {
+        render(<Skills title={title} skills={skills}/>);
+        expect(screen.getByTestId("list-block")).toBeInTheDocument();
+    });
+
+    it("passes title through to ListBlock", () => {
+        render(<Skills title={title} skills={skills}/>);
+        expect(screen.getByTestId("list-block-title")).toHaveTextContent(title);
+    });
+
+    it("passes skills through as listProps", () => {
+        render(<Skills title={title} skills={skills}/>);
+        skills.forEach((skill) => {
+            expect(screen.getByText(skill)).toBeInTheDocument();
         });
     });
 
-    //   test("applies the correct styles to the skillsContainer", () => {
-    //     render(<Skills aboutMe={mockAboutMe}  />);
-
-    //     const skillsContainer =
-    //       screen.getByRole("list").parentElement?.parentElement;
-    //     expect(skillsContainer).toHaveClass("hidden sm:flex pt-8");
-    //   });
-
-    test("renders correctly with an empty languages array", () => {
-        const aboutMeWithoutLanguages = {...mockAboutMe, languages: []};
-        render(<Skills title={""} skills={[]}/>);
-
-        expect(screen.getByText("Languages")).toBeInTheDocument();
-        const languagesList = screen.queryByText("JavaScript");
-        expect(languagesList).not.toBeInTheDocument();
+    it("renders nothing extra when skills is empty", () => {
+        render(<Skills title={title} skills={[]}/>);
+        expect(screen.getByTestId("list-block")).toBeInTheDocument();
+        expect(screen.getByTestId("list-block-title")).toHaveTextContent(title);
+        expect(screen.queryByRole("listitem")).not.toBeInTheDocument();
     });
-
-    //   test("handles empty arrays for both languages and tools gracefully", () => {
-    //     const aboutMeWithEmptyArrays = { ...mockAboutMe, languages: [], tools: [] };
-    //     render(<Skills aboutMe={aboutMeWithEmptyArrays} theme={mockTheme} />);
-
-    //     expect(screen.getByText("Languages")).toBeInTheDocument();
-    //     expect(screen.getByText("Tools")).toBeInTheDocument();
-    //     expect(screen.queryByRole("list")).toBeNull();
-    //   });
 });
