@@ -28,22 +28,44 @@ export const user: IUserData = {
     },
     aboutMe: {
         elevator: [
-            "Hello. I'm Chris and I enjoy creating and automating processes through the power of code. Getting my feet wet with excel, and graduating to initially to JavaScript, then to my language of choice Python.",
-            "A veteran of the US Army aviation as an officer, company commander, and a AH-64D Apache attack helicopter pilot.",
-            "I revisited programming, after hitting a barrier in the potential of excel. Frustrated by its data limitations, I ventured out and I attended a coding training program at CodeFellows, and fell in love with the power of coding.",
-            "In software, there isn't a stack I'm not willing to learn or ecosystem to develop in. I have since learned TypeScript and C# through my positions, and explored the Azure development ecosystem.",
+            "Hello. I'm Chris, a full-stack software developer who enjoys creating and automating processes through code. I started with Excel, moved into JavaScript, and found my stride in Python.",
+            "Before software, I served in the U.S. Army National Guard as an officer, company commander, and AH-64D Apache attack helicopter pilot.",
+            "I returned to programming after hitting Excel’s limits on data and automation. That frustration led me to Code Fellows, where I completed an advanced full-stack program and discovered a genuine love for building software.",
+            "There isn’t a stack or ecosystem I won’t learn. In my current roles I’ve shipped production work in TypeScript, C#, React, Next.js, and Python across Azure, and I continue expanding into whatever tools the problem demands."
         ],
-        languages: ["Python", "C#", "Javascript / TS"],
-        tools: ["React / TS", "Flask", "NextJS / TS "],
+        languages: [
+            "C#",
+            "TypeScript",
+            "JavaScript",
+            "Python",
+        ],
+        tools: [
+            "Visual Studio",
+            "Rider",
+            "VS Code",
+            "Azure",
+            "Azure DevOps",
+            "GitHub",
+            "SSMS",
+            "Postman",
+        ],
         profileImage: profileImage,
     },
     jobs: [
+        {
+            id: "exp-001",
+            CompanyName: "Medical Solutions",
+            Position: "Full Stack Software Developer",
+            CompanyURL: "https://www.medicalsolutions.com/",
+            Tenure: "December 2024 - Present",
+            BulletPoints: [],
+        },
         {
             id: "exp-0",
             CompanyName: "Unite Digital",
             Position: "Software Developer",
             CompanyURL: "https://unitedigital.com/",
-            Tenure: "August 2022 - Present",
+            Tenure: "August 2022 - November 2024",
             BulletPoints: [
                 "Module lead for Dealer Settings.",
                 "Assisted in multi-tenant module development of Enrollment Center including frontend, backend, and SQL database setup.",
@@ -198,26 +220,6 @@ export const user: IUserData = {
                 {
                     image: booksPic01,
                     alt: "Can of Books Pic",
-                },
-            ],
-        },
-        {
-            id: "sub-3",
-            title: "Coders Pursuit",
-            description:
-                "Simple movie trivia game in Javascript, HTML, and CSS only with local storage.",
-            toolList: ["VS Code"],
-            urlList: [
-                {
-                    name: "github",
-                    url: "https://github.com/Coders-Pursuit/Movie-Trivia",
-                    icon: faGithub,
-                },
-            ],
-            images: [
-                {
-                    image: pursuitPic01,
-                    alt: "Coders Pursuit Pic",
                 },
             ],
         },

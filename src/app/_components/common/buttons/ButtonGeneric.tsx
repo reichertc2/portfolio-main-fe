@@ -28,7 +28,7 @@ export const ButtonGeneric: React.FC<IButtonGenericProps> = ({
         const filename = typeof download === "string" ? download : undefined;
 
         return (
-            <a href={url} download={filename} className={`${className} py-3`}>
+            <a href={url} download={filename} className={`${className}`}>
                 {text}
             </a>
         );

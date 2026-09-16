@@ -18,14 +18,14 @@ export const ListBlock: React.FC<IListBlockProps> = ({
                                                      }) => {
     const styles = vertical
         ? {
-            ul: "dark:text-text-dark inline-block text-sm md:w-3/5",
+            ul: "dark:text-text-dark inline-block text-sm md:w-4/5",
             liTitle: "text-semibold pb-4",
             li: "border-1 border-secondary mx-2 rounded-md",
         }
         : {
             ul: "dark:text-text-dark inline-block text-sm w-4/5",
-            liTitle: "pb-4 text-semibold col-span-full",
-            li: "inline border-1 border-secondary mx-2 py-2 rounded-md",
+            liTitle: "pb-4 text-semibold",
+            li: "m-2 inline-block border-1 border-secondary mx-2 py-2 rounded-md",
         };
 
     return (
@@ -34,7 +34,7 @@ export const ListBlock: React.FC<IListBlockProps> = ({
             {listProps.map((item, idx) => (
                 <li
                     key={idx}
-                    className={`${styles.li}  px-2  italic`}
+                    className={`${styles.li} px-2 italic`}
                 >
                     {item}
                 </li>

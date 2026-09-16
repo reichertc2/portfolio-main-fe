@@ -38,9 +38,10 @@ describe("ListBlock", () => {
             "text-sm",
             "w-4/5"
         );
-        expect(titleLi).toHaveClass("pb-4", "text-semibold", "col-span-full");
+        expect(titleLi).toHaveClass("pb-4", "text-semibold");
         expect(itemLi).toHaveClass(
-            "inline",
+            "m-2",
+            "inline-block",
             "border-1",
             "border-secondary",
             "mx-2",
@@ -57,7 +58,7 @@ describe("ListBlock", () => {
         );
         const ul = container.querySelector("ul");
         expect(ul).toHaveClass("w-4/5");
-        expect(ul).not.toHaveClass("md:w-3/5");
+        expect(ul).not.toHaveClass("md:w-4/5");
     });
 
     it("uses stacked classes when vertical is true", () => {
@@ -72,7 +73,7 @@ describe("ListBlock", () => {
             "dark:text-text-dark",
             "inline-block",
             "text-sm",
-            "md:w-3/5"
+            "md:w-4/5"
         );
         expect(ul).not.toHaveClass("w-4/5");
         expect(titleLi).toHaveClass("text-semibold", "pb-4");
